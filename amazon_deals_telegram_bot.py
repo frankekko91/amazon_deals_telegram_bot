@@ -148,8 +148,8 @@ def fetch_deals() -> list[dict]:
         "country": Config.AMAZON_COUNTRY,
         "min_product_star_rating": "ALL",
         "price_range": "ALL",
-        "discount_range": f"{Config.MIN_DISCOUNT_PERCENT}-100",
-        "sort_by": "HIGHEST_DISCOUNT",
+        "discount_range": "ALL",        # ← valori accettati: ALL, 1, 2, 3, 4
+        "sort_by": "HIGHEST_DISCOUNT",  # filtro sconto minimo applicato manualmente sotto
         "page": "1",
     }
 
