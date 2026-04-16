@@ -129,82 +129,128 @@ BASE_DOMAIN_MAP = {
     "ES": "amazon.es",
 }
 
+def _parse_discount(badge: str) -> int:
+    """
+    Estrae la percentuale di sconto da stringhe come '26% off' o 'Up to 40% off'.
+    Restituisce 0 se non riesce a parsare.
+    """
+    if not badge:
+        return 0
+    match = re.search(r"(\d+)\s*%", badge)
+    return int(match.group(1)) if match else 0
+
+
 def fetch_deals() -> list[dict]:
     """
-    Calls the Real-Time Amazon Data API on RapidAPI to fetch today's deals.
+    Chiama l'endpoint /deals dell'API Real-Time Amazon Data su RapidAPI.
+
+    Struttura reale della risposta:
+        {
+          "deal_id": "8325275f",
+          "deal_type": "BEST_DEAL",
+          "deal_title": "Sony 77 Inch OLED...",
+          "deal_photo": "https://...",
+          "deal_state": "AVAILABLE",
+          "deal_url": "https://www.amazon.com/.../dp/B0CVQGRW9F",
+          "canonical_deal_url": "https://www.amazon.com/deal/8325275f",
+          "deal_badge": "26% off",
+          "product_asin": "B0CVQGRW9F"
+        }
 
     Returns:
-        List of deal dicts with keys: title, asin, url, price, original_price,
-        discount_percent, rating, image_url.
+        Lista di dict con i deal qualificanti.
     """
     logger.info("Fetching Amazon deals from RapidAPI…")
 
-    endpoint = f"https://{Config.RAPIDAPI_HOST}/deals-v2"
+    # Endpoint corretto per i Today's Deals
+    endpoint = f"https://{Config.RAPIDAPI_HOST}/deals"
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
     params = {
-        "country": Config.AMAZON_COUNTRY,   # es. IT, US, DE …
-        "deal_type": "ALL",                  # ALL | TODAY_DEALS | LIGHTNING_DEALS | BEST_DEALS
-        "sort_by": "HIGHEST_DISCOUNT",       # ordinamento per sconto maggiore
-        "page": "1",
+        "country": Config.AMAZON_COUNTRY,
+        "deal_state": "AVAILABLE",   # solo offerte attive
     }
-    # Nota: il filtro MIN_DISCOUNT_PERCENT viene applicato manualmente sul risultato
 
     try:
-        response = requests.get(endpoint, headers=headers, params=params, timeout=15)
+        response = requests.get(endpoint, headers=headers, params=params, timeout=20)
         response.raise_for_status()
     except requests.exceptions.HTTPError as e:
         logger.error(f"HTTP error fetching deals: {e} — Response: {response.text[:300]}")
         return []
     except requests.exceptions.ConnectionError:
-        logger.error("Connection error — check your internet connection.")
+        logger.error("Connection error — controlla la connessione internet.")
         return []
     except requests.exceptions.Timeout:
-        logger.error("Request timed out while fetching deals.")
+        logger.error("Timeout — l'API non ha risposto in tempo.")
         return []
 
     data = response.json()
 
-    # Verifica status risposta secondo struttura doc ufficiale: {status, request_id, data}
-    if data.get("status") == "ERROR":
-        err = data.get("error", {})
-        logger.error(f"API error {err.get('code')}: {err.get('message')}")
-        return []
+    # Log della risposta grezza per debug (solo primi 500 char)
+    logger.debug(f"Raw API response: {str(data)[:500]}")
 
-    raw_deals = data.get("data", {}).get("deals", [])
+    # La risposta può avere la lista sotto "deals" oppure direttamente come lista
+    raw_deals = (
+        data.get("deals")
+        or data.get("data", {}).get("deals", [])
+        or (data if isinstance(data, list) else [])
+    )
 
     if not raw_deals:
-        logger.warning("No deals returned from API.")
+        logger.warning(f"Nessun deal ricevuto dall'API. Risposta: {str(data)[:300]}")
         return []
+
+    logger.info(f"Ricevuti {len(raw_deals)} deal totali dall'API, filtro in corso…")
 
     domain = BASE_DOMAIN_MAP.get(Config.AMAZON_COUNTRY, "amazon.com")
     deals = []
 
-    for item in raw_deals[: Config.MAX_DEALS_PER_RUN * 3]:  # fetch 3× buffer for filtering
+    for item in raw_deals:
         try:
-            asin = item.get("asin", "")
-            if not asin:
+            # Campi reali dell'API Today's Deals
+            asin = item.get("product_asin", "")
+            deal_url = item.get("deal_url", "")
+            deal_state = item.get("deal_state", "")
+
+            # Salta se non disponibile
+            if deal_state and deal_state != "AVAILABLE":
                 continue
 
-            raw_url = f"https://www.{domain}/dp/{asin}"
-            discount = int(item.get("discount_percentage", 0) or 0)
+            # Costruisce URL prodotto: usa deal_url se disponibile, altrimenti ASIN
+            if deal_url and "/dp/" in deal_url:
+                raw_url = deal_url.split("?")[0]   # rimuove parametri extra
+            elif asin:
+                raw_url = f"https://www.{domain}/dp/{asin}"
+            else:
+                continue   # niente URL valido, salta
 
+            # Estrae ASIN dall'URL se non c'è nel campo diretto
+            if not asin:
+                asin = extract_asin(raw_url) or ""
+
+            # Percentuale di sconto da "deal_badge" (es. "26% off")
+            badge = item.get("deal_badge", "")
+            discount = _parse_discount(badge)
+
+            # Filtra per sconto minimo
             if discount < Config.MIN_DISCOUNT_PERCENT:
                 continue
 
             deal = {
-                "title": item.get("product_title", "Amazon Product"),
+                "title": item.get("deal_title", "Offerta Amazon"),
                 "asin": asin,
                 "url": raw_url,
                 "affiliate_url": build_affiliate_link(raw_url, Config.AMAZON_AFFILIATE_TAG),
-                "price": item.get("product_price", "N/A"),
-                "original_price": item.get("product_original_price", "N/A"),
+                "price": "Vedi su Amazon",          # non fornito nell'endpoint deals
+                "original_price": "",
                 "discount_percent": discount,
-                "rating": item.get("product_star_rating", "N/A"),
-                "image_url": item.get("product_photo", ""),
+                "rating": "N/A",                    # non fornito nell'endpoint deals
+                "image_url": item.get("deal_photo", ""),
                 "category": item.get("deal_type", "General"),
+                "canonical_url": item.get("canonical_deal_url", raw_url),
+                "ends_at": item.get("deal_ends_at", ""),
             }
             deals.append(deal)
 
@@ -212,10 +258,10 @@ def fetch_deals() -> list[dict]:
                 break
 
         except (KeyError, ValueError, TypeError) as e:
-            logger.warning(f"Skipping malformed deal item: {e}")
+            logger.warning(f"Skipping malformed deal item: {e} — item: {str(item)[:100]}")
             continue
 
-    logger.info(f"Parsed {len(deals)} qualifying deals.")
+    logger.info(f"Parsed {len(deals)} qualifying deals (sconto >= {Config.MIN_DISCOUNT_PERCENT}%).")
     return deals
 
 
@@ -224,51 +270,62 @@ def fetch_deals() -> list[dict]:
 # ──────────────────────────────────────────────
 def format_deal_message(deal: dict, index: int, total: int) -> str:
     """
-    Builds a Telegram-compatible HTML message for one deal.
+    Costruisce un messaggio HTML per Telegram per una singola offerta.
 
     Args:
-        deal:   Deal dict from fetch_deals().
-        index:  1-based position in the batch.
-        total:  Total deals in this batch.
+        deal:   Dict deal da fetch_deals().
+        index:  Posizione 1-based nel batch.
+        total:  Totale deal nel batch.
 
     Returns:
-        HTML-formatted string ready for Telegram sendMessage.
+        Stringa HTML pronta per Telegram sendMessage.
     """
-    title = deal["title"][:80] + ("…" if len(deal["title"]) > 80 else "")
-    stars = "⭐" * round(float(deal["rating"])) if deal["rating"] not in ("N/A", "", None) else ""
+    title = deal["title"][:90] + ("…" if len(deal["title"]) > 90 else "")
+
+    # Categoria leggibile in italiano
+    category_map = {
+        "BEST_DEAL": "Best Deal 🏆",
+        "LIGHTNING_DEAL": "Offerta Lampo ⚡",
+        "DEAL_OF_THE_DAY": "Offerta del Giorno 🌟",
+    }
+    category = category_map.get(deal["category"], deal["category"])
+
+    # Scadenza offerta (se disponibile)
+    ends_str = ""
+    if deal.get("ends_at"):
+        try:
+            ends_dt = datetime.fromisoformat(deal["ends_at"].replace("Z", "+00:00"))
+            ends_str = f"\n⏰ <i>Scade: {ends_dt.strftime('%d/%m/%Y %H:%M')}</i>"
+        except Exception:
+            pass
 
     lines = [
-        f"🔥 <b>Deal {index}/{total}</b>",
+        f"🔥 <b>Offerta {index}/{total}</b>",
         "",
         f"🛍 <b>{title}</b>",
         "",
-        f"💰 <b>{deal['price']}</b>  "
-        f"<s>{deal['original_price']}</s>  "
-        f"➡️  <b>-{deal['discount_percent']}% OFF</b>",
+        f"💥 <b>-{deal['discount_percent']}% di SCONTO</b>",
+        "",
+        f"🔗 <a href=\"{deal['affiliate_url']}\">👉 Vai all'Offerta</a>",
+        "",
+        f"<i>📦 {category}</i>",
+        f"<i>🗓 {datetime.now().strftime('%d/%m/%Y %H:%M')}</i>",
     ]
 
-    if stars:
-        lines.append(f"⭐ Rating: {deal['rating']} {stars}")
-
-    lines += [
-        "",
-        f"🔗 <a href=\"{deal['affiliate_url']}\">👉 Grab This Deal</a>",
-        "",
-        f"<i>📦 Category: {deal['category']}</i>",
-        f"<i>🗓 Posted: {datetime.now().strftime('%d %b %Y, %H:%M')}</i>",
-    ]
+    if ends_str:
+        lines.append(ends_str)
 
     return "\n".join(lines)
 
 
 def format_header_message(total: int) -> str:
-    """Returns a daily-intro message posted before the deal batch."""
-    date_str = datetime.now().strftime("%A, %d %B %Y")
+    """Messaggio introduttivo prima del batch di offerte."""
+    date_str = datetime.now().strftime("%A %d %B %Y")
     return (
-        f"🛒 <b>Amazon Deals — {date_str}</b>\n\n"
-        f"Here are today's top <b>{total} deals</b> with "
-        f"at least <b>{Config.MIN_DISCOUNT_PERCENT}% off</b>!\n\n"
-        f"All links below are affiliate links. Happy shopping! 🎉"
+        f"🛒 <b>Offerte Amazon — {date_str}</b>\n\n"
+        f"Ecco le migliori <b>{total} offerte</b> di oggi "
+        f"con almeno <b>{Config.MIN_DISCOUNT_PERCENT}% di sconto</b>!\n\n"
+        f"I link qui sotto sono link affiliati. Buono shopping! 🎉"
     )
 
 
