@@ -162,22 +162,23 @@ def fetch_deals() -> list[dict]:
     """
     logger.info("Fetching Amazon deals from RapidAPI…")
 
-    # Endpoint corretto per i Today's Deals
-    endpoint = f"https://{Config.RAPIDAPI_HOST}/deals"
+    # Endpoint ufficiale confermato dalla documentazione RapidAPI
+    # https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-amazon-data → GET /deals-v2
+    endpoint = f"https://{Config.RAPIDAPI_HOST}/deals-v2"
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
+    # Parametri minimi — il piano free non accetta tutti i filtri avanzati
     params = {
         "country": Config.AMAZON_COUNTRY,
-        "deal_state": "AVAILABLE",   # solo offerte attive
     }
 
     try:
         response = requests.get(endpoint, headers=headers, params=params, timeout=20)
         response.raise_for_status()
     except requests.exceptions.HTTPError as e:
-        logger.error(f"HTTP error fetching deals: {e} — Response: {response.text[:300]}")
+        logger.error(f"HTTP error fetching deals: {e} — Response: {response.text[:500]}")
         return []
     except requests.exceptions.ConnectionError:
         logger.error("Connection error — controlla la connessione internet.")
@@ -188,8 +189,8 @@ def fetch_deals() -> list[dict]:
 
     data = response.json()
 
-    # Log della risposta grezza per debug (solo primi 500 char)
-    logger.debug(f"Raw API response: {str(data)[:500]}")
+    # Stampa SEMPRE la struttura raw per debug — aiuta a capire i campi reali
+    logger.info(f"[DEBUG] Risposta API (primi 800 char): {str(data)[:800]}")
 
     # La risposta può avere la lista sotto "deals" oppure direttamente come lista
     raw_deals = (
