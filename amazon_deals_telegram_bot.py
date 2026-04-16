@@ -145,13 +145,12 @@ def fetch_deals() -> list[dict]:
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
     params = {
-        "country": Config.AMAZON_COUNTRY,
-        "min_product_star_rating": "ALL",
-        "price_range": "ALL",
-        "discount_range": "ALL",        # ← valori accettati: ALL, 1, 2, 3, 4
-        "sort_by": "HIGHEST_DISCOUNT",  # filtro sconto minimo applicato manualmente sotto
+        "country": Config.AMAZON_COUNTRY,   # es. IT, US, DE …
+        "deal_type": "ALL",                  # ALL | TODAY_DEALS | LIGHTNING_DEALS | BEST_DEALS
+        "sort_by": "HIGHEST_DISCOUNT",       # ordinamento per sconto maggiore
         "page": "1",
     }
+    # Nota: il filtro MIN_DISCOUNT_PERCENT viene applicato manualmente sul risultato
 
     try:
         response = requests.get(endpoint, headers=headers, params=params, timeout=15)
@@ -167,6 +166,13 @@ def fetch_deals() -> list[dict]:
         return []
 
     data = response.json()
+
+    # Verifica status risposta secondo struttura doc ufficiale: {status, request_id, data}
+    if data.get("status") == "ERROR":
+        err = data.get("error", {})
+        logger.error(f"API error {err.get('code')}: {err.get('message')}")
+        return []
+
     raw_deals = data.get("data", {}).get("deals", [])
 
     if not raw_deals:
