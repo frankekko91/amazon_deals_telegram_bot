@@ -426,7 +426,7 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             
             title = title_elem.get_text(strip=True) if title_elem else ""
             if not title or len(title) < 5:
-                logger.debug(f"  ❌ No title found or too short")
+                logger.debug(f"  ❌ No title found or too short: '{title}'")
                 continue
             
             logger.debug(f"  ✅ Title: {title[:50]}")
@@ -450,18 +450,22 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             
             # Cerca span con €
             price_spans = box.find_all("span", string=re.compile(r"€"))
-            logger.debug(f"  Found {len(price_spans)} price spans")
+            logger.debug(f"  Found {len(price_spans)} price spans: {[ps.get_text(strip=True) for ps in price_spans]}")
             for ps in price_spans:
-                p = parse_price(ps.get_text(strip=True))
+                raw_text = ps.get_text(strip=True)
+                p = parse_price(raw_text)
+                logger.debug(f"    Parsing '{raw_text}' → {p}")
                 if p and p > 0:
-                    logger.debug(f"    Price found: €{p:.2f}")
+                    logger.debug(f"    ✅ Valid price: €{p:.2f}")
                     if not price_now:
                         price_now = p
                     elif p > price_now:  # Prezzo più alto = originale
                         price_orig = p
+                else:
+                    logger.debug(f"    ❌ Invalid price (p={p})")
             
             if not price_now or price_now == 0:
-                logger.debug(f"  ❌ No valid price found")
+                logger.debug(f"  ❌ No valid price found (price_now={price_now})")
                 continue
             
             logger.debug(f"  ✅ Prices: current=€{price_now:.2f}, original={price_orig}")
@@ -624,7 +628,13 @@ def fetch_deals_rapidapi() -> List[Deal]:
                 []
             )
             
-            logger.debug(f"    Found {len(raw_deals)} raw items")
+            logger.info(f"    Found {len(raw_deals)} raw items")
+            
+            if raw_deals and len(raw_deals) > 0:
+                # Log sample first item structure
+                first_item = raw_deals[0]
+                logger.debug(f"    First item keys: {list(first_item.keys())}")
+                logger.debug(f"    First item: {str(first_item)[:300]}")
             
             if not raw_deals:
                 logger.info(f"    ⏭️  /{endpoint_name}: no data in response")
@@ -656,12 +666,14 @@ def fetch_deals_rapidapi() -> List[Deal]:
 def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]:
     """Processa deals da vari endpoint RapidAPI."""
     deals = []
+    logger.info(f"  Processing {len(raw_deals)} items from /{source_endpoint}…")
     
-    for item in raw_deals:
+    for idx, item in enumerate(raw_deals):
         try:
             # Estrai ASIN (key variabile tra endpoint)
             asin = item.get("product_asin") or item.get("asin") or item.get("id", "")
             if not asin or len(asin) < 5:
+                logger.debug(f"    Item {idx}: ❌ No valid ASIN (got '{asin}')")
                 continue
             
             # Titolo
@@ -672,7 +684,10 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
                 ""
             )[:100]
             if not title:
+                logger.debug(f"    Item {idx} ({asin}): ❌ No title")
                 continue
+            
+            logger.debug(f"    Item {idx} ({asin}): {title[:50]}")
             
             # URL
             url_prod = (
@@ -683,15 +698,14 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
             )
             
             # Prezzo attuale
-            price_now = (
-                parse_price(item.get("deal_price")) or
-                parse_price(item.get("product_price")) or
-                parse_price(item.get("price")) or
-                0.0
-            )
+            price_str = item.get("deal_price") or item.get("product_price") or item.get("price") or ""
+            price_now = parse_price(price_str)
             
             if not price_now or price_now == 0:
+                logger.debug(f"      ❌ No valid price (raw='{price_str}', parsed={price_now})")
                 continue
+            
+            logger.debug(f"      ✅ Price: €{price_now:.2f}")
             
             # Prezzo originale
             price_orig = (
@@ -700,6 +714,9 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
                 parse_price(item.get("original_price")) or
                 None
             )
+            
+            if price_orig:
+                logger.debug(f"      ✅ Original price: €{price_orig:.2f}")
             
             # Sconto
             discount_str = (
@@ -714,7 +731,10 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
             if discount == 0 and price_orig and price_orig > price_now:
                 discount = round((price_orig - price_now) / price_orig * 100)
             
+            logger.debug(f"      Discount: {discount}% (raw='{discount_str}')")
+            
             if discount < Config.MIN_DISCOUNT_PERCENT:
+                logger.debug(f"      ❌ Discount {discount}% < MIN {Config.MIN_DISCOUNT_PERCENT}%")
                 continue
             
             # Immagine
@@ -740,15 +760,16 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
             )
             deals.append(deal)
             
-            logger.debug(f"✅ Deal: {title[:40]} | €{price_now:.2f} | -{discount}% [{source_endpoint}]")
+            logger.info(f"      ✅ VALID DEAL: {title[:40]} | €{price_now:.2f} | -{discount}%")
             
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
         
         except Exception as e:
-            logger.debug(f"Item error: {e}")
+            logger.debug(f"    Item {idx}: ❌ Exception: {e}")
             continue
     
+    logger.info(f"  Result: {len(deals)} valid deals from {len(raw_deals)} items")
     return deals
 
 
