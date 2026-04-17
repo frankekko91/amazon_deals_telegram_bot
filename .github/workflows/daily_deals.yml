@@ -42,7 +42,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update deals_history.json"
-          file_pattern: deals_history.json bot.log
+          file_pattern: deals_history.json
 
       - name: Upload logs
         if: always()
