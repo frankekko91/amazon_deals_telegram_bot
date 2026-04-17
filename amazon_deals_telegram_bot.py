@@ -312,105 +312,185 @@ def debug_html_structure(soup) -> None:
 
 
 def fetch_deals_scraping() -> List[Deal]:
-    """Scraping amazon.it/gp/goldbox con BeautifulSoup."""
+    """Scraping amazon.it/gp/goldbox con BeautifulSoup — Multi-strategy resiliente."""
     if not HAS_BEAUTIFULSOUP:
         logger.warning("❌ BeautifulSoup non installato")
         return []
     
     logger.info("🔷 PRIMARY: Scraping amazon.it/gp/goldbox…")
     
-    url = "https://www.amazon.it/gp/goldbox"
+    urls_to_try = [
+        "https://www.amazon.it/gp/goldbox",
+        "https://www.amazon.it/dp/",  # Fallback: lista prodotti
+        "https://www.amazon.it/s?i=digital-deals",  # Deals digitali
+    ]
+    
     headers = {
         "User-Agent": random.choice(USER_AGENTS),
         "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Encoding": "gzip, deflate",
-        "DNT": "1",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
+        "Cache-Control": "no-cache",
     }
     
-    try:
-        session = requests.Session()
-        # Aggiungi proxy per evitare blocchi
-        proxy = get_random_proxy()
-        proxies = {"http": proxy, "https": proxy} if proxy else {}
+    for url in urls_to_try:
+        try:
+            session = requests.Session()
+            proxy = get_random_proxy()
+            proxies = {"http": proxy, "https": proxy} if proxy else {}
+            
+            try:
+                logger.debug(f"Trying {url}…")
+                response = session.get(url, headers=headers, timeout=20, proxies=proxies)
+            except requests.exceptions.ProxyError:
+                logger.warning(f"Proxy failed, retrying without…")
+                response = session.get(url, headers=headers, timeout=20)
+            
+            response.raise_for_status()
+        except Exception as e:
+            logger.debug(f"Failed {url}: {e}")
+            continue
         
         try:
-            response = session.get(url, headers=headers, timeout=20, proxies=proxies)
-        except requests.exceptions.ProxyError:
-            # Fallback senza proxy se proxy fallisce
-            logger.warning(f"Proxy error — riprovo senza proxy…")
-            response = session.get(url, headers=headers, timeout=20)
+            soup = BeautifulSoup(response.content, "html.parser")
+            
+            # NUOVO: Estrattore aggressivo — qualsiasi div con link prodotto + prezzo
+            result = _aggressive_product_extraction(soup)
+            if result:
+                logger.info(f"✅ Scraping riuscito con estrazione aggressiva: {len(result)} deals")
+                return result
         
-        response.raise_for_status()
-    except Exception as e:
-        logger.warning(f"Errore scraping: {e}")
-        return []
+        except Exception as e:
+            logger.error(f"Parse error {url}: {e}")
+            continue
     
-    try:
-        soup = BeautifulSoup(response.content, "html.parser")
-    except Exception as e:
-        logger.error(f"Errore parsing: {e}")
-        return []
-    
-    # 🔍 DEBUG: Salva HTML per analisi
-    debug_file = "amazon_debug.html"
-    try:
-        with open(debug_file, "w", encoding="utf-8") as f:
-            f.write(response.text[:5000])  # Prima 5000 char
-        logger.info(f"📄 HTML salvato in {debug_file}")
-    except:
-        pass
-    
-    # 🔍 DEBUG: Analizza struttura pagina
-    debug_html_structure(soup)
-    
-    # Strategie di selezione progressive
-    deal_boxes = []
-    
-    # Strategy 1: Selettore originale
-    deal_boxes = soup.find_all("div", {
-        "class": "s-result-item",
-        "data-component-type": "s-search-result"
-    })
-    if deal_boxes:
-        logger.info(f"✅ Strategy 1: {len(deal_boxes)} boxes con s-result-item + data-component-type")
-        return _process_deal_boxes(deal_boxes)
-    
-    # Strategy 2: Solo data-component-type
-    deal_boxes = soup.find_all("div", {"data-component-type": "s-search-result"})
-    if deal_boxes:
-        logger.info(f"✅ Strategy 2: {len(deal_boxes)} boxes con data-component-type")
-        return _process_deal_boxes(deal_boxes)
-    
-    # Strategy 3: Cerca data-asin (product item)
-    deal_boxes = soup.find_all("div", {"data-asin": True})
-    if deal_boxes:
-        logger.info(f"✅ Strategy 3: {len(deal_boxes)} boxes con data-asin")
-        return _process_deal_boxes(deal_boxes)
-    
-    # Strategy 4: Cerca link di prodotto con /dp/
-    links = soup.find_all("a", {"href": re.compile(r"/dp/[A-Z0-9]{10}")})
-    if links:
-        logger.info(f"✅ Strategy 4: {len(links)} product links trovati")
-        # Prendi parent div per ogni link
-        deal_boxes = [link.find_parent("div") for link in links if link.find_parent("div")]
-        deal_boxes = list(set(deal_boxes))  # Rimuovi duplicati
-        return _process_deal_boxes(deal_boxes)
-    
-    # Strategy 5: Cerca per stringhe contenenti "€"
-    spans_with_price = soup.find_all("span", string=re.compile(r"€"))
-    if spans_with_price:
-        logger.info(f"✅ Strategy 5: {len(spans_with_price)} span con € trovati")
-        deal_boxes = [s.find_parent("div", recursive=True) for s in spans_with_price]
-        deal_boxes = [b for b in deal_boxes if b]
-        deal_boxes = list(set(deal_boxes))  # Rimuovi duplicati
-        return _process_deal_boxes(deal_boxes)
-    
-    logger.warning(f"❌ Nessuna strategy riuscita. HTML structure changed.")
-    logger.warning(f"Salva {debug_file} per analisi manuale")
+    logger.warning(f"❌ Scraping fallito su tutte le URL")
     return []
+
+
+def _aggressive_product_extraction(soup) -> List[Deal]:
+    """Estrazione aggressiva: trova qualsiasi prodotto con prezzo su Amazon."""
+    deals = []
+    
+    # Tutti gli elementi con possibile prezzo
+    price_containers = soup.find_all("div", {"data-component-type": "s-search-result"})
+    
+    if not price_containers:
+        # Fallback: cerca div con span che contiene €
+        price_spans = soup.find_all("span", string=re.compile(r"€\s*\d"))
+        price_containers = list(set([ps.find_parent("div", recursive=True) for ps in price_spans if ps.find_parent("div")]))
+    
+    if not price_containers:
+        logger.warning("No product containers found")
+        return []
+    
+    logger.info(f"Found {len(price_containers)} potential deal containers")
+    
+    for idx, container in enumerate(price_containers[:10]):  # Limit to first 10
+        try:
+            # ASIN da data-asin o href
+            asin = container.get("data-asin") or ""
+            if not asin:
+                link = container.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
+                if link:
+                    asin = extract_asin(link.get("href", ""))
+            
+            if not asin or len(str(asin)) < 5:
+                continue
+            
+            # Title da vari selettori
+            title = ""
+            for selector in ["h2", "h1", {"class": re.compile(r"title|name")}]:
+                if isinstance(selector, dict):
+                    elem = container.find(string=re.compile(r".{10,}"))
+                    if elem and len(str(elem)) > 10:
+                        title = str(elem).strip()[:100]
+                        break
+                else:
+                    elem = container.find(selector)
+                    if elem:
+                        title = elem.get_text(strip=True)[:100]
+                        break
+            
+            # Se non trovato, estrai da link
+            if not title:
+                link = container.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
+                if link:
+                    title = link.get_text(strip=True)[:100]
+            
+            if not title or len(title) < 5:
+                continue
+            
+            # URL
+            link = container.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
+            if not link:
+                continue
+            
+            url_prod = link.get("href", "")
+            if url_prod.startswith("/"):
+                url_prod = "https://www.amazon.it" + url_prod
+            elif not url_prod.startswith("http"):
+                url_prod = "https://www.amazon.it/" + url_prod
+            url_prod = url_prod.split("?")[0]
+            
+            # Prices — cerca € in span
+            price_spans = container.find_all("span", string=re.compile(r"€"))
+            if not price_spans:
+                continue
+            
+            price_now = None
+            price_orig = None
+            for ps in price_spans:
+                raw_text = ps.get_text(strip=True)
+                p = parse_price(raw_text)
+                if p and p > 0:
+                    if not price_now:
+                        price_now = p
+                    elif p > price_now:
+                        price_orig = p
+            
+            if not price_now or price_now == 0:
+                continue
+            
+            # Discount
+            discount = 0
+            if price_orig and price_orig > price_now:
+                discount = round((price_orig - price_now) / price_orig * 100)
+            
+            # Badge di sconto if exists
+            badge = container.find("span", string=re.compile(r"%"))
+            if badge:
+                discount = parse_discount(badge.get_text(strip=True))
+            
+            if discount < Config.MIN_DISCOUNT_PERCENT:
+                continue
+            
+            img = container.find("img")
+            image_url = img.get("src", "") if img else ""
+            
+            deal = Deal(
+                deal_id=f"scraping_{asin}",
+                asin=asin,
+                title=title,
+                url=url_prod,
+                affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
+                price_now=price_now,
+                price_orig=price_orig,
+                discount_percent=discount,
+                image_url=image_url,
+                category="Offerta",
+                source="scraping",
+            )
+            deals.append(deal)
+            logger.info(f"✅ Extracted: {title[:40]} | €{price_now:.2f} | -{discount}%")
+            
+            if len(deals) >= Config.MAX_DEALS_PER_RUN:
+                break
+        
+        except Exception as e:
+            logger.debug(f"Item {idx} error: {e}")
+            continue
+    
+    return deals
 
 
 def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
@@ -950,27 +1030,24 @@ def fetch_deals() -> List[Deal]:
 # TELEGRAM
 # ──────────────────────────────────────────────
 def format_deal_message(deal: Deal, idx: int, total: int, reason: str = "") -> str:
-    title = deal.title[:90] + ("…" if len(deal.title) > 90 else "")
+    title = deal.title[:85] + ("…" if len(deal.title) > 85 else "")
     
+    # Price formatting
     if deal.price_orig and deal.price_now:
-        price_line = f"💰 <b>€{deal.price_now:.2f}</b>  <s>€{deal.price_orig:.2f}</s>  ➡️ <b>-{deal.discount_percent}%</b>"
+        price_line = f"<b>€{deal.price_now:.2f}</b> <s>€{deal.price_orig:.2f}</s> <b style='color:red'>-{deal.discount_percent}%</b>"
     elif deal.price_now > 0:
-        price_line = f"💰 <b>€{deal.price_now:.2f}</b>  ➡️ <b>-{deal.discount_percent}%</b>"
+        price_line = f"<b>€{deal.price_now:.2f}</b>"
     else:
-        price_line = f"💥 <b>-{deal.discount_percent}% SCONTO</b>"
+        price_line = f"<b>-{deal.discount_percent}%</b>"
     
-    reason_line = f"\n🔔 <i>{reason}</i>" if reason else ""
-    source = "🔷 Scraping" if deal.source == "scraping" else "🔶 API"
+    reason_line = f"\u2B50 {reason}" if reason else ""
     
-    return (
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"🔥 <b>Deal {idx}/{total}</b>\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"🛍 <b>{title}</b>\n\n"
-        f"{price_line}{reason_line}\n\n"
-        f"🔗 <a href=\"{deal.affiliate_url}\">👉 Acquista</a>\n\n"
-        f"<i>🗓 {datetime.now().strftime('%d/%m %H:%M')} | {source}</i>"
-    )
+    # Simplified, cleaner format
+    msg = f"<b>{title}</b>\n\n{price_line}"
+    if reason_line:
+        msg += f"\n{reason_line}"
+    
+    return msg
 
 
 def format_header(total: int) -> str:
@@ -1009,10 +1086,23 @@ async def post_deals(deals: List[Tuple[Deal, str]]) -> None:
     
     for i, (deal, reason) in enumerate(deals, 1):
         try:
+            # Create inline keyboard with buttons
+            keyboard = [
+                [
+                    telegram.InlineKeyboardButton("🛒 Buy", url=deal.affiliate_url),
+                    telegram.InlineKeyboardButton("💾 Save", callback_data=f"save_{deal.deal_id}"),
+                ],
+                [
+                    telegram.InlineKeyboardButton("📢 Share", callback_data=f"share_{deal.deal_id}"),
+                ]
+            ]
+            reply_markup = telegram.InlineKeyboardMarkup(keyboard)
+            
             await bot.send_message(
                 chat_id=Config.TELEGRAM_CHANNEL_ID,
                 text=format_deal_message(deal, i, len(deals), reason),
                 parse_mode=telegram.constants.ParseMode.HTML,
+                reply_markup=reply_markup,
                 disable_web_page_preview=False,
             )
             logger.info(f"✅ Posted {i}/{len(deals)}: {deal.title[:40]}")
