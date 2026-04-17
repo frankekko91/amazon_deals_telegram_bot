@@ -49,7 +49,7 @@ except ImportError:
 load_dotenv()
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,  # ⬅️ Changed from INFO to DEBUG to see all details
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.FileHandler("bot.log"),
