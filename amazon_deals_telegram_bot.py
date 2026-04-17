@@ -1097,6 +1097,31 @@ def fetch_deals() -> List[Deal]:
 # ──────────────────────────────────────────────
 # TELEGRAM
 # ──────────────────────────────────────────────
+def create_short_link(affiliate_url: str) -> str:
+    """Crea un link accorciato per Amazon.
+    
+    Da: https://www.amazon.it/Oral-B-Spazzolino-Ricaricabile-Dentifricio-Protezione/dp/B0F2J6B9ZK?tag=scontiitalia2-21
+    A:  https://amazon.it/dp/B0F2J6B9ZK?tag=scontiitalia2-21
+    """
+    # Estrai ASIN dal URL
+    match = re.search(r'/(?:dp|gp/product)/([A-Z0-9]{10})', affiliate_url)
+    if not match:
+        return affiliate_url
+    
+    asin = match.group(1)
+    
+    # Estrai tag se presente
+    tag_match = re.search(r'[?&]tag=([^&]+)', affiliate_url)
+    tag = tag_match.group(1) if tag_match else ""
+    
+    # Crea URL corto: amazon.it/dp/ASIN?tag=...
+    short = f"https://amazon.it/dp/{asin}"
+    if tag:
+        short += f"?tag={tag}"
+    
+    return short
+
+
 def get_discount_stars(discount: int) -> str:
     """Ritorna stelle basate sulla percentuale di sconto.
     
@@ -1119,6 +1144,7 @@ def get_discount_stars(discount: int) -> str:
 
 def format_deal_message(deal: Deal, idx: int, total: int, reason: str = "") -> str:
     title = deal.title[:85] + ("…" if len(deal.title) > 85 else "")
+    short_link = create_short_link(deal.affiliate_url)
     
     # Price formatting
     if deal.price_orig and deal.price_now:
@@ -1132,8 +1158,8 @@ def format_deal_message(deal: Deal, idx: int, total: int, reason: str = "") -> s
     stars = get_discount_stars(deal.discount_percent)
     reason_line = f"{stars} {reason}" if reason else stars
     
-    # IMPORTANTE: Link all'inizio per caricare anteprima immagine su Telegram
-    msg = f"{deal.affiliate_url}\n\n<b>{title}</b>\n\n{price_line}"
+    # Titolo primo, poi link (per anteprima), poi prezzo
+    msg = f"<b>{title}</b>\n\n{short_link}\n\n{price_line}"
     if reason_line:
         msg += f"\n{reason_line}"
     
