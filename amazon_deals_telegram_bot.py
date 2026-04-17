@@ -1097,6 +1097,26 @@ def fetch_deals() -> List[Deal]:
 # ──────────────────────────────────────────────
 # TELEGRAM
 # ──────────────────────────────────────────────
+def get_discount_stars(discount: int) -> str:
+    """Ritorna stelle basate sulla percentuale di sconto.
+    
+    - 20-34%: ⭐ (sconto buono)
+    - 35-49%: ⭐⭐ (sconto molto buono)
+    - 50-64%: ⭐⭐⭐ (sconto eccezionale)
+    - 65%+: ⭐⭐⭐⭐ (sconto incredibile)
+    """
+    if discount >= 65:
+        return "⭐⭐⭐⭐"
+    elif discount >= 50:
+        return "⭐⭐⭐"
+    elif discount >= 35:
+        return "⭐⭐"
+    elif discount >= 20:
+        return "⭐"
+    else:
+        return ""
+
+
 def format_deal_message(deal: Deal, idx: int, total: int, reason: str = "") -> str:
     title = deal.title[:85] + ("…" if len(deal.title) > 85 else "")
     
@@ -1108,10 +1128,12 @@ def format_deal_message(deal: Deal, idx: int, total: int, reason: str = "") -> s
     else:
         price_line = f"<b>-{deal.discount_percent}%</b>"
     
-    reason_line = f"\u2B50 {reason}" if reason else ""
+    # Stars based on discount percentage
+    stars = get_discount_stars(deal.discount_percent)
+    reason_line = f"{stars} {reason}" if reason else stars
     
-    # Simplified, cleaner format
-    msg = f"<b>{title}</b>\n\n{price_line}"
+    # IMPORTANTE: Link all'inizio per caricare anteprima immagine su Telegram
+    msg = f"{deal.affiliate_url}\n\n<b>{title}</b>\n\n{price_line}"
     if reason_line:
         msg += f"\n{reason_line}"
     
