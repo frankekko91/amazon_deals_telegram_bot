@@ -267,6 +267,27 @@ USER_AGENTS = [
 ]
 
 
+def debug_html_structure(soup) -> None:
+    """Analizza HTML e suggerisce selettori."""
+    logger.info("🔍 DEBUG: Analizzando struttura HTML…")
+    
+    # Cerca pattern comuni
+    patterns = {
+        "data-asin": soup.find_all("div", {"data-asin": True}),
+        "s-result-item": soup.find_all("div", {"class": "s-result-item"}),
+        "a-price-whole": soup.find_all("span", {"class": "a-price-whole"}),
+        "a-price-strike": soup.find_all("span", {"class": "a-price-strike"}),
+        "a-badge": soup.find_all("span", {"class": re.compile(r"badge")}),
+        "dp-links": soup.find_all("a", {"href": re.compile(r"/dp/[A-Z0-9]{10}")}),
+        "price-symbols": soup.find_all(string=re.compile(r"€")),
+    }
+    
+    for pattern_name, elements in patterns.items():
+        logger.info(f"  {pattern_name}: {len(elements)} elementi trovati")
+        if elements and len(elements) > 0:
+            logger.debug(f"    Esempio: {str(elements[0])[:200]}")
+
+
 def fetch_deals_scraping() -> List[Deal]:
     """Scraping amazon.it/gp/goldbox con BeautifulSoup."""
     if not HAS_BEAUTIFULSOUP:
@@ -310,55 +331,99 @@ def fetch_deals_scraping() -> List[Deal]:
         logger.error(f"Errore parsing: {e}")
         return []
     
-    # Selectors più robusti — prova multipli approcci
+    # 🔍 DEBUG: Salva HTML per analisi
+    debug_file = "amazon_debug.html"
+    try:
+        with open(debug_file, "w", encoding="utf-8") as f:
+            f.write(response.text[:5000])  # Prima 5000 char
+        logger.info(f"📄 HTML salvato in {debug_file}")
+    except:
+        pass
+    
+    # 🔍 DEBUG: Analizza struttura pagina
+    debug_html_structure(soup)
+    
+    # Strategie di selezione progressive
+    deal_boxes = []
+    
+    # Strategy 1: Selettore originale
     deal_boxes = soup.find_all("div", {
         "class": "s-result-item",
         "data-component-type": "s-search-result"
     })
+    if deal_boxes:
+        logger.info(f"✅ Strategy 1: {len(deal_boxes)} boxes con s-result-item + data-component-type")
+        return _process_deal_boxes(deal_boxes)
     
-    # Fallback selector se il primo non trova risultati
-    if not deal_boxes:
-        logger.warning("Primary selector failed — trying alternative…")
-        deal_boxes = soup.find_all("div", {"class": "a-price-button-row"})
-        deal_boxes = [box.find_parent("div", {"class": "s-result-item"}) for box in deal_boxes]
+    # Strategy 2: Solo data-component-type
+    deal_boxes = soup.find_all("div", {"data-component-type": "s-search-result"})
+    if deal_boxes:
+        logger.info(f"✅ Strategy 2: {len(deal_boxes)} boxes con data-component-type")
+        return _process_deal_boxes(deal_boxes)
+    
+    # Strategy 3: Cerca data-asin (product item)
+    deal_boxes = soup.find_all("div", {"data-asin": True})
+    if deal_boxes:
+        logger.info(f"✅ Strategy 3: {len(deal_boxes)} boxes con data-asin")
+        return _process_deal_boxes(deal_boxes)
+    
+    # Strategy 4: Cerca link di prodotto con /dp/
+    links = soup.find_all("a", {"href": re.compile(r"/dp/[A-Z0-9]{10}")})
+    if links:
+        logger.info(f"✅ Strategy 4: {len(links)} product links trovati")
+        # Prendi parent div per ogni link
+        deal_boxes = [link.find_parent("div") for link in links if link.find_parent("div")]
+        deal_boxes = list(set(deal_boxes))  # Rimuovi duplicati
+        return _process_deal_boxes(deal_boxes)
+    
+    # Strategy 5: Cerca per stringhe contenenti "€"
+    spans_with_price = soup.find_all("span", string=re.compile(r"€"))
+    if spans_with_price:
+        logger.info(f"✅ Strategy 5: {len(spans_with_price)} span con € trovati")
+        deal_boxes = [s.find_parent("div", recursive=True) for s in spans_with_price]
         deal_boxes = [b for b in deal_boxes if b]
+        deal_boxes = list(set(deal_boxes))  # Rimuovi duplicati
+        return _process_deal_boxes(deal_boxes)
     
-    # Altro fallback
-    if not deal_boxes:
-        logger.warning("Secondary selector failed — trying generic…")
-        deal_boxes = soup.find_all("div", {"data-component-type": "s-search-result"})
-    
-    if not deal_boxes:
-        logger.warning(f"❌ No deal boxes found — HTML could be outdated")
-        logger.debug(f"HTML snippet: {response.text[:500]}")
-        return []
-    
-    logger.info(f"✅ Found {len(deal_boxes)} deal boxes")
-    
+    logger.warning(f"❌ Nessuna strategy riuscita. HTML structure changed.")
+    logger.warning(f"Salva {debug_file} per analisi manuale")
+    return []
+
+
+def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
+    """Estrai deals da una lista di box."""
     deals = []
+    logger.info(f"📦 Processing {len(deal_boxes)} deal boxes…")
+    
     for idx, box in enumerate(deal_boxes):
         try:
             # ASIN
             asin = box.get("data-asin")
             if not asin:
-                link = box.find("a", {"class": "a-link-normal"})
+                link = box.find("a", {"href": re.compile(r"/dp/[A-Z0-9]{10}")})
                 if link:
                     asin = extract_asin(link.get("href", ""))
             if not asin:
                 continue
             
-            # Title
-            title_elem = box.find("span", {"class": "a-size-base-plus"})
-            if not title_elem:
-                title_elem = box.find("h2")
-            if not title_elem:
-                title_elem = box.find("span", {"class": "a-price"})
+            # Title — prova multipli selettori
+            title_elem = None
+            for selector in [
+                {"class": "a-size-base-plus"},
+                {"class": "a-size-medium"},
+                {"class": "a-text-normal"},
+                {"name": "h2"},
+            ]:
+                title_elem = box.find("span", selector) if "class" in selector else box.find(selector.get("name"))
+                if title_elem:
+                    break
+            
             title = title_elem.get_text(strip=True) if title_elem else ""
-            if not title:
+            if not title or len(title) < 5:
                 continue
             
             # URL
-            link = box.find("a", {"class": "a-link-normal"})
+            link = box.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
             if not link or not link.get("href"):
                 continue
             url_prod = link["href"]
@@ -368,30 +433,25 @@ def fetch_deals_scraping() -> List[Deal]:
                 url_prod = "https://www.amazon.it/" + url_prod
             url_prod = url_prod.split("?")[0]
             
-            # Prices — prova multipli selettori
-            price_elem = box.find("span", {"class": "a-price-whole"})
-            price_str = price_elem.get_text(strip=True) if price_elem else ""
+            # Prices — estrattore robusto
+            price_now = None
+            price_orig = None
             
-            if not price_str:
-                price_elem = box.find("span", {"class": re.compile(r"a-price-whole|a-price-symbol|a-price")})
-                price_str = price_elem.get_text(strip=True) if price_elem else ""
+            # Cerca span con €
+            price_spans = box.find_all("span", string=re.compile(r"€"))
+            for ps in price_spans:
+                p = parse_price(ps.get_text(strip=True))
+                if p and p > 0:
+                    if not price_now:
+                        price_now = p
+                    elif p > price_now:  # Prezzo più alto = originale
+                        price_orig = p
             
-            price_now = parse_price(price_str)
             if not price_now or price_now == 0:
                 continue
             
-            # Prezzo originale
-            price_orig_elem = box.find("span", {"class": "a-price-strike"})
-            price_orig = parse_price(price_orig_elem.get_text(strip=True) if price_orig_elem else "")
-            
-            # Se non abbiamo prezzo originale, cercalo in alt tag o altri posti
-            if not price_orig:
-                price_orig_elem = box.find("span", {"class": re.compile(r"a-text-strike")})
-                if price_orig_elem:
-                    price_orig = parse_price(price_orig_elem.get_text(strip=True))
-            
             # Discount
-            discount_elem = box.find("span", {"class": re.compile(r"badge|a-badge-label")})
+            discount_elem = box.find("span", {"class": re.compile(r"badge|discount|percent")}, string=re.compile(r"%"))
             discount_str = discount_elem.get_text(strip=True) if discount_elem else ""
             discount = parse_discount(discount_str)
             
@@ -402,7 +462,7 @@ def fetch_deals_scraping() -> List[Deal]:
             if discount < Config.MIN_DISCOUNT_PERCENT:
                 continue
             
-            img = box.find("img", {"class": "s-image"})
+            img = box.find("img")
             image_url = img.get("src", "") if img else ""
             
             deal = Deal(
@@ -433,97 +493,362 @@ def fetch_deals_scraping() -> List[Deal]:
 
 
 # ──────────────────────────────────────────────
-# RAPIDAPI FALLBACK
+# RAPIDAPI ENDPOINT DISCOVERY
 # ──────────────────────────────────────────────
-def fetch_deals_rapidapi() -> List[Deal]:
-    """RapidAPI fallback."""
+def discover_rapidapi_endpoints() -> Dict[str, bool]:
+    """
+    Testa endpoint disponibili sull'API per scoprire quali funzionano.
+    Utile per piano gratuito con limitazioni.
+    
+    Ritorna: {"endpoint": bool_success}
+    """
     if not Config.RAPIDAPI_KEY:
-        return []
+        logger.warning("RAPIDAPI_KEY non configurato, skipping discovery")
+        return {}
     
-    logger.info("🔶 FALLBACK: RapidAPI…")
+    logger.info("🔍 Discovering RapidAPI endpoints…")
     
-    endpoint = f"https://{Config.RAPIDAPI_HOST}/deals-v2"
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
-    params = {"country": Config.AMAZON_COUNTRY}
     
-    try:
-        response = requests.get(endpoint, headers=headers, params=params, timeout=20)
-        response.raise_for_status()
-    except Exception as e:
-        logger.error(f"RapidAPI error: {e}")
-        return []
+    # Endpoint comuni da testare
+    endpoints_to_test = [
+        "deals",
+        "deals-v2",
+        "deal-products",
+        "best-sellers",
+        "products-by-category",
+        "product-offers",
+        "product-search",
+    ]
     
-    data = response.json()
-    raw_deals = data.get("deals") or data.get("data", {}).get("deals", []) or []
+    results = {}
     
-    if not raw_deals:
-        logger.warning("RapidAPI: no deals")
-        return []
-    
-    deals = []
-    for item in raw_deals:
+    for endpoint in endpoints_to_test:
         try:
-            asin = item.get("product_asin", "")
-            if not asin:
+            url = f"https://{Config.RAPIDAPI_HOST}/{endpoint}"
+            params = {"country": Config.AMAZON_COUNTRY, "page": 1}
+            
+            logger.debug(f"Testing /{endpoint}…")
+            response = requests.get(url, headers=headers, params=params, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                has_data = bool(data.get("deals") or data.get("data") or data.get("products") or data.get("results"))
+                results[endpoint] = has_data
+                
+                if has_data:
+                    logger.info(f"  ✅ /{endpoint}: OK (has data)")
+                else:
+                    logger.debug(f"  ⚠️  /{endpoint}: 200 but empty")
+            else:
+                results[endpoint] = False
+                logger.debug(f"  ❌ /{endpoint}: {response.status_code}")
+        
+        except Exception as e:
+            results[endpoint] = False
+            logger.debug(f"  ❌ /{endpoint}: {str(e)[:50]}")
+    
+    # Salva risultati
+    working = {k: v for k, v in results.items() if v}
+    logger.info(f"📊 Working endpoints: {list(working.keys())}")
+    
+    return results
+
+
+# ──────────────────────────────────────────────
+# RAPIDAPI FALLBACK
+# ──────────────────────────────────────────────
+def fetch_deals_rapidapi() -> List[Deal]:
+    """RapidAPI fallback — prova /deals-v2 e fallback a /deals se necessario."""
+    if not Config.RAPIDAPI_KEY:
+        return []
+    
+    logger.info("🔶 FALLBACK: RapidAPI (provo /deals-v2 e /best-sellers)…")
+    
+    headers = {
+        "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
+        "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
+    }
+    
+    # Prova endpoints in quest'ordine
+    endpoints_to_try = [
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 1}),
+        ("deal-products", {"country": Config.AMAZON_COUNTRY, "page": 1}),
+        ("deals", {"country": Config.AMAZON_COUNTRY, "page": 1}),
+        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "all"}),
+        ("products-by-category", {"country": Config.AMAZON_COUNTRY, "category": "electronics", "page": 1}),
+    ]
+    
+    for endpoint_name, params in endpoints_to_try:
+        try:
+            url = f"https://{Config.RAPIDAPI_HOST}/{endpoint_name}"
+            logger.debug(f"Trying /{endpoint_name}…")
+            
+            response = requests.get(url, headers=headers, params=params, timeout=20)
+            response.raise_for_status()
+            
+            data = response.json()
+            
+            # Estrai deals da vari formati API
+            raw_deals = (
+                data.get("deals") or 
+                data.get("data", {}).get("deals") or 
+                data.get("products") or
+                data.get("data", {}).get("products") or
+                data.get("results") or
+                data.get("data", {}).get("results") or
+                []
+            )
+            
+            if not raw_deals:
+                logger.debug(f"/{endpoint_name}: no data, trying next…")
                 continue
             
-            url_prod = item.get("deal_url", f"https://www.amazon.it/dp/{asin}")
-            badge = item.get("deal_badge", "")
-            discount = parse_discount(badge)
+            # Processa deals trovati
+            deals = _process_rapidapi_deals(raw_deals, endpoint_name)
+            
+            if deals:
+                logger.info(f"✅ RapidAPI /{endpoint_name}: {len(deals)} deals [1 call]")
+                return deals
+        
+        except Exception as e:
+            logger.debug(f"/{endpoint_name} failed: {e}")
+            continue
+    
+    logger.warning("RapidAPI: Nessun endpoint ha restituito risultati validi")
+    return []
+
+
+def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]:
+    """Processa deals da vari endpoint RapidAPI."""
+    deals = []
+    
+    for item in raw_deals:
+        try:
+            # Estrai ASIN (key variabile tra endpoint)
+            asin = item.get("product_asin") or item.get("asin") or item.get("id", "")
+            if not asin or len(asin) < 5:
+                continue
+            
+            # Titolo
+            title = (
+                item.get("deal_title") or 
+                item.get("product_title") or 
+                item.get("title") or 
+                ""
+            )[:100]
+            if not title:
+                continue
+            
+            # URL
+            url_prod = (
+                item.get("deal_url") or 
+                item.get("product_url") or 
+                item.get("url") or 
+                f"https://www.amazon.it/dp/{asin}"
+            )
+            
+            # Prezzo attuale
+            price_now = (
+                parse_price(item.get("deal_price")) or
+                parse_price(item.get("product_price")) or
+                parse_price(item.get("price")) or
+                0.0
+            )
+            
+            if not price_now or price_now == 0:
+                continue
+            
+            # Prezzo originale
+            price_orig = (
+                parse_price(item.get("deal_price_original")) or
+                parse_price(item.get("product_original_price")) or
+                parse_price(item.get("original_price")) or
+                None
+            )
+            
+            # Sconto
+            discount_str = (
+                item.get("deal_badge") or 
+                item.get("discount_badge") or 
+                item.get("badge") or
+                ""
+            )
+            discount = parse_discount(discount_str)
+            
+            # Calcola se necessario
+            if discount == 0 and price_orig and price_orig > price_now:
+                discount = round((price_orig - price_now) / price_orig * 100)
             
             if discount < Config.MIN_DISCOUNT_PERCENT:
                 continue
             
-            # Estrai prezzi dalle informazioni disponibili
-            price_now = parse_price(item.get("deal_price", ""))
-            price_orig = parse_price(item.get("deal_price_original", "")) or parse_price(item.get("product_original_price", ""))
-            
-            # Se non abbiamo il prezzo attuale, salta
-            if not price_now or price_now == 0:
-                logger.debug(f"RapidAPI: no price for {asin}")
-                continue
+            # Immagine
+            image_url = (
+                item.get("deal_photo") or 
+                item.get("product_image") or 
+                item.get("image") or 
+                ""
+            )
             
             deal = Deal(
-                deal_id=f"rapidapi_{asin}",
+                deal_id=f"rapidapi_{source_endpoint}_{asin}",
                 asin=asin,
-                title=item.get("deal_title", "Offerta")[:100],
+                title=title,
                 url=url_prod,
                 affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
                 price_now=price_now,
                 price_orig=price_orig,
                 discount_percent=discount,
-                image_url=item.get("deal_photo", ""),
-                category=item.get("deal_type", "Offerta"),
-                source="rapidapi",
+                image_url=image_url,
+                category=item.get("deal_type") or item.get("category") or "Offerta",
+                source=f"rapidapi_{source_endpoint}",
             )
             deals.append(deal)
-            logger.debug(f"RapidAPI Deal: {item.get('deal_title', '')[:40]} | €{price_now:.2f} | -{discount}%")
+            
+            logger.debug(f"✅ Deal: {title[:40]} | €{price_now:.2f} | -{discount}% [{source_endpoint}]")
+            
+            if len(deals) >= Config.MAX_DEALS_PER_RUN:
+                break
+        
+        except Exception as e:
+            logger.debug(f"Item error: {e}")
+            continue
+    
+    return deals
+
+
+def fetch_deals_rapidapi_search() -> List[Deal]:
+    """RapidAPI /search endpoint — per varietà (usare alternato)."""
+    if not Config.RAPIDAPI_KEY:
+        return []
+    
+    logger.info("🔶 SECONDARY: RapidAPI /search…")
+    
+    endpoint = f"https://{Config.RAPIDAPI_HOST}/search"
+    headers = {
+        "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
+        "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
+    }
+    
+    # Cerca bestseller in categorie varie
+    queries = ["bestseller italy", "offerte sconti", "deals oggi"]
+    query = random.choice(queries)
+    
+    params = {
+        "query": query,
+        "country": Config.AMAZON_COUNTRY,
+        "page": 1,
+    }
+    
+    try:
+        logger.debug(f"Searching: {query}")
+        response = requests.get(endpoint, headers=headers, params=params, timeout=20)
+        response.raise_for_status()
+    except Exception as e:
+        logger.error(f"RapidAPI /search error: {e}")
+        return []
+    
+    data = response.json()
+    raw_products = data.get("data") or data.get("results", []) or []
+    
+    if not raw_products:
+        logger.warning("RapidAPI /search: no products")
+        return []
+    
+    deals = []
+    for item in raw_products:
+        try:
+            asin = item.get("asin", "")
+            if not asin:
+                continue
+            
+            url_prod = item.get("product_url", f"https://www.amazon.it/dp/{asin}")
+            price_current = parse_price(item.get("product_price", ""))
+            price_original = parse_price(item.get("product_original_price", ""))
+            
+            if not price_current or price_current == 0:
+                continue
+            
+            # Calcola discount
+            discount = 0
+            if price_original and price_original > price_current:
+                discount = round((price_original - price_current) / price_original * 100)
+            
+            # Filtra: solo se sconto significativo
+            if discount < Config.MIN_DISCOUNT_PERCENT:
+                continue
+            
+            deal = Deal(
+                deal_id=f"rapidapi_search_{asin}",
+                asin=asin,
+                title=item.get("product_title", "Prodotto")[:100],
+                url=url_prod,
+                affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
+                price_now=price_current,
+                price_orig=price_original,
+                discount_percent=discount,
+                image_url=item.get("product_image", ""),
+                category=item.get("product_category", "Vario"),
+                source="rapidapi_search",
+            )
+            deals.append(deal)
+            logger.debug(f"Search Hit: {item.get('product_title', '')[:40]} | €{price_current:.2f} | -{discount}%")
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
         except Exception as e:
-            logger.debug(f"RapidAPI item error: {e}")
+            logger.debug(f"RapidAPI search item error: {e}")
             continue
     
-    logger.info(f"✅ RapidAPI: {len(deals)} deals")
+    logger.info(f"✅ RapidAPI /search: {len(deals)} deals")
     return deals
 
 
 def fetch_deals() -> List[Deal]:
-    """PRIMARY → FALLBACK"""
+    """
+    Strategia ibrida per piano gratuito RapidAPI:
+    
+    1. PRIMARY: Scraping (free, ma fragile)
+    2. FALLBACK 1: RapidAPI /deals-v2 (1 call, affidabile, cheap)
+    3. FALLBACK 2: RapidAPI /search (1 call, varietà — usato alternato)
+    
+    Budget: ~2 call/run × 60 run/mese = 120 call/mese ✅ (sotto 500 limite free)
+    """
     logger.info("╔" + "═"*50)
-    logger.info("║ FETCH DEALS")
+    logger.info("║ FETCH DEALS — Hybrid Strategy (Free RapidAPI)")
     logger.info("╚" + "═"*50)
     
+    # ⚠️  NOTA: Amazon goldbox HTML cambia frequentemente
     deals = fetch_deals_scraping()
-    if not deals:
-        logger.warning("Scraping failed → RapidAPI fallback…")
-        deals = fetch_deals_rapidapi()
     
-    logger.info(f"📦 Total: {len(deals)} deals")
-    return deals
+    if deals:
+        logger.info(f"✅ Scraping riuscito: {len(deals)} deals")
+        return deals
+    
+    # FALLBACK PRIMARY: /deals-v2 (sempre disponibile)
+    logger.warning("⚠️  Scraping fallito → RapidAPI /deals-v2…")
+    deals = fetch_deals_rapidapi()
+    
+    if deals:
+        logger.info(f"✅ RapidAPI /deals-v2: {len(deals)} deals [1 call]")
+        return deals
+    
+    # FALLBACK SECONDARIO: /search (alternato per risparmiare quota)
+    # Usa solo lunedi/mercoledi/venerdi per varietà senza sprecare call
+    if datetime.now().weekday() in [0, 2, 4]:  # Mon, Wed, Fri
+        logger.warning("⚠️  /deals-v2 fallito → RapidAPI /search (varietà)…")
+        deals = fetch_deals_rapidapi_search()
+        
+        if deals:
+            logger.info(f"✅ RapidAPI /search: {len(deals)} deals [1 call alternato]")
+            return deals
+    
+    logger.critical("❌ Tutti gli endpoint falliti")
+    logger.info(f"📄 Controlla bot.log per debug")
+    return []
 
 
 # ──────────────────────────────────────────────
