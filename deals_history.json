@@ -43,5 +43,50 @@
     "timestamp": "2026-04-17T12:18:52.831482",
     "price_prev": null,
     "posted": true
+  },
+  "rapidapi_deals-v2_B0FHK7S731": {
+    "deal_id": "rapidapi_deals-v2_B0FHK7S731",
+    "asin": "B0FHK7S731",
+    "title": "Google Pixel 10 - Smartphone Android sbloccato con Gemini, tripla fotocamera posteriore avanzata, au",
+    "price_now": 549.0,
+    "timestamp": "2026-04-17T13:38:54.853144",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_B0DQPSZZZQ": {
+    "deal_id": "rapidapi_deals-v2_B0DQPSZZZQ",
+    "asin": "B0DQPSZZZQ",
+    "title": "roborock QV 35A Robot Aspirapolvere, Antigroviglio, 8000Pa, Panno Sollevabile, Autolavaggio, Asciuga",
+    "price_now": 349.99,
+    "timestamp": "2026-04-17T13:38:54.853432",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_B0G5WMLPNQ": {
+    "deal_id": "rapidapi_deals-v2_B0G5WMLPNQ",
+    "asin": "B0G5WMLPNQ",
+    "title": "ECOVACS Goat O600 RTK Care Kit Robot Tosaerba Senza Cavi Perimetrali, per Aree Fino a 600 M\u00b2, Naviga",
+    "price_now": 499.0,
+    "timestamp": "2026-04-17T13:38:54.853720",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_B0G7XRSJNS": {
+    "deal_id": "rapidapi_deals-v2_B0G7XRSJNS",
+    "asin": "B0G7XRSJNS",
+    "title": "LEFANT M3 Ultra Robot Aspirapolvere e Lavapavimenti con Mappatura, Laser dToF 360\u00b0, Aspirazione 2300",
+    "price_now": 379.99,
+    "timestamp": "2026-04-17T13:38:54.853990",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_B09YMR4DV3": {
+    "deal_id": "rapidapi_deals-v2_B09YMR4DV3",
+    "asin": "B09YMR4DV3",
+    "title": "Caff\u00e8 Borbone Miscela Mia Napoli - 100 Capsule ALLUMINIO (10 confezioni da 10) - Compatibili con le ",
+    "price_now": 18.85,
+    "timestamp": "2026-04-17T13:38:54.854484",
+    "price_prev": null,
+    "posted": true
   }
 }
