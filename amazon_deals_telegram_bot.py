@@ -45,8 +45,6 @@ try:
     HAS_BEAUTIFULSOUP = True
 except ImportError:
     HAS_BEAUTIFULSOUP = False
-    logger_tmp = logging.getLogger()
-    logger_tmp.warning("⚠️  BeautifulSoup non installato — pip install beautifulsoup4")
 
 load_dotenv()
 
@@ -76,7 +74,7 @@ class Config:
     AMAZON_COUNTRY = os.getenv("AMAZON_COUNTRY", "IT")
     
     DEALS_DB_FILE = "deals_history.json"
-    DB_RETENTION_DAYS = 7
+    DB_RETENTION_DAYS = 30  # Mantieni history per 30 giorni, poi pulisci
     
     @classmethod
     def validate(cls) -> None:
@@ -88,6 +86,32 @@ class Config:
         missing = [k for k, v in required.items() if not v]
         if missing:
             raise EnvironmentError(f"Missing env vars: {', '.join(missing)}")
+
+
+# ──────────────────────────────────────────────
+# PROXY GRATUITI (Rotation)
+# ──────────────────────────────────────────────
+FREE_PROXIES = [
+    "http://10.10.1.10:3128",
+    "http://proxy.lum.superproxy.io:22225",
+    "http://1.10.186.254:50625",
+    "http://110.78.146.17:8080",
+    "http://41.174.179.147:8080",
+]
+
+
+def get_random_proxy() -> Optional[str]:
+    """Ritorna un proxy casuale dalla lista (con fallback a None)."""
+    if random.random() > 0.5:  # 50% di probabilità di usare proxy
+        return random.choice(FREE_PROXIES)
+    return None
+
+
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+]
 
 
 # ──────────────────────────────────────────────
@@ -264,7 +288,17 @@ def fetch_deals_scraping() -> List[Deal]:
     
     try:
         session = requests.Session()
-        response = session.get(url, headers=headers, timeout=20)
+        # Aggiungi proxy per evitare blocchi
+        proxy = get_random_proxy()
+        proxies = {"http": proxy, "https": proxy} if proxy else {}
+        
+        try:
+            response = session.get(url, headers=headers, timeout=20, proxies=proxies)
+        except requests.exceptions.ProxyError:
+            # Fallback senza proxy se proxy fallisce
+            logger.warning(f"Proxy error — riprovo senza proxy…")
+            response = session.get(url, headers=headers, timeout=20)
+        
         response.raise_for_status()
     except Exception as e:
         logger.warning(f"Errore scraping: {e}")
