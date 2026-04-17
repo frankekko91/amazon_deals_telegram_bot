@@ -1155,17 +1155,19 @@ async def post_deals(deals: List[Tuple[Deal, str]]) -> None:
     for i, (deal, reason) in enumerate(deals, 1):
         try:
             # Create inline keyboard with buttons
+            # Share URL per Telegram (funziona su mobile e web)
+            share_url = f"https://t.me/share/url?url={deal.affiliate_url}&text={deal.title}"
+            
             keyboard = [
                 [
                     telegram.InlineKeyboardButton("🛒 Buy", url=deal.affiliate_url),
-                    telegram.InlineKeyboardButton("💾 Save", callback_data=f"save_{deal.deal_id}"),
-                ],
-                [
-                    telegram.InlineKeyboardButton("📢 Share", callback_data=f"share_{deal.deal_id}"),
+                    telegram.InlineKeyboardButton("📢 Share", url=share_url),
                 ]
             ]
             reply_markup = telegram.InlineKeyboardMarkup(keyboard)
             
+            # Invia come testo con link preview abilitato
+            # Telegram genererà automaticamente l'anteprima del link (con foto di Amazon)
             await bot.send_message(
                 chat_id=Config.TELEGRAM_CHANNEL_ID,
                 text=format_deal_message(deal, i, len(deals), reason),
@@ -1173,6 +1175,7 @@ async def post_deals(deals: List[Tuple[Deal, str]]) -> None:
                 reply_markup=reply_markup,
                 disable_web_page_preview=False,
             )
+            
             logger.info(f"✅ Posted {i}/{len(deals)}: {deal.title[:40]}")
         except Exception as e:
             logger.error(f"Post error: {e}")
