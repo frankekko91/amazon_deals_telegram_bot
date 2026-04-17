@@ -795,28 +795,30 @@ def fetch_deals_rapidapi() -> List[Deal]:
         logger.warning("❌ RAPIDAPI_KEY non configurato")
         return []
     
-    logger.info("🔶 FALLBACK: RapidAPI (multi-endpoint)…")
+    logger.info("PRIMARY: RapidAPI (multi-endpoint)…")
     
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
     
-    # Matrice di endpoint + parametri per massimizzare varietà
+    # Matrice di endpoint + parametri — DIVERSE SOURCES, NO DUPLICATES
+    # Skip deals-v2 page 2 perché ritorna gli stessi di page 1
     endpoints_matrix = [
         # (endpoint, params)
         ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 2}),  # Pagina 2
         ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "electronics"}),
         ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "home"}),
-        ("products-by-category", {"country": Config.AMAZON_COUNTRY, "category": "electronics", "page": 1}),
+        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "sports"}),
         ("deal-products", {"country": Config.AMAZON_COUNTRY, "page": 1}),
+        ("products-by-category", {"country": Config.AMAZON_COUNTRY, "category": "electronics", "page": 1}),
     ]
     
     all_deals = []
+    seen_asins = set()  # Dedup by ASIN
     
     for endpoint_name, params in endpoints_matrix:
-        if len(all_deals) >= Config.MAX_DEALS_PER_RUN * 2:  # Raccogli 2x per varietà
+        if len(all_deals) >= Config.MAX_DEALS_PER_RUN * 3:  # Raccogli 3x per varietà (15 deal)
             break
         
         try:
@@ -846,8 +848,14 @@ def fetch_deals_rapidapi() -> List[Deal]:
             
             # Processa deals trovati
             deals = _process_rapidapi_deals(raw_deals, endpoint_name)
-            all_deals.extend(deals)
-            logger.info(f"    ✅ {endpoint_name}: {len(deals)} deals")
+            
+            # Aggiungi solo prodotti non duplicati
+            for deal in deals:
+                if deal.asin not in seen_asins:
+                    seen_asins.add(deal.asin)
+                    all_deals.append(deal)
+            
+            logger.info(f"    ✅ {endpoint_name}: {len(deals)} deals ({len(all_deals)} total unique)")
         
         except requests.exceptions.Timeout:
             logger.debug(f"    ⏱️  Timeout")
@@ -855,7 +863,7 @@ def fetch_deals_rapidapi() -> List[Deal]:
             logger.debug(f"    ❌ {type(e).__name__}")
     
     if all_deals:
-        logger.info(f"✅ RapidAPI total: {len(all_deals)} deals")
+        logger.info(f"✅ RapidAPI total: {len(all_deals)} unique deals")
         return all_deals
     
     logger.critical("❌ RapidAPI: nessun endpoint riuscito")
@@ -1070,34 +1078,26 @@ def fetch_deals_rapidapi_search() -> List[Deal]:
 
 def fetch_deals() -> List[Deal]:
     """
-    Strategia ibrida multi-source:
+    Strategia RapidAPI ottimizzata:
     
-    1. PRIMARY: Scraping con Selenium (se disponibile) → JavaScript rendering
-    2. FALLBACK: BeautifulSoup multi-URL
-    3. BACKUP: RapidAPI multi-endpoint (deals-v2, best-sellers, categories, etc)
+    - Multi-endpoint (deals-v2, best-sellers, deal-products, ecc)
+    - Deduplicazione per ASIN
+    - 15+ prodotti per diversity
     
-    Budget: ~5-10 call/run × 60 run/mese = max 600 call ✅ (sotto 500-1000 limite)
+    Budget: ~6 call/run × 60 run/mese = max 360 call (sotto 500-1000 limite)
     """
     logger.info("╔" + "═"*50)
-    logger.info("║ FETCH DEALS — Multi-Source Strategy")
+    logger.info("║ FETCH DEALS — RapidAPI Only Strategy")
     logger.info("╚" + "═"*50)
     
-    # STRATEGY 1: Scraping (Selenium → BeautifulSoup)
-    deals = fetch_deals_scraping()
-    
-    if deals:
-        logger.info(f"✅ Scraping riuscito: {len(deals)} deals")
-        return deals
-    
-    # STRATEGY 2: RapidAPI multi-endpoint
-    logger.warning("⚠️  Scraping fallito → RapidAPI multi-endpoint…")
+    # STRATEGY: RapidAPI multi-endpoint (scraping non funziona su GitHub)
     deals = fetch_deals_rapidapi()
     
     if deals:
-        logger.info(f"✅ RapidAPI: {len(deals)} deals")
+        logger.info(f"✅ RapidAPI: {len(deals)} deals estratti")
         return deals
     
-    logger.critical("❌ Tutte le strategie fallite")
+    logger.critical("❌ RapidAPI fallito — nessun deal trovato")
     return []
 
 
