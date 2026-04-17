@@ -828,17 +828,8 @@ def fetch_deals_rapidapi() -> List[Deal]:
             
             data = response.json()
             
-            # Estrai deals da vari formati API (flessibile per cambiamenti)
-            raw_deals = (
-                data.get("deals") or 
-                data.get("data", {}).get("deals") or 
-                data.get("data", []) if isinstance(data.get("data"), list) else None or
-                data.get("products") or
-                data.get("data", {}).get("products") or
-                data.get("results") or
-                data.get("data", {}).get("results") or
-                []
-            )
+            # Estrai deals — struttura: data → data → deals
+            raw_deals = data.get("data", {}).get("deals", [])
             
             logger.debug(f"    → {len(raw_deals)} items")
             
