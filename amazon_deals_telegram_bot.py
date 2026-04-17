@@ -72,6 +72,7 @@ class Config:
     MAX_DEALS_PER_RUN = int(os.getenv("MAX_DEALS_PER_RUN", "5"))
     MIN_DISCOUNT_PERCENT = int(os.getenv("MIN_DISCOUNT_PERCENT", "20"))
     AMAZON_COUNTRY = os.getenv("AMAZON_COUNTRY", "IT")
+    FORCE_POST_NEW_DEALS = os.getenv("FORCE_POST_NEW_DEALS", "false").lower() == "true"  # Forza posting di nuovi deal
     
     DEALS_DB_FILE = "deals_history.json"
     DB_RETENTION_DAYS = 30  # Mantieni history per 30 giorni, poi pulisci
@@ -312,58 +313,149 @@ def debug_html_structure(soup) -> None:
 
 
 def fetch_deals_scraping() -> List[Deal]:
-    """Scraping amazon.it/gp/goldbox con BeautifulSoup — Multi-strategy resiliente."""
+    """Scraping amazon.it — Tenta multiple strategie, preferisce Selenium."""
+    logger.info("🔷 PRIMARY: Scraping amazon.it…")
+    
+    # STRATEGY 1: Prova Selenium per JavaScript rendering (se disponibile)
+    try:
+        from selenium import webdriver
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        
+        logger.debug("🚀 Tentando Selenium per rendering dinamico…")
+        result = _scrape_with_selenium()
+        if result and len(result) > 0:
+            logger.info(f"✅ Selenium: {len(result)} deals")
+            return result
+    except ImportError:
+        logger.debug("⚠️  Selenium non disponibile, fallback a BeautifulSoup")
+    except Exception as e:
+        logger.debug(f"Selenium fallito: {e}")
+    
+    # STRATEGY 2: BeautifulSoup su multiple URL
     if not HAS_BEAUTIFULSOUP:
         logger.warning("❌ BeautifulSoup non installato")
         return []
     
-    logger.info("🔷 PRIMARY: Scraping amazon.it/gp/goldbox…")
-    
     urls_to_try = [
         "https://www.amazon.it/gp/goldbox",
-        "https://www.amazon.it/dp/",  # Fallback: lista prodotti
-        "https://www.amazon.it/s?i=digital-deals",  # Deals digitali
+        "https://www.amazon.it/s?k=offerte&i=instant-video",
+        "https://www.amazon.it/s?bbn=43565085&rh=n%3A43565085&ref=nav_cs_streaming",
     ]
-    
-    headers = {
-        "User-Agent": random.choice(USER_AGENTS),
-        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Cache-Control": "no-cache",
-    }
     
     for url in urls_to_try:
         try:
-            session = requests.Session()
-            proxy = get_random_proxy()
-            proxies = {"http": proxy, "https": proxy} if proxy else {}
-            
-            try:
-                logger.debug(f"Trying {url}…")
-                response = session.get(url, headers=headers, timeout=20, proxies=proxies)
-            except requests.exceptions.ProxyError:
-                logger.warning(f"Proxy failed, retrying without…")
-                response = session.get(url, headers=headers, timeout=20)
-            
-            response.raise_for_status()
+            result = _scrape_beautifulsoup_url(url)
+            if result:
+                return result
         except Exception as e:
             logger.debug(f"Failed {url}: {e}")
-            continue
-        
-        try:
-            soup = BeautifulSoup(response.content, "html.parser")
-            
-            # NUOVO: Estrattore aggressivo — qualsiasi div con link prodotto + prezzo
-            result = _aggressive_product_extraction(soup)
-            if result:
-                logger.info(f"✅ Scraping riuscito con estrazione aggressiva: {len(result)} deals")
-                return result
-        
-        except Exception as e:
-            logger.error(f"Parse error {url}: {e}")
-            continue
     
-    logger.warning(f"❌ Scraping fallito su tutte le URL")
+    logger.warning("❌ Scraping fallito su tutte le URL")
+    return []
+
+
+def _scrape_with_selenium() -> List[Deal]:
+    """Scraping con Selenium per rendering JavaScript."""
+    try:
+        from selenium import webdriver
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.chrome.options import Options
+        import time
+        
+        logger.debug("Inizializzando Selenium Chrome…")
+        
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument(f"user-agent={random.choice(USER_AGENTS)}")
+        
+        driver = webdriver.Chrome(options=chrome_options)
+        driver.get("https://www.amazon.it/gp/goldbox")
+        
+        # Wait per rendering
+        time.sleep(3)
+        
+        # Estrai prodotti
+        containers = driver.find_elements(By.CSS_SELECTOR, "[data-component-type='s-search-result']")
+        logger.debug(f"Found {len(containers)} containers via Selenium")
+        
+        deals = []
+        for container in containers[:10]:
+            try:
+                asin_elem = container.find_element(By.CSS_SELECTOR, "[data-asin]")
+                asin = asin_elem.get_attribute("data-asin")
+                
+                title_elem = container.find_element(By.CSS_SELECTOR, "h2 a span")
+                title = title_elem.text[:100]
+                
+                price_span = container.find_element(By.CSS_SELECTOR, "[aria-hidden='true'] .a-price-whole")
+                price_text = price_span.text
+                price_now = parse_price(price_text)
+                
+                if not asin or not title or not price_now:
+                    continue
+                
+                link = container.find_element(By.CSS_SELECTOR, "h2 a")
+                url_prod = link.get_attribute("href")
+                
+                # Get discount if available
+                discount_span = container.find_element(By.CSS_SELECTOR, ".a-badge-flash-sale")
+                discount_text = discount_span.text if discount_span else ""
+                discount = parse_discount(discount_text)
+                
+                if discount < Config.MIN_DISCOUNT_PERCENT:
+                    continue
+                
+                deal = Deal(
+                    deal_id=f"scraping_selenium_{asin}",
+                    asin=asin,
+                    title=title,
+                    url=url_prod,
+                    affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
+                    price_now=price_now,
+                    price_orig=None,
+                    discount_percent=discount,
+                    image_url="",
+                    category="Offerta",
+                    source="scraping_selenium",
+                )
+                deals.append(deal)
+                logger.debug(f"✅ Selenium: {title[:40]} | €{price_now} | -{discount}%")
+            except:
+                continue
+        
+        driver.quit()
+        return deals
+    
+    except Exception as e:
+        logger.debug(f"Selenium error: {e}")
+        return []
+
+
+def _scrape_beautifulsoup_url(url: str) -> List[Deal]:
+    """Scraping BeautifulSoup per una singola URL."""
+    headers = {
+        "User-Agent": random.choice(USER_AGENTS),
+        "Accept-Language": "it-IT,it;q=0.9",
+    }
+    
+    try:
+        logger.debug(f"BeautifulSoup: {url}…")
+        response = requests.get(url, headers=headers, timeout=15)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, "html.parser")
+        result = _aggressive_product_extraction(soup)
+        
+        if result:
+            logger.info(f"✅ BeautifulSoup {url}: {len(result)} deals")
+            return result
+    except Exception as e:
+        logger.debug(f"BeautifulSoup {url} failed: {e}")
+    
     return []
 
 
@@ -698,37 +790,43 @@ def discover_rapidapi_endpoints() -> Dict[str, bool]:
 # RAPIDAPI FALLBACK
 # ──────────────────────────────────────────────
 def fetch_deals_rapidapi() -> List[Deal]:
-    """RapidAPI fallback — prova /deals-v2 e fallback a /deals se necessario."""
+    """RapidAPI — Multi-endpoint strategy per massimizzare varietà."""
     if not Config.RAPIDAPI_KEY:
         logger.warning("❌ RAPIDAPI_KEY non configurato")
         return []
     
-    logger.info("🔶 FALLBACK: RapidAPI (provo endpoints con timeout 15s)…")
+    logger.info("🔶 FALLBACK: RapidAPI (multi-endpoint)…")
     
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
     
-    # Prova endpoints in quest'ordine
-    endpoints_to_try = [
+    # Matrice di endpoint + parametri per massimizzare varietà
+    endpoints_matrix = [
+        # (endpoint, params)
         ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("deal-products", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("deals", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "all"}),
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 2}),  # Pagina 2
+        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "electronics"}),
+        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "home"}),
         ("products-by-category", {"country": Config.AMAZON_COUNTRY, "category": "electronics", "page": 1}),
+        ("deal-products", {"country": Config.AMAZON_COUNTRY, "page": 1}),
     ]
     
-    for endpoint_name, params in endpoints_to_try:
+    all_deals = []
+    
+    for endpoint_name, params in endpoints_matrix:
+        if len(all_deals) >= Config.MAX_DEALS_PER_RUN * 2:  # Raccogli 2x per varietà
+            break
+        
         try:
             url = f"https://{Config.RAPIDAPI_HOST}/{endpoint_name}"
-            logger.info(f"  → Provo /{endpoint_name}…")
+            logger.debug(f"  → {endpoint_name} {params}…")
             
             response = requests.get(url, headers=headers, params=params, timeout=15)
             response.raise_for_status()
             
             data = response.json()
-            logger.debug(f"    Response keys: {list(data.keys())}")
             
             # Estrai deals da vari formati API
             raw_deals = (
@@ -741,38 +839,26 @@ def fetch_deals_rapidapi() -> List[Deal]:
                 []
             )
             
-            logger.info(f"    Found {len(raw_deals)} raw items")
-            
-            if raw_deals and len(raw_deals) > 0:
-                # Log sample first item structure
-                first_item = raw_deals[0]
-                logger.debug(f"    First item keys: {list(first_item.keys())}")
-                logger.debug(f"    First item: {str(first_item)[:300]}")
+            logger.debug(f"    → {len(raw_deals)} items")
             
             if not raw_deals:
-                logger.info(f"    ⏭️  /{endpoint_name}: no data in response")
                 continue
             
             # Processa deals trovati
             deals = _process_rapidapi_deals(raw_deals, endpoint_name)
-            
-            if deals:
-                logger.info(f"✅ RapidAPI /{endpoint_name}: {len(deals)} deals [1 call]")
-                return deals
-            else:
-                logger.info(f"    ⏭️  /{endpoint_name}: found {len(raw_deals)} items but no valid deals")
+            all_deals.extend(deals)
+            logger.info(f"    ✅ {endpoint_name}: {len(deals)} deals")
         
         except requests.exceptions.Timeout:
-            logger.warning(f"    ⏱️  /{endpoint_name}: TIMEOUT (15s)")
-            continue
-        except requests.exceptions.ConnectionError as e:
-            logger.warning(f"    🌐 /{endpoint_name}: CONNECTION ERROR - {str(e)[:50]}")
-            continue
+            logger.debug(f"    ⏱️  Timeout")
         except Exception as e:
-            logger.warning(f"    ❌ /{endpoint_name}: {type(e).__name__} - {str(e)[:80]}")
-            continue
+            logger.debug(f"    ❌ {type(e).__name__}")
     
-    logger.critical("❌ RapidAPI: Nessun endpoint ha restituito risultati validi")
+    if all_deals:
+        logger.info(f"✅ RapidAPI total: {len(all_deals)} deals")
+        return all_deals
+    
+    logger.critical("❌ RapidAPI: nessun endpoint riuscito")
     return []
 
 
@@ -984,45 +1070,34 @@ def fetch_deals_rapidapi_search() -> List[Deal]:
 
 def fetch_deals() -> List[Deal]:
     """
-    Strategia ibrida per piano gratuito RapidAPI:
+    Strategia ibrida multi-source:
     
-    1. PRIMARY: Scraping (free, ma fragile)
-    2. FALLBACK 1: RapidAPI /deals-v2 (1 call, affidabile, cheap)
-    3. FALLBACK 2: RapidAPI /search (1 call, varietà — usato alternato)
+    1. PRIMARY: Scraping con Selenium (se disponibile) → JavaScript rendering
+    2. FALLBACK: BeautifulSoup multi-URL
+    3. BACKUP: RapidAPI multi-endpoint (deals-v2, best-sellers, categories, etc)
     
-    Budget: ~2 call/run × 60 run/mese = 120 call/mese ✅ (sotto 500 limite free)
+    Budget: ~5-10 call/run × 60 run/mese = max 600 call ✅ (sotto 500-1000 limite)
     """
     logger.info("╔" + "═"*50)
-    logger.info("║ FETCH DEALS — Hybrid Strategy (Free RapidAPI)")
+    logger.info("║ FETCH DEALS — Multi-Source Strategy")
     logger.info("╚" + "═"*50)
     
-    # ⚠️  NOTA: Amazon goldbox HTML cambia frequentemente
+    # STRATEGY 1: Scraping (Selenium → BeautifulSoup)
     deals = fetch_deals_scraping()
     
     if deals:
         logger.info(f"✅ Scraping riuscito: {len(deals)} deals")
         return deals
     
-    # FALLBACK PRIMARY: /deals-v2 (sempre disponibile)
-    logger.warning("⚠️  Scraping fallito → RapidAPI /deals-v2…")
+    # STRATEGY 2: RapidAPI multi-endpoint
+    logger.warning("⚠️  Scraping fallito → RapidAPI multi-endpoint…")
     deals = fetch_deals_rapidapi()
     
     if deals:
-        logger.info(f"✅ RapidAPI /deals-v2: {len(deals)} deals [1 call]")
+        logger.info(f"✅ RapidAPI: {len(deals)} deals")
         return deals
     
-    # FALLBACK SECONDARIO: /search (alternato per risparmiare quota)
-    # Usa solo lunedi/mercoledi/venerdi per varietà senza sprecare call
-    if datetime.now().weekday() in [0, 2, 4]:  # Mon, Wed, Fri
-        logger.warning("⚠️  /deals-v2 fallito → RapidAPI /search (varietà)…")
-        deals = fetch_deals_rapidapi_search()
-        
-        if deals:
-            logger.info(f"✅ RapidAPI /search: {len(deals)} deals [1 call alternato]")
-            return deals
-    
-    logger.critical("❌ Tutti gli endpoint falliti")
-    logger.info(f"📄 Controlla bot.log per debug")
+    logger.critical("❌ Tutte le strategie fallite")
     return []
 
 
@@ -1132,18 +1207,31 @@ def run_job() -> None:
         logger.warning("❌ No deals found")
         return
     
+    logger.info(f"📊 Fetched {len(all_deals)} deals (showing diverse products)")
+    
     deals_to_post: List[Tuple[Deal, str]] = []
     
     for deal in all_deals:
         should_post, reason = db.should_post(deal)
         
-        if should_post:
-            deals_to_post.append((deal, reason))
-            db.update(deal, posted=True)
-            logger.info(f"✅ POST: {deal.deal_id} — {reason}")
+        # LOGIC: Force post nuovi deal o se cambiano
+        if Config.FORCE_POST_NEW_DEALS:
+            # Forza posting dei primi N deal per varietà
+            if len(deals_to_post) < Config.MAX_DEALS_PER_RUN:
+                deals_to_post.append((deal, f"✨ Fresh from {deal.source}"))
+                db.update(deal, posted=True)
+                logger.info(f"✅ FORCE POST: {deal.deal_id}")
+            else:
+                db.update(deal, posted=False)
         else:
-            db.update(deal, posted=False)
-            logger.info(f"⏭️  SKIP: {deal.deal_id} — {reason}")
+            # Logica normale: post se nuovo o prezzo sceso
+            if should_post:
+                deals_to_post.append((deal, reason))
+                db.update(deal, posted=True)
+                logger.info(f"✅ POST: {deal.deal_id} — {reason}")
+            else:
+                db.update(deal, posted=False)
+                logger.info(f"⏭️  SKIP: {deal.deal_id} — {reason}")
         
         if len(deals_to_post) >= Config.MAX_DEALS_PER_RUN:
             break
@@ -1151,9 +1239,10 @@ def run_job() -> None:
     db.save()
     
     if deals_to_post:
+        logger.info(f"📤 Posting {len(deals_to_post)} deals…")
         asyncio.run(post_deals(deals_to_post))
     else:
-        logger.info("⏭️  No new deals to post")
+        logger.info("⏭️  No deals to post")
     
     logger.info("\n" + "="*60)
     logger.info("✅ JOB COMPLETE")
