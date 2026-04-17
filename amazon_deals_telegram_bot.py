@@ -397,14 +397,20 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
     
     for idx, box in enumerate(deal_boxes):
         try:
+            logger.debug(f"\n🔍 Processing box {idx}…")
+            
             # ASIN
             asin = box.get("data-asin")
             if not asin:
                 link = box.find("a", {"href": re.compile(r"/dp/[A-Z0-9]{10}")})
                 if link:
                     asin = extract_asin(link.get("href", ""))
+                    logger.debug(f"  ASIN estrapolato da link: {asin}")
             if not asin:
+                logger.debug(f"  ❌ No ASIN found")
                 continue
+            
+            logger.debug(f"  ✅ ASIN: {asin}")
             
             # Title — prova multipli selettori
             title_elem = None
@@ -420,11 +426,15 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             
             title = title_elem.get_text(strip=True) if title_elem else ""
             if not title or len(title) < 5:
+                logger.debug(f"  ❌ No title found or too short")
                 continue
+            
+            logger.debug(f"  ✅ Title: {title[:50]}")
             
             # URL
             link = box.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
             if not link or not link.get("href"):
+                logger.debug(f"  ❌ No product link found")
                 continue
             url_prod = link["href"]
             if url_prod.startswith("/"):
@@ -432,6 +442,7 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             elif not url_prod.startswith("http"):
                 url_prod = "https://www.amazon.it/" + url_prod
             url_prod = url_prod.split("?")[0]
+            logger.debug(f"  ✅ URL: {url_prod[:60]}")
             
             # Prices — estrattore robusto
             price_now = None
@@ -439,16 +450,21 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             
             # Cerca span con €
             price_spans = box.find_all("span", string=re.compile(r"€"))
+            logger.debug(f"  Found {len(price_spans)} price spans")
             for ps in price_spans:
                 p = parse_price(ps.get_text(strip=True))
                 if p and p > 0:
+                    logger.debug(f"    Price found: €{p:.2f}")
                     if not price_now:
                         price_now = p
                     elif p > price_now:  # Prezzo più alto = originale
                         price_orig = p
             
             if not price_now or price_now == 0:
+                logger.debug(f"  ❌ No valid price found")
                 continue
+            
+            logger.debug(f"  ✅ Prices: current=€{price_now:.2f}, original={price_orig}")
             
             # Discount
             discount_elem = box.find("span", {"class": re.compile(r"badge|discount|percent")}, string=re.compile(r"%"))
@@ -459,7 +475,10 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             if discount == 0 and price_orig and price_now and price_orig > price_now:
                 discount = round((price_orig - price_now) / price_orig * 100)
             
+            logger.debug(f"  ✅ Discount: {discount}%")
+            
             if discount < Config.MIN_DISCOUNT_PERCENT:
+                logger.debug(f"  ⏭️  Discount {discount}% < MIN {Config.MIN_DISCOUNT_PERCENT}%")
                 continue
             
             img = box.find("img")
@@ -479,16 +498,16 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
                 source="scraping",
             )
             deals.append(deal)
-            logger.debug(f"✅ Deal: {title[:40]} | €{price_now:.2f} | -{discount}%")
+            logger.info(f"✅ Deal estratto: {title[:40]} | €{price_now:.2f} | -{discount}%")
             
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
         
         except Exception as e:
-            logger.debug(f"Errore deal {idx}: {e}")
+            logger.error(f"❌ Errore deal {idx}: {e}", exc_info=True)
             continue
     
-    logger.info(f"✅ Scraping: {len(deals)} deals estratti")
+    logger.info(f"✅ Scraping: {len(deals)}/{len(deal_boxes)} deals estratti")
     return deals
 
 
@@ -564,9 +583,10 @@ def discover_rapidapi_endpoints() -> Dict[str, bool]:
 def fetch_deals_rapidapi() -> List[Deal]:
     """RapidAPI fallback — prova /deals-v2 e fallback a /deals se necessario."""
     if not Config.RAPIDAPI_KEY:
+        logger.warning("❌ RAPIDAPI_KEY non configurato")
         return []
     
-    logger.info("🔶 FALLBACK: RapidAPI (provo /deals-v2 e /best-sellers)…")
+    logger.info("🔶 FALLBACK: RapidAPI (provo endpoints con timeout 15s)…")
     
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
@@ -585,12 +605,13 @@ def fetch_deals_rapidapi() -> List[Deal]:
     for endpoint_name, params in endpoints_to_try:
         try:
             url = f"https://{Config.RAPIDAPI_HOST}/{endpoint_name}"
-            logger.debug(f"Trying /{endpoint_name}…")
+            logger.info(f"  → Provo /{endpoint_name}…")
             
-            response = requests.get(url, headers=headers, params=params, timeout=20)
+            response = requests.get(url, headers=headers, params=params, timeout=15)
             response.raise_for_status()
             
             data = response.json()
+            logger.debug(f"    Response keys: {list(data.keys())}")
             
             # Estrai deals da vari formati API
             raw_deals = (
@@ -603,8 +624,10 @@ def fetch_deals_rapidapi() -> List[Deal]:
                 []
             )
             
+            logger.debug(f"    Found {len(raw_deals)} raw items")
+            
             if not raw_deals:
-                logger.debug(f"/{endpoint_name}: no data, trying next…")
+                logger.info(f"    ⏭️  /{endpoint_name}: no data in response")
                 continue
             
             # Processa deals trovati
@@ -613,12 +636,20 @@ def fetch_deals_rapidapi() -> List[Deal]:
             if deals:
                 logger.info(f"✅ RapidAPI /{endpoint_name}: {len(deals)} deals [1 call]")
                 return deals
+            else:
+                logger.info(f"    ⏭️  /{endpoint_name}: found {len(raw_deals)} items but no valid deals")
         
+        except requests.exceptions.Timeout:
+            logger.warning(f"    ⏱️  /{endpoint_name}: TIMEOUT (15s)")
+            continue
+        except requests.exceptions.ConnectionError as e:
+            logger.warning(f"    🌐 /{endpoint_name}: CONNECTION ERROR - {str(e)[:50]}")
+            continue
         except Exception as e:
-            logger.debug(f"/{endpoint_name} failed: {e}")
+            logger.warning(f"    ❌ /{endpoint_name}: {type(e).__name__} - {str(e)[:80]}")
             continue
     
-    logger.warning("RapidAPI: Nessun endpoint ha restituito risultati validi")
+    logger.critical("❌ RapidAPI: Nessun endpoint ha restituito risultati validi")
     return []
 
 
