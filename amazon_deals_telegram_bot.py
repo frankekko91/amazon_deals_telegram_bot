@@ -310,11 +310,23 @@ def fetch_deals_scraping() -> List[Deal]:
         logger.error(f"Errore parsing: {e}")
         return []
     
-    # Selectors corretti per amazon.it
+    # Selectors più robusti — prova multipli approcci
     deal_boxes = soup.find_all("div", {
         "class": "s-result-item",
         "data-component-type": "s-search-result"
     })
+    
+    # Fallback selector se il primo non trova risultati
+    if not deal_boxes:
+        logger.warning("Primary selector failed — trying alternative…")
+        deal_boxes = soup.find_all("div", {"class": "a-price-button-row"})
+        deal_boxes = [box.find_parent("div", {"class": "s-result-item"}) for box in deal_boxes]
+        deal_boxes = [b for b in deal_boxes if b]
+    
+    # Altro fallback
+    if not deal_boxes:
+        logger.warning("Secondary selector failed — trying generic…")
+        deal_boxes = soup.find_all("div", {"data-component-type": "s-search-result"})
     
     if not deal_boxes:
         logger.warning(f"❌ No deal boxes found — HTML could be outdated")
@@ -339,6 +351,8 @@ def fetch_deals_scraping() -> List[Deal]:
             title_elem = box.find("span", {"class": "a-size-base-plus"})
             if not title_elem:
                 title_elem = box.find("h2")
+            if not title_elem:
+                title_elem = box.find("span", {"class": "a-price"})
             title = title_elem.get_text(strip=True) if title_elem else ""
             if not title:
                 continue
@@ -354,21 +368,34 @@ def fetch_deals_scraping() -> List[Deal]:
                 url_prod = "https://www.amazon.it/" + url_prod
             url_prod = url_prod.split("?")[0]
             
-            # Prices
+            # Prices — prova multipli selettori
             price_elem = box.find("span", {"class": "a-price-whole"})
             price_str = price_elem.get_text(strip=True) if price_elem else ""
+            
+            if not price_str:
+                price_elem = box.find("span", {"class": re.compile(r"a-price-whole|a-price-symbol|a-price")})
+                price_str = price_elem.get_text(strip=True) if price_elem else ""
+            
             price_now = parse_price(price_str)
             if not price_now or price_now == 0:
                 continue
             
+            # Prezzo originale
             price_orig_elem = box.find("span", {"class": "a-price-strike"})
             price_orig = parse_price(price_orig_elem.get_text(strip=True) if price_orig_elem else "")
             
+            # Se non abbiamo prezzo originale, cercalo in alt tag o altri posti
+            if not price_orig:
+                price_orig_elem = box.find("span", {"class": re.compile(r"a-text-strike")})
+                if price_orig_elem:
+                    price_orig = parse_price(price_orig_elem.get_text(strip=True))
+            
             # Discount
-            discount_elem = box.find("span", {"class": re.compile(r"badge")})
+            discount_elem = box.find("span", {"class": re.compile(r"badge|a-badge-label")})
             discount_str = discount_elem.get_text(strip=True) if discount_elem else ""
             discount = parse_discount(discount_str)
             
+            # Calcola discount se non trovato
             if discount == 0 and price_orig and price_now and price_orig > price_now:
                 discount = round((price_orig - price_now) / price_orig * 100)
             
@@ -392,7 +419,7 @@ def fetch_deals_scraping() -> List[Deal]:
                 source="scraping",
             )
             deals.append(deal)
-            logger.debug(f"✅ Deal: {title[:40]} | €{price_now:.0f} | -{discount}%")
+            logger.debug(f"✅ Deal: {title[:40]} | €{price_now:.2f} | -{discount}%")
             
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
@@ -450,23 +477,34 @@ def fetch_deals_rapidapi() -> List[Deal]:
             if discount < Config.MIN_DISCOUNT_PERCENT:
                 continue
             
+            # Estrai prezzi dalle informazioni disponibili
+            price_now = parse_price(item.get("deal_price", ""))
+            price_orig = parse_price(item.get("deal_price_original", "")) or parse_price(item.get("product_original_price", ""))
+            
+            # Se non abbiamo il prezzo attuale, salta
+            if not price_now or price_now == 0:
+                logger.debug(f"RapidAPI: no price for {asin}")
+                continue
+            
             deal = Deal(
                 deal_id=f"rapidapi_{asin}",
                 asin=asin,
                 title=item.get("deal_title", "Offerta")[:100],
                 url=url_prod,
                 affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
-                price_now=0.0,
-                price_orig=None,
+                price_now=price_now,
+                price_orig=price_orig,
                 discount_percent=discount,
                 image_url=item.get("deal_photo", ""),
                 category=item.get("deal_type", "Offerta"),
                 source="rapidapi",
             )
             deals.append(deal)
+            logger.debug(f"RapidAPI Deal: {item.get('deal_title', '')[:40]} | €{price_now:.2f} | -{discount}%")
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
-        except:
+        except Exception as e:
+            logger.debug(f"RapidAPI item error: {e}")
             continue
     
     logger.info(f"✅ RapidAPI: {len(deals)} deals")
