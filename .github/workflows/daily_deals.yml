@@ -2,54 +2,49 @@ name: Amazon Deals Bot — Daily Run
 
 on:
   schedule:
-    - cron: '0 7 * * *'    # 08:00 ora italiana (UTC+1)
-    - cron: '0 10 * * *'   # 11:00 ora italiana
-    - cron: '0 13 * * *'   # 14:00 ora italiana
-    - cron: '0 16 * * *'   # 17:00 ora italiana
-    - cron: '0 19 * * *'   # 20:00 ora italiana
-  workflow_dispatch:       # Permette avvio manuale da GitHub
+    - cron: '0 7 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 13 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 19 * * *'
+  workflow_dispatch:
 
 jobs:
   amazon-deals:
     runs-on: ubuntu-latest
-    timeout-minutes: 5     # Timeout dopo 5 min (dovrebbe finire in 30 sec)
+    timeout-minutes: 5
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 🐍 Setup Python 3.11
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: pip install -r requirements.txt
 
-       - name: ⚙️ Run bot job
-         env:
-           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
-           AMAZON_AFFILIATE_TAG: ${{ secrets.AMAZON_AFFILIATE_TAG }}
-           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-           RAPIDAPI_HOST: real-time-amazon-data.p.rapidapi.com
-           MAX_DEALS_PER_RUN: '5'
-           MIN_DISCOUNT_PERCENT: '20'
-           AMAZON_COUNTRY: 'IT'
-         run: python amazon_deals_telegram_bot.py
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          AMAZON_AFFILIATE_TAG: ${{ secrets.AMAZON_AFFILIATE_TAG }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_HOST: real-time-amazon-data.p.rapidapi.com
+          MAX_DEALS_PER_RUN: '5'
+          MIN_DISCOUNT_PERCENT: '20'
+          AMAZON_COUNTRY: 'IT'
+        run: python amazon_deals_telegram_bot.py
 
-       - name: 💾 Auto-commit deals history DB
-         if: always()
-         uses: stefanzweifel/git-auto-commit-action@v5
-         with:
-           commit_message: "🤖 Auto-update deals_history.json"
-           file_pattern: "deals_history.json bot.log"
-           disable_globbing: false
-           skip_fetch: false
-           skip_checkout: false
+      - name: Auto-commit deals database
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update deals_history.json"
+          file_pattern: deals_history.json bot.log
 
-       - name: 📊 Upload logs
+      - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
