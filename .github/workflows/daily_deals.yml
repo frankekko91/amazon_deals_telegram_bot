@@ -27,19 +27,29 @@ jobs:
       - name: 📦 Install dependencies
         run: pip install -r requirements.txt
 
-      - name: ⚙️ Run bot job
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
-          AMAZON_AFFILIATE_TAG: ${{ secrets.AMAZON_AFFILIATE_TAG }}
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-          RAPIDAPI_HOST: real-time-amazon-data.p.rapidapi.com
-          MAX_DEALS_PER_RUN: '5'
-          MIN_DISCOUNT_PERCENT: '20'
-          AMAZON_COUNTRY: 'IT'
-        run: python amazon_deals_telegram_bot.py
+       - name: ⚙️ Run bot job
+         env:
+           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+           AMAZON_AFFILIATE_TAG: ${{ secrets.AMAZON_AFFILIATE_TAG }}
+           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+           RAPIDAPI_HOST: real-time-amazon-data.p.rapidapi.com
+           MAX_DEALS_PER_RUN: '5'
+           MIN_DISCOUNT_PERCENT: '20'
+           AMAZON_COUNTRY: 'IT'
+         run: python amazon_deals_telegram_bot.py
 
-      - name: 📊 Upload logs
+       - name: 💾 Auto-commit deals history DB
+         if: always()
+         uses: stefanzweifel/git-auto-commit-action@v5
+         with:
+           commit_message: "🤖 Auto-update deals_history.json"
+           file_pattern: "deals_history.json bot.log"
+           disable_globbing: false
+           skip_fetch: false
+           skip_checkout: false
+
+       - name: 📊 Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
