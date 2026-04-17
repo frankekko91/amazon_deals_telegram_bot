@@ -37,7 +37,7 @@ jobs:
           MAX_DEALS_PER_RUN: '5'
           MIN_DISCOUNT_PERCENT: '20'
           AMAZON_COUNTRY: 'IT'
-        run: python amazon_deals_bot_final.py
+        run: python amazon_deals_telegram_bot.py
 
       - name: 📊 Upload logs
         if: always()
