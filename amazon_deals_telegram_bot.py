@@ -239,22 +239,45 @@ def extract_asin(url: str) -> Optional[str]:
     return match.group(1) if match else None
 
 
-def parse_price(s: str) -> Optional[float]:
+def parse_price(s) -> Optional[float]:
+    """Parse price from string OR dict with amount/currency."""
     if not s:
         return None
     try:
-        clean = re.sub(r"[^\d,.]", "", s)
+        # Se è un dizionario con 'amount' (da RapidAPI /deals-v2)
+        if isinstance(s, dict):
+            amount = s.get("amount", s.get("value", 0))
+            if isinstance(amount, (int, float)):
+                return float(amount)
+            # Se è una stringa dentro il dict
+            if isinstance(amount, str):
+                amount = amount.strip()
+        else:
+            amount = str(s)
+        
+        # Parse string
+        clean = re.sub(r"[^\d,.]", "", amount)
         clean = clean.replace(".", "").replace(",", ".")
-        return float(clean)
+        return float(clean) if clean else None
     except:
         return None
 
 
-def parse_discount(s: str) -> int:
-    if not s:
+def parse_discount(s) -> int:
+    """Parse discount from string or number."""
+    if not s and s != 0:
         return 0
-    match = re.search(r"(\d+)\s*%", s)
-    return int(match.group(1)) if match else 0
+    try:
+        # Se è già un numero
+        if isinstance(s, (int, float)):
+            return int(s)
+        
+        # Se è una stringa
+        s_str = str(s).strip()
+        match = re.search(r"(\d+)\s*%", s_str)
+        return int(match.group(1)) if match else 0
+    except:
+        return 0
 
 
 # ──────────────────────────────────────────────
@@ -414,6 +437,9 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             
             # Title — prova multipli selettori
             title_elem = None
+            title = ""
+            
+            # First try: span con classi specifiche (vecchio metodo)
             for selector in [
                 {"class": "a-size-base-plus"},
                 {"class": "a-size-medium"},
@@ -422,9 +448,16 @@ def _process_deal_boxes(deal_boxes: List) -> List[Deal]:
             ]:
                 title_elem = box.find("span", selector) if "class" in selector else box.find(selector.get("name"))
                 if title_elem:
+                    title = title_elem.get_text(strip=True)
                     break
             
-            title = title_elem.get_text(strip=True) if title_elem else ""
+            # Se non trovato, prova il link stesso
+            if not title:
+                link = box.find("a", {"href": re.compile(r"/dp/|/gp/product/")})
+                if link:
+                    title = link.get_text(strip=True)
+                    logger.debug(f"  Title estrapolato da link: {title[:50]}")
+            
             if not title or len(title) < 5:
                 logger.debug(f"  ❌ No title found or too short: '{title}'")
                 continue
@@ -672,7 +705,7 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
         try:
             # Estrai ASIN (key variabile tra endpoint)
             asin = item.get("product_asin") or item.get("asin") or item.get("id", "")
-            if not asin or len(asin) < 5:
+            if not asin or len(str(asin)) < 5:
                 logger.debug(f"    Item {idx}: ❌ No valid ASIN (got '{asin}')")
                 continue
             
@@ -697,23 +730,19 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
                 f"https://www.amazon.it/dp/{asin}"
             )
             
-            # Prezzo attuale
-            price_str = item.get("deal_price") or item.get("product_price") or item.get("price") or ""
-            price_now = parse_price(price_str)
+            # Prezzo attuale — gestisci sia dict che string
+            price_raw = item.get("deal_price") or item.get("product_price") or item.get("price")
+            price_now = parse_price(price_raw)
             
             if not price_now or price_now == 0:
-                logger.debug(f"      ❌ No valid price (raw='{price_str}', parsed={price_now})")
+                logger.debug(f"      ❌ No valid price (raw={price_raw}, parsed={price_now})")
                 continue
             
             logger.debug(f"      ✅ Price: €{price_now:.2f}")
             
-            # Prezzo originale
-            price_orig = (
-                parse_price(item.get("deal_price_original")) or
-                parse_price(item.get("product_original_price")) or
-                parse_price(item.get("original_price")) or
-                None
-            )
+            # Prezzo originale — gestisci sia dict che string
+            price_orig_raw = item.get("deal_price_original") or item.get("product_original_price") or item.get("list_price") or item.get("original_price")
+            price_orig = parse_price(price_orig_raw)
             
             if price_orig:
                 logger.debug(f"      ✅ Original price: €{price_orig:.2f}")
@@ -723,6 +752,7 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
                 item.get("deal_badge") or 
                 item.get("discount_badge") or 
                 item.get("badge") or
+                item.get("savings_percentage") or
                 ""
             )
             discount = parse_discount(discount_str)
@@ -747,7 +777,7 @@ def _process_rapidapi_deals(raw_deals: List, source_endpoint: str) -> List[Deal]
             
             deal = Deal(
                 deal_id=f"rapidapi_{source_endpoint}_{asin}",
-                asin=asin,
+                asin=str(asin),
                 title=title,
                 url=url_prod,
                 affiliate_url=build_affiliate_link(url_prod, Config.AMAZON_AFFILIATE_TAG),
@@ -807,13 +837,26 @@ def fetch_deals_rapidapi_search() -> List[Deal]:
     data = response.json()
     raw_products = data.get("data") or data.get("results", []) or []
     
+    logger.debug(f"Search returned {len(raw_products)} items, first type: {type(raw_products[0]) if raw_products else 'N/A'}")
+    if raw_products and len(raw_products) > 0:
+        logger.debug(f"  First item: {str(raw_products[0])[:200]}")
+    
     if not raw_products:
         logger.warning("RapidAPI /search: no products")
         return []
     
     deals = []
-    for item in raw_products:
+    for idx, item in enumerate(raw_products):
         try:
+            # Se è una stringa, skippa (API error)
+            if isinstance(item, str):
+                logger.debug(f"  Item {idx}: ❌ Item è string, not dict: {item[:50]}")
+                continue
+            
+            if not isinstance(item, dict):
+                logger.debug(f"  Item {idx}: ❌ Item non è dict: {type(item)}")
+                continue
+            
             asin = item.get("asin", "")
             if not asin:
                 continue
@@ -852,7 +895,7 @@ def fetch_deals_rapidapi_search() -> List[Deal]:
             if len(deals) >= Config.MAX_DEALS_PER_RUN:
                 break
         except Exception as e:
-            logger.debug(f"RapidAPI search item error: {e}")
+            logger.debug(f"RapidAPI search item {idx} error: {e}")
             continue
     
     logger.info(f"✅ RapidAPI /search: {len(deals)} deals")
