@@ -4,7 +4,7 @@
     "asin": "B0DQPSZZZQ",
     "title": "roborock QV 35A Robot Aspirapolvere, Antigroviglio, 8000Pa, Panno Sollevabile, Autolavaggio, Asciuga",
     "price_now": 349.99,
-    "timestamp": "2026-04-17T16:41:46.634989",
+    "timestamp": "2026-04-17T19:57:14.384598",
     "price_prev": 349.99,
     "posted": false
   },
@@ -22,7 +22,7 @@
     "asin": "B0FHK7S731",
     "title": "Google Pixel 10 - Smartphone Android sbloccato con Gemini, tripla fotocamera posteriore avanzata, au",
     "price_now": 549.0,
-    "timestamp": "2026-04-17T16:41:46.634335",
+    "timestamp": "2026-04-17T19:57:14.385307",
     "price_prev": 549.0,
     "posted": false
   },
@@ -40,7 +40,7 @@
     "asin": "B0F2J6B9ZK",
     "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3 Nero, 1 Spazzolino Elettrico, 1 Testina Di Ricambio, C",
     "price_now": 59.97,
-    "timestamp": "2026-04-17T16:41:46.634654",
+    "timestamp": "2026-04-17T19:57:14.384972",
     "price_prev": 59.97,
     "posted": false
   },
@@ -50,6 +50,24 @@
     "title": "Dyson Supersonic Nural\u2122 Asciugacapelli - Lisci e ondulati",
     "price_now": 399.0,
     "timestamp": "2026-04-17T16:41:46.636041",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G1M2ZGC1": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G1M2ZGC1",
+    "asin": "B0G1M2ZGC1",
+    "title": "UMAY Tapis Roulant Salvaspazio con Inclinazione 15%, Tapis Roulant Elettrico 12KM/H, Tapirulan Piegh",
+    "price_now": 199.49,
+    "timestamp": "2026-04-17T19:57:14.385632",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0B1DV8KG8": {
+    "deal_id": "rapidapi_deals-v2_p1_B0B1DV8KG8",
+    "asin": "B0B1DV8KG8",
+    "title": "Oral-B iO Ultimate Clean Testine Spazzolino Elettrico, Confezione da 8 Testine di Ricambio Nere, Rim",
+    "price_now": 39.79,
+    "timestamp": "2026-04-17T19:57:14.385991",
     "price_prev": null,
     "posted": true
   }
