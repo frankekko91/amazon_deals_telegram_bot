@@ -1,18 +1,18 @@
-name: Amazon Deals Bot
+name: Amazon Deals Bot — Daily Run
 
 on:
   schedule:
-    - cron: '0 7 * * *'    # 08:00 ora italiana (UTC+1) — Buongiorno offerte
-    - cron: '0 9 * * *'    # 10:00 ora italiana — Offerte mattina
-    - cron: '0 11 * * *'   # 12:00 ora italiana — Offerte mezzogiorno
-    - cron: '0 14 * * *'   # 15:00 ora italiana — Offerte pomeriggio
-    - cron: '0 17 * * *'   # 18:00 ora italiana — Offerte aperitivo
-    - cron: '0 19 * * *'   # 20:00 ora italiana — Offerte sera
-  workflow_dispatch:        # Permette avvio manuale dalla tab Actions
+    - cron: '0 7 * * *'    # 08:00 ora italiana (UTC+1)
+    - cron: '0 10 * * *'   # 11:00 ora italiana
+    - cron: '0 13 * * *'   # 14:00 ora italiana
+    - cron: '0 16 * * *'   # 17:00 ora italiana
+    - cron: '0 19 * * *'   # 20:00 ora italiana
+  workflow_dispatch:       # Permette avvio manuale da GitHub
 
 jobs:
-  run-bot:
+  amazon-deals:
     runs-on: ubuntu-latest
+    timeout-minutes: 5     # Timeout dopo 5 min (dovrebbe finire in 30 sec)
 
     steps:
       - name: 📥 Checkout repository
@@ -22,18 +22,27 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: 📦 Installa dipendenze
-        run: pip install requests python-telegram-bot schedule python-dotenv
+      - name: 📦 Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: 🤖 Avvia il bot
+      - name: ⚙️ Run bot job
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
           AMAZON_AFFILIATE_TAG: ${{ secrets.AMAZON_AFFILIATE_TAG }}
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-          RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
-          MAX_DEALS_PER_RUN: ${{ secrets.MAX_DEALS_PER_RUN }}
-          MIN_DISCOUNT_PERCENT: ${{ secrets.MIN_DISCOUNT_PERCENT }}
-          AMAZON_COUNTRY: ${{ secrets.AMAZON_COUNTRY }}
-        run: python amazon_deals_telegram_bot.py
+          RAPIDAPI_HOST: real-time-amazon-data.p.rapidapi.com
+          MAX_DEALS_PER_RUN: '5'
+          MIN_DISCOUNT_PERCENT: '20'
+          AMAZON_COUNTRY: 'IT'
+        run: python amazon_deals_bot_final.py
+
+      - name: 📊 Upload logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: bot-logs
+          path: bot.log
+          retention-days: 7
