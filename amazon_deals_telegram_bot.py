@@ -790,28 +790,26 @@ def discover_rapidapi_endpoints() -> Dict[str, bool]:
 # RAPIDAPI FALLBACK
 # ──────────────────────────────────────────────
 def fetch_deals_rapidapi() -> List[Deal]:
-    """RapidAPI — Multi-endpoint strategy per massimizzare varietà."""
+    """RapidAPI — deals-v2 con multiple pages per massimizzare varietà."""
     if not Config.RAPIDAPI_KEY:
         logger.warning("❌ RAPIDAPI_KEY non configurato")
         return []
     
-    logger.info("PRIMARY: RapidAPI (multi-endpoint)…")
+    logger.info("PRIMARY: RapidAPI (multi-page deals-v2)…")
     
     headers = {
         "X-RapidAPI-Key": Config.RAPIDAPI_KEY,
         "X-RapidAPI-Host": Config.RAPIDAPI_HOST,
     }
     
-    # Matrice di endpoint + parametri — DIVERSE SOURCES, NO DUPLICATES
-    # Skip deals-v2 page 2 perché ritorna gli stessi di page 1
+    # Strategie: deals-v2 ha pagine diverse, usiamo 1-5 per varietà
+    # (best-sellers, deal-products, products-by-category non disponibili nel free tier)
     endpoints_matrix = [
-        # (endpoint, params)
         ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "electronics"}),
-        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "home"}),
-        ("best-sellers", {"country": Config.AMAZON_COUNTRY, "category": "sports"}),
-        ("deal-products", {"country": Config.AMAZON_COUNTRY, "page": 1}),
-        ("products-by-category", {"country": Config.AMAZON_COUNTRY, "category": "electronics", "page": 1}),
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 2}),
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 3}),
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 4}),
+        ("deals-v2", {"country": Config.AMAZON_COUNTRY, "page": 5}),
     ]
     
     all_deals = []
@@ -823,23 +821,15 @@ def fetch_deals_rapidapi() -> List[Deal]:
         
         try:
             url = f"https://{Config.RAPIDAPI_HOST}/{endpoint_name}"
-            logger.debug(f"  → {endpoint_name} {params}…")
+            logger.debug(f"  → {endpoint_name} page {params['page']}…")
             
             response = requests.get(url, headers=headers, params=params, timeout=15)
             response.raise_for_status()
             
             data = response.json()
             
-            # Estrai deals da vari formati API
-            raw_deals = (
-                data.get("deals") or 
-                data.get("data", {}).get("deals") or 
-                data.get("products") or
-                data.get("data", {}).get("products") or
-                data.get("results") or
-                data.get("data", {}).get("results") or
-                []
-            )
+            # Estrai deals — deals-v2 ritorna sempre in "deals"
+            raw_deals = data.get("deals", [])
             
             logger.debug(f"    → {len(raw_deals)} items")
             
@@ -847,7 +837,7 @@ def fetch_deals_rapidapi() -> List[Deal]:
                 continue
             
             # Processa deals trovati
-            deals = _process_rapidapi_deals(raw_deals, endpoint_name)
+            deals = _process_rapidapi_deals(raw_deals, f"{endpoint_name}_p{params['page']}")
             
             # Aggiungi solo prodotti non duplicati
             for deal in deals:
@@ -855,7 +845,7 @@ def fetch_deals_rapidapi() -> List[Deal]:
                     seen_asins.add(deal.asin)
                     all_deals.append(deal)
             
-            logger.info(f"    ✅ {endpoint_name}: {len(deals)} deals ({len(all_deals)} total unique)")
+            logger.info(f"    ✅ {endpoint_name} page {params['page']}: {len(deals)} deals ({len(all_deals)} total unique)")
         
         except requests.exceptions.Timeout:
             logger.debug(f"    ⏱️  Timeout")
