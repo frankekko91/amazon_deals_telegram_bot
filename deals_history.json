@@ -70,5 +70,50 @@
     "timestamp": "2026-04-17T19:57:14.385991",
     "price_prev": null,
     "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0C5QXCP7Z": {
+    "deal_id": "rapidapi_deals-v2_p1_B0C5QXCP7Z",
+    "asin": "B0C5QXCP7Z",
+    "title": "Ring videocamera esterna a batteria (Stick Up Cam) | Telecamera di sorveglianza wifi senza fili per ",
+    "price_now": 49.99,
+    "timestamp": "2026-05-16T08:30:12.407759",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B09B8X9RGM": {
+    "deal_id": "rapidapi_deals-v2_p1_B09B8X9RGM",
+    "asin": "B09B8X9RGM",
+    "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
+    "price_now": 44.99,
+    "timestamp": "2026-05-16T08:30:12.408230",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B01L01ES3M": {
+    "deal_id": "rapidapi_deals-v2_p1_B01L01ES3M",
+    "asin": "B01L01ES3M",
+    "title": "Caff\u00e8 Borbone Respresso, Miscela Nera - 100 Capsule - Compatibili con le Macchine ad uso domestico N",
+    "price_now": 16.99,
+    "timestamp": "2026-05-16T08:30:12.408647",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B01BBW9Q46": {
+    "deal_id": "rapidapi_deals-v2_p1_B01BBW9Q46",
+    "asin": "B01BBW9Q46",
+    "title": "Caff\u00e8 Borbone Don Carlo, Miscela Rossa - 100 Capsule - Compatibili con le Macchine ad uso domestico ",
+    "price_now": 17.65,
+    "timestamp": "2026-05-16T08:30:12.409089",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CN41GMDK": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CN41GMDK",
+    "asin": "B0CN41GMDK",
+    "title": "Amazon Fire TV Stick 4K Select (ultimo modello) - Trasmetti in streaming in 4K centinaia di migliaia",
+    "price_now": 29.99,
+    "timestamp": "2026-05-16T08:30:12.410163",
+    "price_prev": null,
+    "posted": true
   }
 }
