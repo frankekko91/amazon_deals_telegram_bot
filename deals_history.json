@@ -76,7 +76,7 @@
     "asin": "B0C5QXCP7Z",
     "title": "Ring videocamera esterna a batteria (Stick Up Cam) | Telecamera di sorveglianza wifi senza fili per ",
     "price_now": 49.99,
-    "timestamp": "2026-05-16T20:00:27.307981",
+    "timestamp": "2026-05-17T08:56:56.142192",
     "price_prev": 49.99,
     "posted": false
   },
@@ -85,7 +85,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 44.99,
-    "timestamp": "2026-05-16T20:00:27.308390",
+    "timestamp": "2026-05-17T08:56:56.142603",
     "price_prev": 44.99,
     "posted": false
   },
@@ -94,7 +94,7 @@
     "asin": "B01L01ES3M",
     "title": "Caff\u00e8 Borbone Respresso, Miscela Nera - 100 Capsule - Compatibili con le Macchine ad uso domestico N",
     "price_now": 16.99,
-    "timestamp": "2026-05-16T20:00:27.310277",
+    "timestamp": "2026-05-17T08:56:56.142959",
     "price_prev": 16.99,
     "posted": false
   },
@@ -103,9 +103,9 @@
     "asin": "B01BBW9Q46",
     "title": "Caff\u00e8 Borbone Don Carlo, Miscela Rossa - 100 Capsule - Compatibili con le Macchine ad uso domestico ",
     "price_now": 17.65,
-    "timestamp": "2026-05-16T08:30:12.409089",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-05-17T08:56:56.143707",
+    "price_prev": 17.65,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0CN41GMDK": {
     "deal_id": "rapidapi_deals-v2_p1_B0CN41GMDK",
@@ -139,7 +139,7 @@
     "asin": "B0DV5RRL9F",
     "title": "DREAME H12 Pro FlexReach Aspirapolvere Lavapavimenti, Design Piatto a 180\u00b0, 5 Min di Asciugatura, As",
     "price_now": 199.0,
-    "timestamp": "2026-05-16T16:43:33.642426",
+    "timestamp": "2026-05-17T08:56:56.143320",
     "price_prev": 199.0,
     "posted": false
   }
