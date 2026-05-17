@@ -1,55 +1,10 @@
 {
-  "rapidapi_deals-v2_p1_B0DQPSZZZQ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DQPSZZZQ",
-    "asin": "B0DQPSZZZQ",
-    "title": "roborock QV 35A Robot Aspirapolvere, Antigroviglio, 8000Pa, Panno Sollevabile, Autolavaggio, Asciuga",
-    "price_now": 349.99,
-    "timestamp": "2026-04-17T19:57:14.384598",
-    "price_prev": 349.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0FHK7S731": {
-    "deal_id": "rapidapi_deals-v2_p1_B0FHK7S731",
-    "asin": "B0FHK7S731",
-    "title": "Google Pixel 10 - Smartphone Android sbloccato con Gemini, tripla fotocamera posteriore avanzata, au",
-    "price_now": 549.0,
-    "timestamp": "2026-04-17T19:57:14.385307",
-    "price_prev": 549.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F2J6B9ZK": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J6B9ZK",
-    "asin": "B0F2J6B9ZK",
-    "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3 Nero, 1 Spazzolino Elettrico, 1 Testina Di Ricambio, C",
-    "price_now": 59.97,
-    "timestamp": "2026-04-17T19:57:14.384972",
-    "price_prev": 59.97,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0G1M2ZGC1": {
-    "deal_id": "rapidapi_deals-v2_p1_B0G1M2ZGC1",
-    "asin": "B0G1M2ZGC1",
-    "title": "UMAY Tapis Roulant Salvaspazio con Inclinazione 15%, Tapis Roulant Elettrico 12KM/H, Tapirulan Piegh",
-    "price_now": 199.49,
-    "timestamp": "2026-04-17T19:57:14.385632",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B0B1DV8KG8": {
-    "deal_id": "rapidapi_deals-v2_p1_B0B1DV8KG8",
-    "asin": "B0B1DV8KG8",
-    "title": "Oral-B iO Ultimate Clean Testine Spazzolino Elettrico, Confezione da 8 Testine di Ricambio Nere, Rim",
-    "price_now": 39.79,
-    "timestamp": "2026-04-17T19:57:14.385991",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0C5QXCP7Z": {
     "deal_id": "rapidapi_deals-v2_p1_B0C5QXCP7Z",
     "asin": "B0C5QXCP7Z",
     "title": "Ring videocamera esterna a batteria (Stick Up Cam) | Telecamera di sorveglianza wifi senza fili per ",
     "price_now": 49.99,
-    "timestamp": "2026-05-17T16:43:25.491507",
+    "timestamp": "2026-05-17T20:02:46.628610",
     "price_prev": 49.99,
     "posted": false
   },
@@ -58,7 +13,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 44.99,
-    "timestamp": "2026-05-17T16:43:25.491815",
+    "timestamp": "2026-05-17T20:02:46.629038",
     "price_prev": 44.99,
     "posted": false
   },
@@ -94,7 +49,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 474.0,
-    "timestamp": "2026-05-17T16:43:25.492052",
+    "timestamp": "2026-05-17T20:02:46.629418",
     "price_prev": 474.0,
     "posted": false
   },
@@ -103,7 +58,7 @@
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere, Antigroviglio, 8000Pa, Panno Sollevabile, Autolavaggio, Asc",
     "price_now": 349.99,
-    "timestamp": "2026-05-17T14:27:07.986181",
+    "timestamp": "2026-05-17T20:02:46.629834",
     "price_prev": 349.99,
     "posted": false
   },
@@ -112,7 +67,7 @@
     "asin": "B0DV5RRL9F",
     "title": "DREAME H12 Pro FlexReach Aspirapolvere Lavapavimenti, Design Piatto a 180\u00b0, 5 Min di Asciugatura, As",
     "price_now": 199.0,
-    "timestamp": "2026-05-17T11:01:03.838670",
+    "timestamp": "2026-05-17T20:02:46.630193",
     "price_prev": 199.0,
     "posted": false
   },
