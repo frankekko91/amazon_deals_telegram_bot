@@ -8,15 +8,6 @@
     "price_prev": 349.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0G7XRSJNS": {
-    "deal_id": "rapidapi_deals-v2_p1_B0G7XRSJNS",
-    "asin": "B0G7XRSJNS",
-    "title": "LEFANT M3 Ultra Robot Aspirapolvere e Lavapavimenti con Mappatura, Laser dToF 360\u00b0, Aspirazione 2300",
-    "price_now": 379.99,
-    "timestamp": "2026-04-17T14:31:22.346925",
-    "price_prev": 379.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0FHK7S731": {
     "deal_id": "rapidapi_deals-v2_p1_B0FHK7S731",
     "asin": "B0FHK7S731",
@@ -24,15 +15,6 @@
     "price_now": 549.0,
     "timestamp": "2026-04-17T19:57:14.385307",
     "price_prev": 549.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B09YMR4DV3": {
-    "deal_id": "rapidapi_deals-v2_p1_B09YMR4DV3",
-    "asin": "B09YMR4DV3",
-    "title": "Caff\u00e8 Borbone Miscela Mia Napoli - 100 Capsule ALLUMINIO (10 confezioni da 10) - Compatibili con le ",
-    "price_now": 18.85,
-    "timestamp": "2026-04-17T16:41:46.635543",
-    "price_prev": 18.85,
     "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J6B9ZK": {
@@ -43,15 +25,6 @@
     "timestamp": "2026-04-17T19:57:14.384972",
     "price_prev": 59.97,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0D3QPK5TV": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D3QPK5TV",
-    "asin": "B0D3QPK5TV",
-    "title": "Dyson Supersonic Nural\u2122 Asciugacapelli - Lisci e ondulati",
-    "price_now": 399.0,
-    "timestamp": "2026-04-17T16:41:46.636041",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0G1M2ZGC1": {
     "deal_id": "rapidapi_deals-v2_p1_B0G1M2ZGC1",
@@ -76,7 +49,7 @@
     "asin": "B0C5QXCP7Z",
     "title": "Ring videocamera esterna a batteria (Stick Up Cam) | Telecamera di sorveglianza wifi senza fili per ",
     "price_now": 49.99,
-    "timestamp": "2026-05-17T14:27:07.985388",
+    "timestamp": "2026-05-17T16:43:25.491507",
     "price_prev": 49.99,
     "posted": false
   },
@@ -85,7 +58,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 44.99,
-    "timestamp": "2026-05-17T14:27:07.985671",
+    "timestamp": "2026-05-17T16:43:25.491815",
     "price_prev": 44.99,
     "posted": false
   },
@@ -94,7 +67,7 @@
     "asin": "B01L01ES3M",
     "title": "Caff\u00e8 Borbone Respresso, Miscela Nera - 100 Capsule - Compatibili con le Macchine ad uso domestico N",
     "price_now": 16.99,
-    "timestamp": "2026-05-17T14:27:07.986577",
+    "timestamp": "2026-05-17T16:43:25.492311",
     "price_prev": 16.99,
     "posted": false
   },
@@ -121,7 +94,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 474.0,
-    "timestamp": "2026-05-17T14:27:07.985941",
+    "timestamp": "2026-05-17T16:43:25.492052",
     "price_prev": 474.0,
     "posted": false
   },
@@ -142,5 +115,14 @@
     "timestamp": "2026-05-17T11:01:03.838670",
     "price_prev": 199.0,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0FHWP5Y6P": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FHWP5Y6P",
+    "asin": "B0FHWP5Y6P",
+    "title": "ECOVACS X11 OMNICYCLONE Robot Aspirapolvere Lavapavimenti, BLAST e 19.500 Pa, Boost di Potenza Ultra",
+    "price_now": 749.0,
+    "timestamp": "2026-05-17T16:43:25.492705",
+    "price_prev": null,
+    "posted": true
   }
 }
