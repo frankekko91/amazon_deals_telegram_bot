@@ -102,9 +102,9 @@
     "deal_id": "rapidapi_deals-v2_p1_B0F2J8X7HZ",
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, 1 Testina di Ricambio, Nero - 1 Testine di Ricambio p",
-    "price_now": 59.91,
-    "timestamp": "2026-05-18T20:22:21.789235",
-    "price_prev": null,
+    "price_now": 49.11,
+    "timestamp": "2026-05-19T17:56:02.392882",
+    "price_prev": 59.91,
     "posted": true
   },
   "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
@@ -113,6 +113,42 @@
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 39.99,
     "timestamp": "2026-05-19T16:26:42.367194",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GLJBR3TH": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GLJBR3TH",
+    "asin": "B0GLJBR3TH",
+    "title": "Pampers Progressi Newborn, Taglia 1 (2-5 kg), Formato Scorta, Indicatore di Bagnato, Protezione Pell",
+    "price_now": 47.33,
+    "timestamp": "2026-05-19T17:56:02.392204",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DCFYVR1Z": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DCFYVR1Z",
+    "asin": "B0DCFYVR1Z",
+    "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
+    "price_now": 32.78,
+    "timestamp": "2026-05-19T17:56:02.392534",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0B5H2ZGZG": {
+    "deal_id": "rapidapi_deals-v2_p1_B0B5H2ZGZG",
+    "asin": "B0B5H2ZGZG",
+    "title": "Foxy Mega | Carta igienica 36 rotoli| 480 strappi| Decorata |100% Energia elettrica rinnovabile| Con",
+    "price_now": 20.16,
+    "timestamp": "2026-05-19T17:56:02.393207",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B07BSQNH22": {
+    "deal_id": "rapidapi_deals-v2_p1_B07BSQNH22",
+    "asin": "B07BSQNH22",
+    "title": "Scholl Clog Evo Zoccoli Sanitari MedicaliUnisex - Adulto",
+    "price_now": 30.28,
+    "timestamp": "2026-05-19T17:56:02.393518",
     "price_prev": null,
     "posted": true
   }
