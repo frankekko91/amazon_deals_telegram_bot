@@ -103,8 +103,8 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, 1 Testina di Ricambio, Nero - 1 Testine di Ricambio p",
     "price_now": 49.11,
-    "timestamp": "2026-05-19T17:56:02.392882",
-    "price_prev": 59.91,
+    "timestamp": "2026-05-19T20:28:40.000853",
+    "price_prev": 49.11,
     "posted": true
   },
   "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
@@ -130,9 +130,9 @@
     "asin": "B0DCFYVR1Z",
     "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
     "price_now": 32.78,
-    "timestamp": "2026-05-19T17:56:02.392534",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-05-19T20:28:40.001116",
+    "price_prev": 32.78,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0B5H2ZGZG": {
     "deal_id": "rapidapi_deals-v2_p1_B0B5H2ZGZG",
@@ -149,6 +149,42 @@
     "title": "Scholl Clog Evo Zoccoli Sanitari MedicaliUnisex - Adulto",
     "price_now": 30.28,
     "timestamp": "2026-05-19T17:56:02.393518",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0D9QT7MPK": {
+    "deal_id": "rapidapi_deals-v2_p1_B0D9QT7MPK",
+    "asin": "B0D9QT7MPK",
+    "title": "Pampers Progressi Maxi, Taglia 4 (7-18 kg), Formato Scorta, Indicatore di Bagnato, Pelli Delicate, L",
+    "price_now": 45.64,
+    "timestamp": "2026-05-19T20:28:40.001358",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F2J7HCVF": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F2J7HCVF",
+    "asin": "B0F2J7HCVF",
+    "title": "Oral-B iO 6 Spazzolino Elettrico Ricaricabile, 2 Testina di Ricambio, Nero - 2 Testine di Ricambio p",
+    "price_now": 98.28,
+    "timestamp": "2026-05-19T20:28:40.001598",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0BWNRTRMQ": {
+    "deal_id": "rapidapi_deals-v2_p1_B0BWNRTRMQ",
+    "asin": "B0BWNRTRMQ",
+    "title": "Oral-B Testine di Ricambio Pro, Cross Action, Bianche, 12 Ricambi - 12 Testine di Ricambio per Spazz",
+    "price_now": 22.94,
+    "timestamp": "2026-05-19T20:28:40.001817",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p2_B0F7ZFWVTC": {
+    "deal_id": "rapidapi_deals-v2_p2_B0F7ZFWVTC",
+    "asin": "B0F7ZFWVTC",
+    "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
+    "price_now": 39.99,
+    "timestamp": "2026-05-19T20:28:41.521970",
     "price_prev": null,
     "posted": true
   }
