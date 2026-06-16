@@ -62,15 +62,6 @@
     "price_prev": 199.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0FHWP5Y6P": {
-    "deal_id": "rapidapi_deals-v2_p1_B0FHWP5Y6P",
-    "asin": "B0FHWP5Y6P",
-    "title": "ECOVACS X11 OMNICYCLONE Robot Aspirapolvere Lavapavimenti, BLAST e 19.500 Pa, Boost di Potenza Ultra",
-    "price_now": 749.0,
-    "timestamp": "2026-05-17T16:43:25.492705",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0FN8FR84Q": {
     "deal_id": "rapidapi_deals-v2_p1_B0FN8FR84Q",
     "asin": "B0FN8FR84Q",
@@ -184,7 +175,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-16T15:06:42.752708",
+    "timestamp": "2026-06-16T18:06:29.827746",
     "price_prev": 31.99,
     "posted": false
   },
@@ -193,7 +184,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-16T15:06:42.753015",
+    "timestamp": "2026-06-16T18:06:29.828041",
     "price_prev": 24.99,
     "posted": false
   },
@@ -202,7 +193,7 @@
     "asin": "B0CQ87N7TS",
     "title": "DJI Mini 3 Fly More Combo (DJI RC)\u2013Mini drone con fotocamera leggero, stabilizzatore a 3 assi, video",
     "price_now": 385.0,
-    "timestamp": "2026-06-16T15:06:42.753285",
+    "timestamp": "2026-06-16T18:06:29.828304",
     "price_prev": 385.0,
     "posted": false
   },
@@ -211,9 +202,9 @@
     "asin": "B0CXJ9GM3G",
     "title": "DJI Mini 4K, drone per adulti, fotocamera 4K HD, < 249 g, stabilizzatore 3 assi, trasmissione video ",
     "price_now": 179.55,
-    "timestamp": "2026-06-16T12:01:11.470106",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-16T18:06:29.828592",
+    "price_prev": 179.55,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0DPB7RN2L": {
     "deal_id": "rapidapi_deals-v2_p1_B0DPB7RN2L",
@@ -230,6 +221,15 @@
     "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
     "price_now": 285.0,
     "timestamp": "2026-06-16T15:06:42.753824",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DY8V59LY": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DY8V59LY",
+    "asin": "B0DY8V59LY",
+    "title": "DREAME L40s Pro Ultra Robot Aspirapolvere, Auto-pulizia moci, Aspirazione 19.000 Pa, Spazzola antigr",
+    "price_now": 549.0,
+    "timestamp": "2026-06-16T18:06:29.828842",
     "price_prev": null,
     "posted": true
   }
