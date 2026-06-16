@@ -35,22 +35,13 @@
     "price_prev": 17.65,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0F53MJY8T": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F53MJY8T",
-    "asin": "B0F53MJY8T",
-    "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
-    "price_now": 474.0,
-    "timestamp": "2026-05-17T20:02:46.629418",
-    "price_prev": 474.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0DSLBN5FS": {
     "deal_id": "rapidapi_deals-v2_p1_B0DSLBN5FS",
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
     "price_now": 299.99,
-    "timestamp": "2026-06-16T15:06:42.753587",
-    "price_prev": 349.99,
+    "timestamp": "2026-06-16T21:40:26.998998",
+    "price_prev": 299.99,
     "posted": true
   },
   "rapidapi_deals-v2_p1_B0DV5RRL9F": {
@@ -175,7 +166,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-16T19:26:00.462745",
+    "timestamp": "2026-06-16T21:40:26.998497",
     "price_prev": 31.99,
     "posted": false
   },
@@ -184,7 +175,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-16T19:26:00.462942",
+    "timestamp": "2026-06-16T21:40:26.998763",
     "price_prev": 24.99,
     "posted": false
   },
@@ -229,7 +220,16 @@
     "asin": "B0DY8V59LY",
     "title": "DREAME L40s Pro Ultra Robot Aspirapolvere, Auto-pulizia moci, Aspirazione 19.000 Pa, Spazzola antigr",
     "price_now": 549.0,
-    "timestamp": "2026-06-16T18:06:29.828842",
+    "timestamp": "2026-06-16T21:40:26.999265",
+    "price_prev": 549.0,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0F4T46PZD": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F4T46PZD",
+    "asin": "B0F4T46PZD",
+    "title": "Samsung Smart TV 55'' QE55QN83FAUXZT Neo QLED 4K Mini LED, NQ4 AI Gen2 Processor, 4K AI Upscaling, A",
+    "price_now": 499.0,
+    "timestamp": "2026-06-16T21:40:26.999491",
     "price_prev": null,
     "posted": true
   }
