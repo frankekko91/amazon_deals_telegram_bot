@@ -178,5 +178,50 @@
     "timestamp": "2026-05-19T20:28:41.521970",
     "price_prev": null,
     "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CKGQ5913": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CKGQ5913",
+    "asin": "B0CKGQ5913",
+    "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
+    "price_now": 31.99,
+    "timestamp": "2026-06-16T12:01:11.469126",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0FLYB3MVV": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FLYB3MVV",
+    "asin": "B0FLYB3MVV",
+    "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
+    "price_now": 24.99,
+    "timestamp": "2026-06-16T12:01:11.469472",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CQ87N7TS": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CQ87N7TS",
+    "asin": "B0CQ87N7TS",
+    "title": "DJI Mini 3 Fly More Combo (DJI RC)\u2013Mini drone con fotocamera leggero, stabilizzatore a 3 assi, video",
+    "price_now": 385.0,
+    "timestamp": "2026-06-16T12:01:11.469788",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CXJ9GM3G": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CXJ9GM3G",
+    "asin": "B0CXJ9GM3G",
+    "title": "DJI Mini 4K, drone per adulti, fotocamera 4K HD, < 249 g, stabilizzatore 3 assi, trasmissione video ",
+    "price_now": 179.55,
+    "timestamp": "2026-06-16T12:01:11.470106",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DPB7RN2L": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DPB7RN2L",
+    "asin": "B0DPB7RN2L",
+    "title": "DREAME X50 Ultra Complete Robot Aspirapolvere, Rilevamento Degli Ostacoli con IA e Navigazione a 360",
+    "price_now": 749.0,
+    "timestamp": "2026-06-16T12:01:11.470394",
+    "price_prev": null,
+    "posted": true
   }
 }
