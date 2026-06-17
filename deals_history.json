@@ -31,7 +31,7 @@
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
     "price_now": 299.99,
-    "timestamp": "2026-06-17T11:26:13.590128",
+    "timestamp": "2026-06-17T13:38:31.412920",
     "price_prev": 299.99,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-17T11:26:13.589398",
+    "timestamp": "2026-06-17T13:38:31.412286",
     "price_prev": 31.99,
     "posted": false
   },
@@ -166,7 +166,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-17T11:26:13.589697",
+    "timestamp": "2026-06-17T13:38:31.412485",
     "price_prev": 24.99,
     "posted": false
   },
@@ -229,7 +229,16 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 449.0,
-    "timestamp": "2026-06-17T11:26:13.590331",
+    "timestamp": "2026-06-17T13:38:31.412736",
+    "price_prev": 449.0,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0CW1QDRVV": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CW1QDRVV",
+    "asin": "B0CW1QDRVV",
+    "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
+    "price_now": 198.55,
+    "timestamp": "2026-06-17T13:38:31.413101",
     "price_prev": null,
     "posted": true
   }
