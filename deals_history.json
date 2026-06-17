@@ -26,23 +26,14 @@
     "price_prev": 16.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B01BBW9Q46": {
-    "deal_id": "rapidapi_deals-v2_p1_B01BBW9Q46",
-    "asin": "B01BBW9Q46",
-    "title": "Caff\u00e8 Borbone Don Carlo, Miscela Rossa - 100 Capsule - Compatibili con le Macchine ad uso domestico ",
-    "price_now": 17.65,
-    "timestamp": "2026-05-18T10:55:22.091262",
-    "price_prev": 17.65,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0DSLBN5FS": {
     "deal_id": "rapidapi_deals-v2_p1_B0DSLBN5FS",
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
     "price_now": 299.99,
-    "timestamp": "2026-06-16T21:40:26.998998",
+    "timestamp": "2026-06-17T11:26:13.590128",
     "price_prev": 299.99,
-    "posted": true
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0DV5RRL9F": {
     "deal_id": "rapidapi_deals-v2_p1_B0DV5RRL9F",
@@ -166,7 +157,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-16T21:40:26.998497",
+    "timestamp": "2026-06-17T11:26:13.589398",
     "price_prev": 31.99,
     "posted": false
   },
@@ -175,7 +166,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-16T21:40:26.998763",
+    "timestamp": "2026-06-17T11:26:13.589697",
     "price_prev": 24.99,
     "posted": false
   },
@@ -211,9 +202,9 @@
     "asin": "B0F6YTVXM4",
     "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
     "price_now": 285.0,
-    "timestamp": "2026-06-16T15:06:42.753824",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-17T11:26:13.589888",
+    "price_prev": 285.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0DY8V59LY": {
     "deal_id": "rapidapi_deals-v2_p1_B0DY8V59LY",
@@ -230,6 +221,15 @@
     "title": "Samsung Smart TV 55'' QE55QN83FAUXZT Neo QLED 4K Mini LED, NQ4 AI Gen2 Processor, 4K AI Upscaling, A",
     "price_now": 499.0,
     "timestamp": "2026-06-16T21:40:26.999491",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F53MJY8T": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F53MJY8T",
+    "asin": "B0F53MJY8T",
+    "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
+    "price_now": 449.0,
+    "timestamp": "2026-06-17T11:26:13.590331",
     "price_prev": null,
     "posted": true
   }
