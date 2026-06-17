@@ -157,7 +157,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-17T13:38:31.412286",
+    "timestamp": "2026-06-17T16:40:19.404215",
     "price_prev": 31.99,
     "posted": false
   },
@@ -166,7 +166,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-17T13:38:31.412485",
+    "timestamp": "2026-06-17T16:40:19.404490",
     "price_prev": 24.99,
     "posted": false
   },
@@ -184,7 +184,7 @@
     "asin": "B0CXJ9GM3G",
     "title": "DJI Mini 4K, drone per adulti, fotocamera 4K HD, < 249 g, stabilizzatore 3 assi, trasmissione video ",
     "price_now": 179.55,
-    "timestamp": "2026-06-16T19:26:00.463416",
+    "timestamp": "2026-06-17T16:40:19.405299",
     "price_prev": 179.55,
     "posted": false
   },
@@ -229,7 +229,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 449.0,
-    "timestamp": "2026-06-17T13:38:31.412736",
+    "timestamp": "2026-06-17T16:40:19.404750",
     "price_prev": 449.0,
     "posted": false
   },
@@ -239,6 +239,15 @@
     "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
     "price_now": 198.55,
     "timestamp": "2026-06-17T13:38:31.413101",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GJD7VMPX": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GJD7VMPX",
+    "asin": "B0GJD7VMPX",
+    "title": "ECOVACS X12 OMNICYCLONE Robot Aspirapolvere Lavapavimenti, BLAST e 22.000 Pa, FocusJet anti-macchie,",
+    "price_now": 885.0,
+    "timestamp": "2026-06-17T16:40:19.405017",
     "price_prev": null,
     "posted": true
   }
