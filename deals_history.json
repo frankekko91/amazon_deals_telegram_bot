@@ -1,13 +1,4 @@
 {
-  "rapidapi_deals-v2_p1_B0C5QXCP7Z": {
-    "deal_id": "rapidapi_deals-v2_p1_B0C5QXCP7Z",
-    "asin": "B0C5QXCP7Z",
-    "title": "Ring videocamera esterna a batteria (Stick Up Cam) | Telecamera di sorveglianza wifi senza fili per ",
-    "price_now": 49.99,
-    "timestamp": "2026-05-19T12:36:15.858540",
-    "price_prev": 49.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B09B8X9RGM": {
     "deal_id": "rapidapi_deals-v2_p1_B09B8X9RGM",
     "asin": "B09B8X9RGM",
@@ -51,15 +42,6 @@
     "price_now": 399.0,
     "timestamp": "2026-05-19T16:26:42.367808",
     "price_prev": 399.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0DQPVLXF8": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DQPVLXF8",
-    "asin": "B0DQPVLXF8",
-    "title": "roborock QV 35A Robot Aspirapolvere, Antigroviglio, 8000Pa, Panno Sollevabile, Autolavaggio, Asciuga",
-    "price_now": 329.99,
-    "timestamp": "2026-05-19T12:36:15.859302",
-    "price_prev": 329.99,
     "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J8X7HZ": {
@@ -157,7 +139,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-18T11:03:34.118131",
+    "timestamp": "2026-06-18T12:48:20.269348",
     "price_prev": 31.99,
     "posted": false
   },
@@ -166,7 +148,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-18T11:03:34.118529",
+    "timestamp": "2026-06-18T12:48:20.269612",
     "price_prev": 24.99,
     "posted": false
   },
@@ -202,7 +184,7 @@
     "asin": "B0F6YTVXM4",
     "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
     "price_now": 285.0,
-    "timestamp": "2026-06-17T18:07:48.155143",
+    "timestamp": "2026-06-18T12:48:20.270225",
     "price_prev": 285.0,
     "posted": false
   },
@@ -238,9 +220,9 @@
     "asin": "B0CW1QDRVV",
     "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
     "price_now": 198.55,
-    "timestamp": "2026-06-17T13:38:31.413101",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-18T12:48:20.270045",
+    "price_prev": 198.55,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GJD7VMPX": {
     "deal_id": "rapidapi_deals-v2_p1_B0GJD7VMPX",
@@ -257,6 +239,15 @@
     "title": "roborock Qrevo Curv 2 Flow Robot Aspirapolvere Lavapavimenti, 270mm Autopulizia Rullo, 20.000Pa, Pro",
     "price_now": 599.0,
     "timestamp": "2026-06-18T11:03:34.118931",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DK9M8CZ9": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DK9M8CZ9",
+    "asin": "B0DK9M8CZ9",
+    "title": "Olimpia Splendid, Dolceclima Slim 8 WWB, Portable Air Conditioning 8,000 BTU/h, Ultra compact Design",
+    "price_now": 199.0,
+    "timestamp": "2026-06-18T12:48:20.269821",
     "price_prev": null,
     "posted": true
   }
