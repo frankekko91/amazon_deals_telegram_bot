@@ -31,7 +31,7 @@
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
     "price_now": 299.99,
-    "timestamp": "2026-06-17T21:01:29.082019",
+    "timestamp": "2026-06-18T11:03:34.119314",
     "price_prev": 299.99,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-17T21:01:29.080912",
+    "timestamp": "2026-06-18T11:03:34.118131",
     "price_prev": 31.99,
     "posted": false
   },
@@ -166,7 +166,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-17T21:01:29.081273",
+    "timestamp": "2026-06-18T11:03:34.118529",
     "price_prev": 24.99,
     "posted": false
   },
@@ -229,7 +229,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 449.0,
-    "timestamp": "2026-06-17T21:01:29.081628",
+    "timestamp": "2026-06-18T11:03:34.119662",
     "price_prev": 449.0,
     "posted": false
   },
@@ -248,6 +248,15 @@
     "title": "ECOVACS X12 OMNICYCLONE Robot Aspirapolvere Lavapavimenti, BLAST e 22.000 Pa, FocusJet anti-macchie,",
     "price_now": 885.0,
     "timestamp": "2026-06-17T16:40:19.405017",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0FS16B394": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FS16B394",
+    "asin": "B0FS16B394",
+    "title": "roborock Qrevo Curv 2 Flow Robot Aspirapolvere Lavapavimenti, 270mm Autopulizia Rullo, 20.000Pa, Pro",
+    "price_now": 599.0,
+    "timestamp": "2026-06-18T11:03:34.118931",
     "price_prev": null,
     "posted": true
   }
