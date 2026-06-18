@@ -17,15 +17,6 @@
     "price_prev": 49.11,
     "posted": true
   },
-  "rapidapi_deals-v2_p1_B0GLJBR3TH": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GLJBR3TH",
-    "asin": "B0GLJBR3TH",
-    "title": "Pampers Progressi Newborn, Taglia 1 (2-5 kg), Formato Scorta, Indicatore di Bagnato, Protezione Pell",
-    "price_now": 47.33,
-    "timestamp": "2026-05-19T17:56:02.392204",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0DCFYVR1Z": {
     "deal_id": "rapidapi_deals-v2_p1_B0DCFYVR1Z",
     "asin": "B0DCFYVR1Z",
@@ -34,24 +25,6 @@
     "timestamp": "2026-05-19T20:28:40.001116",
     "price_prev": 32.78,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0B5H2ZGZG": {
-    "deal_id": "rapidapi_deals-v2_p1_B0B5H2ZGZG",
-    "asin": "B0B5H2ZGZG",
-    "title": "Foxy Mega | Carta igienica 36 rotoli| 480 strappi| Decorata |100% Energia elettrica rinnovabile| Con",
-    "price_now": 20.16,
-    "timestamp": "2026-05-19T17:56:02.393207",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B07BSQNH22": {
-    "deal_id": "rapidapi_deals-v2_p1_B07BSQNH22",
-    "asin": "B07BSQNH22",
-    "title": "Scholl Clog Evo Zoccoli Sanitari MedicaliUnisex - Adulto",
-    "price_now": 30.28,
-    "timestamp": "2026-05-19T17:56:02.393518",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0D9QT7MPK": {
     "deal_id": "rapidapi_deals-v2_p1_B0D9QT7MPK",
@@ -94,7 +67,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-18T16:37:06.100847",
+    "timestamp": "2026-06-18T18:19:34.015296",
     "price_prev": 31.99,
     "posted": false
   },
@@ -103,7 +76,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-18T16:37:06.101044",
+    "timestamp": "2026-06-18T18:19:34.015630",
     "price_prev": 24.99,
     "posted": false
   },
@@ -166,7 +139,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 449.0,
-    "timestamp": "2026-06-18T16:37:06.101192",
+    "timestamp": "2026-06-18T18:19:34.016306",
     "price_prev": 449.0,
     "posted": false
   },
@@ -175,7 +148,7 @@
     "asin": "B0CW1QDRVV",
     "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
     "price_now": 198.55,
-    "timestamp": "2026-06-18T16:37:06.101343",
+    "timestamp": "2026-06-18T18:19:34.016607",
     "price_prev": 198.55,
     "posted": false
   },
@@ -203,6 +176,15 @@
     "title": "Olimpia Splendid, Dolceclima Slim 8 WWB, Portable Air Conditioning 8,000 BTU/h, Ultra compact Design",
     "price_now": 199.0,
     "timestamp": "2026-06-18T12:48:20.269821",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CQ8DG1CX": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CQ8DG1CX",
+    "asin": "B0CQ8DG1CX",
+    "title": "DJI Mini 3 \u2013 Mini drone con fotocamera leggero, stabilizzatore a 3 assi, video 4K HDR, autonomia 38 ",
+    "price_now": 227.05,
+    "timestamp": "2026-06-18T18:19:34.015981",
     "price_prev": null,
     "posted": true
   }
