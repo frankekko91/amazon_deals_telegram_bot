@@ -1,47 +1,11 @@
 {
-  "rapidapi_deals-v2_p1_B09B8X9RGM": {
-    "deal_id": "rapidapi_deals-v2_p1_B09B8X9RGM",
-    "asin": "B09B8X9RGM",
-    "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
-    "price_now": 44.99,
-    "timestamp": "2026-05-19T16:26:42.367531",
-    "price_prev": 44.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B01L01ES3M": {
-    "deal_id": "rapidapi_deals-v2_p1_B01L01ES3M",
-    "asin": "B01L01ES3M",
-    "title": "Caff\u00e8 Borbone Respresso, Miscela Nera - 100 Capsule - Compatibili con le Macchine ad uso domestico N",
-    "price_now": 16.99,
-    "timestamp": "2026-05-19T16:26:42.368192",
-    "price_prev": 16.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0DSLBN5FS": {
     "deal_id": "rapidapi_deals-v2_p1_B0DSLBN5FS",
     "asin": "B0DSLBN5FS",
     "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
     "price_now": 299.99,
-    "timestamp": "2026-06-18T11:03:34.119314",
+    "timestamp": "2026-06-18T16:37:06.101473",
     "price_prev": 299.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0DV5RRL9F": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DV5RRL9F",
-    "asin": "B0DV5RRL9F",
-    "title": "DREAME H12 Pro FlexReach Aspirapolvere Lavapavimenti, Design Piatto a 180\u00b0, 5 Min di Asciugatura, As",
-    "price_now": 199.0,
-    "timestamp": "2026-05-19T16:26:42.368823",
-    "price_prev": 199.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0FN8FR84Q": {
-    "deal_id": "rapidapi_deals-v2_p1_B0FN8FR84Q",
-    "asin": "B0FN8FR84Q",
-    "title": "DREAME L10s Ultra Gen 3 Kit Robot Aspirapolvere e Lavapavimenti, Aspirazione da 25.000 Pa, Spazzola ",
-    "price_now": 399.0,
-    "timestamp": "2026-05-19T16:26:42.367808",
-    "price_prev": 399.0,
     "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J8X7HZ": {
@@ -51,15 +15,6 @@
     "price_now": 49.11,
     "timestamp": "2026-05-19T20:28:40.000853",
     "price_prev": 49.11,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F7ZFWVTC",
-    "asin": "B0F7ZFWVTC",
-    "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
-    "price_now": 39.99,
-    "timestamp": "2026-05-19T16:26:42.367194",
-    "price_prev": null,
     "posted": true
   },
   "rapidapi_deals-v2_p1_B0GLJBR3TH": {
@@ -139,7 +94,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-18T12:48:20.269348",
+    "timestamp": "2026-06-18T16:37:06.100847",
     "price_prev": 31.99,
     "posted": false
   },
@@ -148,7 +103,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-18T12:48:20.269612",
+    "timestamp": "2026-06-18T16:37:06.101044",
     "price_prev": 24.99,
     "posted": false
   },
@@ -211,7 +166,7 @@
     "asin": "B0F53MJY8T",
     "title": "DREAME L40 Ultra AE Robot Aspirapolvere Lavapavimenti, Aspirazione 19.000 Pa, Auto-Pulizia dei Moci ",
     "price_now": 449.0,
-    "timestamp": "2026-06-18T11:03:34.119662",
+    "timestamp": "2026-06-18T16:37:06.101192",
     "price_prev": 449.0,
     "posted": false
   },
@@ -220,7 +175,7 @@
     "asin": "B0CW1QDRVV",
     "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
     "price_now": 198.55,
-    "timestamp": "2026-06-18T12:48:20.270045",
+    "timestamp": "2026-06-18T16:37:06.101343",
     "price_prev": 198.55,
     "posted": false
   },
