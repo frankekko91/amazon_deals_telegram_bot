@@ -8,66 +8,12 @@
     "price_prev": 299.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0F2J8X7HZ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J8X7HZ",
-    "asin": "B0F2J8X7HZ",
-    "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, 1 Testina di Ricambio, Nero - 1 Testine di Ricambio p",
-    "price_now": 49.11,
-    "timestamp": "2026-05-19T20:28:40.000853",
-    "price_prev": 49.11,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B0DCFYVR1Z": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DCFYVR1Z",
-    "asin": "B0DCFYVR1Z",
-    "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
-    "price_now": 32.78,
-    "timestamp": "2026-05-19T20:28:40.001116",
-    "price_prev": 32.78,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0D9QT7MPK": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D9QT7MPK",
-    "asin": "B0D9QT7MPK",
-    "title": "Pampers Progressi Maxi, Taglia 4 (7-18 kg), Formato Scorta, Indicatore di Bagnato, Pelli Delicate, L",
-    "price_now": 45.64,
-    "timestamp": "2026-05-19T20:28:40.001358",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B0F2J7HCVF": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J7HCVF",
-    "asin": "B0F2J7HCVF",
-    "title": "Oral-B iO 6 Spazzolino Elettrico Ricaricabile, 2 Testina di Ricambio, Nero - 2 Testine di Ricambio p",
-    "price_now": 98.28,
-    "timestamp": "2026-05-19T20:28:40.001598",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B0BWNRTRMQ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0BWNRTRMQ",
-    "asin": "B0BWNRTRMQ",
-    "title": "Oral-B Testine di Ricambio Pro, Cross Action, Bianche, 12 Ricambi - 12 Testine di Ricambio per Spazz",
-    "price_now": 22.94,
-    "timestamp": "2026-05-19T20:28:40.001817",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p2_B0F7ZFWVTC": {
-    "deal_id": "rapidapi_deals-v2_p2_B0F7ZFWVTC",
-    "asin": "B0F7ZFWVTC",
-    "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
-    "price_now": 39.99,
-    "timestamp": "2026-05-19T20:28:41.521970",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0CKGQ5913": {
     "deal_id": "rapidapi_deals-v2_p1_B0CKGQ5913",
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-18T18:19:34.015296",
+    "timestamp": "2026-06-18T21:21:30.383577",
     "price_prev": 31.99,
     "posted": false
   },
@@ -76,7 +22,7 @@
     "asin": "B0FLYB3MVV",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 24.99,
-    "timestamp": "2026-06-18T18:19:34.015630",
+    "timestamp": "2026-06-18T21:21:30.383952",
     "price_prev": 24.99,
     "posted": false
   },
@@ -175,9 +121,9 @@
     "asin": "B0DK9M8CZ9",
     "title": "Olimpia Splendid, Dolceclima Slim 8 WWB, Portable Air Conditioning 8,000 BTU/h, Ultra compact Design",
     "price_now": 199.0,
-    "timestamp": "2026-06-18T12:48:20.269821",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-18T21:21:30.384996",
+    "price_prev": 199.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0CQ8DG1CX": {
     "deal_id": "rapidapi_deals-v2_p1_B0CQ8DG1CX",
@@ -185,6 +131,24 @@
     "title": "DJI Mini 3 \u2013 Mini drone con fotocamera leggero, stabilizzatore a 3 assi, video 4K HDR, autonomia 38 ",
     "price_now": 227.05,
     "timestamp": "2026-06-18T18:19:34.015981",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B07WXRW9LL": {
+    "deal_id": "rapidapi_deals-v2_p1_B07WXRW9LL",
+    "asin": "B07WXRW9LL",
+    "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
+    "price_now": 271.0,
+    "timestamp": "2026-06-18T21:21:30.384395",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DSLB5ZQ8": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DSLB5ZQ8",
+    "asin": "B0DSLB5ZQ8",
+    "title": "roborock QV 35A Set Robot Aspirapolvere Lavapavimenti, Antigroviglio, Aspirazione HyperForce, Panno ",
+    "price_now": 299.99,
+    "timestamp": "2026-06-18T21:21:30.384707",
     "price_prev": null,
     "posted": true
   }
