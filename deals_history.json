@@ -13,7 +13,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-19T17:46:11.860451",
+    "timestamp": "2026-06-19T20:24:48.394586",
     "price_prev": 31.99,
     "posted": false
   },
@@ -121,7 +121,7 @@
     "asin": "B0DK9M8CZ9",
     "title": "Olimpia Splendid, Dolceclima Slim 8 WWB, Portable Air Conditioning 8,000 BTU/h, Ultra compact Design",
     "price_now": 199.0,
-    "timestamp": "2026-06-19T11:11:29.512062",
+    "timestamp": "2026-06-19T20:24:48.395783",
     "price_prev": 199.0,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0CQTJ59FR",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 58.98,
-    "timestamp": "2026-06-19T17:46:11.860817",
+    "timestamp": "2026-06-19T20:24:48.394911",
     "price_prev": 58.98,
     "posted": false
   },
@@ -184,17 +184,17 @@
     "asin": "B0FLY8WC3D",
     "title": "Videocamera Blink Outdoor 4 con Videocitofono Blink (Nero), Modulo di sincronizzazione di base inclu",
     "price_now": 84.99,
-    "timestamp": "2026-06-19T17:46:11.861047",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-19T20:24:48.395585",
+    "price_prev": 84.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0FHHYQ58Q": {
     "deal_id": "rapidapi_deals-v2_p1_B0FHHYQ58Q",
     "asin": "B0FHHYQ58Q",
     "title": "DREAME Aqua10 Ultra Roller Complete Robot Aspirapolvere, Autopulizia Rullo, Supera Ostacoli da 8cm, ",
     "price_now": 799.0,
-    "timestamp": "2026-06-19T17:46:11.861410",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-06-19T20:24:48.395274",
+    "price_prev": 799.0,
+    "posted": false
   }
 }
