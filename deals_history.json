@@ -13,7 +13,7 @@
     "asin": "B0CKGQ5913",
     "title": "Ring Intercom Audio | Rendi il tuo citofono pi\u00f9 intelligente | Audio in streaming, chiavi virtuali e",
     "price_now": 31.99,
-    "timestamp": "2026-06-19T13:32:12.928624",
+    "timestamp": "2026-06-19T16:09:55.503038",
     "price_prev": 31.99,
     "posted": false
   },
@@ -94,7 +94,7 @@
     "asin": "B0CW1QDRVV",
     "title": "Tineco FLOOR ONE STRETCH S6 aspirapolvere a secco e umido, inclinazione fino a 180\u00b0, design compatto",
     "price_now": 198.55,
-    "timestamp": "2026-06-18T18:19:34.016607",
+    "timestamp": "2026-06-19T16:09:55.504066",
     "price_prev": 198.55,
     "posted": false
   },
@@ -139,7 +139,7 @@
     "asin": "B07WXRW9LL",
     "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
     "price_now": 271.0,
-    "timestamp": "2026-06-19T13:32:12.929253",
+    "timestamp": "2026-06-19T16:09:55.503571",
     "price_prev": 271.0,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0CQTJ59FR",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 58.98,
-    "timestamp": "2026-06-19T13:32:12.928826",
+    "timestamp": "2026-06-19T16:09:55.503309",
     "price_prev": 58.98,
     "posted": false
   },
@@ -167,6 +167,15 @@
     "title": "Videocamera Blink Outdoor 4 + Videocamera Mini 2K+ Blink (Nero), Modulo di sincronizzazione di base ",
     "price_now": 89.99,
     "timestamp": "2026-06-19T13:32:12.928981",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DHLT8T9L": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DHLT8T9L",
+    "asin": "B0DHLT8T9L",
+    "title": "Videocamera Blink Outdoor 4 (Ultimo modello) - Videocamera di sicurezza smart HD wireless, autonomia",
+    "price_now": 84.99,
+    "timestamp": "2026-06-19T16:09:55.503840",
     "price_prev": null,
     "posted": true
   }
