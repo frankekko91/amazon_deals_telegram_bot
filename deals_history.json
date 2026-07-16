@@ -44,15 +44,6 @@
     "price_prev": 179.55,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0DPB7RN2L": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DPB7RN2L",
-    "asin": "B0DPB7RN2L",
-    "title": "DREAME X50 Ultra Complete Robot Aspirapolvere, Rilevamento Degli Ostacoli con IA e Navigazione a 360",
-    "price_now": 749.0,
-    "timestamp": "2026-06-16T19:26:00.463111",
-    "price_prev": 749.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F6YTVXM4": {
     "deal_id": "rapidapi_deals-v2_p1_B0F6YTVXM4",
     "asin": "B0F6YTVXM4",
@@ -202,7 +193,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-16T17:00:50.892974",
+    "timestamp": "2026-07-16T19:59:59.226741",
     "price_prev": 59.99,
     "posted": false
   },
@@ -229,7 +220,7 @@
     "asin": "B00C7N1TQW",
     "title": "NESCAF\u00c9 DOLCE GUSTO Espresso Barista Caff\u00e8, 6 Confezioni da 16 Capsule (96 Capsule Compatibili Nesca",
     "price_now": 20.89,
-    "timestamp": "2026-07-16T15:07:03.972129",
+    "timestamp": "2026-07-16T19:59:59.227219",
     "price_prev": 20.89,
     "posted": false
   },
@@ -265,7 +256,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, 18.500Pa, Autopulizia Panno 75\u00b0C, Asciugatur",
     "price_now": 389.99,
-    "timestamp": "2026-07-16T17:00:50.893544",
+    "timestamp": "2026-07-16T19:59:59.226953",
     "price_prev": 389.99,
     "posted": false
   },
@@ -293,6 +284,24 @@
     "title": "msi PRO MP275QA E14 Monitor 27\" WQHD, 2560x1440 IPS, 144\u202fHz, 1\u202fms, HDR Ready, Adaptive-Sync, Eye Car",
     "price_now": 109.0,
     "timestamp": "2026-07-16T17:00:50.893718",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0D8WD78ND": {
+    "deal_id": "rapidapi_deals-v2_p1_B0D8WD78ND",
+    "asin": "B0D8WD78ND",
+    "title": "Fairy Platinum Plus Pastiglie Lavastoviglie, 150 Capsule, Limone, Detersivo Con Tecnologia Anti-Opac",
+    "price_now": 28.99,
+    "timestamp": "2026-07-16T19:59:59.227368",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0FMJ5D4KS": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FMJ5D4KS",
+    "asin": "B0FMJ5D4KS",
+    "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
+    "price_now": 170.99,
+    "timestamp": "2026-07-16T19:59:59.227555",
     "price_prev": null,
     "posted": true
   }
