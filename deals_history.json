@@ -202,7 +202,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-16T11:28:59.104747",
+    "timestamp": "2026-07-16T15:07:03.970710",
     "price_prev": 59.99,
     "posted": false
   },
@@ -229,7 +229,7 @@
     "asin": "B00C7N1TQW",
     "title": "NESCAF\u00c9 DOLCE GUSTO Espresso Barista Caff\u00e8, 6 Confezioni da 16 Capsule (96 Capsule Compatibili Nesca",
     "price_now": 20.89,
-    "timestamp": "2026-07-16T11:28:59.105812",
+    "timestamp": "2026-07-16T15:07:03.972129",
     "price_prev": 20.89,
     "posted": false
   },
@@ -247,18 +247,18 @@
     "asin": "B0D9PQD5V4",
     "title": "Rowenta X-Pert 6.60 Allergy, Aspirapolvere Senza Fili Potente, Scopa Elettrica Senza Fili con Conten",
     "price_now": 109.99,
-    "timestamp": "2026-07-16T11:28:59.105178",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-07-16T15:07:03.971662",
+    "price_prev": 109.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GL1X2QKM": {
     "deal_id": "rapidapi_deals-v2_p1_B0GL1X2QKM",
     "asin": "B0GL1X2QKM",
     "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
     "price_now": 159.99,
-    "timestamp": "2026-07-16T11:28:59.105508",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-07-16T15:07:03.971017",
+    "price_prev": 159.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GHN9DR1C": {
     "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
@@ -266,6 +266,15 @@
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, 18.500Pa, Autopulizia Panno 75\u00b0C, Asciugatur",
     "price_now": 389.99,
     "timestamp": "2026-07-16T11:28:59.106001",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G81D1ZF5": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G81D1ZF5",
+    "asin": "B0G81D1ZF5",
+    "title": "Lefant M3Max Robot Aspirapolvere e Lavapavimenti con Mappatura, Laser dToF, 20000Pa, Auto-Svuotament",
+    "price_now": 349.99,
+    "timestamp": "2026-07-16T15:07:03.971342",
     "price_prev": null,
     "posted": true
   }
