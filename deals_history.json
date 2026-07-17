@@ -53,24 +53,6 @@
     "price_prev": 285.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0DY8V59LY": {
-    "deal_id": "rapidapi_deals-v2_p1_B0DY8V59LY",
-    "asin": "B0DY8V59LY",
-    "title": "DREAME L40s Pro Ultra Robot Aspirapolvere, Auto-pulizia moci, Aspirazione 19.000 Pa, Spazzola antigr",
-    "price_now": 549.0,
-    "timestamp": "2026-06-16T21:40:26.999265",
-    "price_prev": 549.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F4T46PZD": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F4T46PZD",
-    "asin": "B0F4T46PZD",
-    "title": "Samsung Smart TV 55'' QE55QN83FAUXZT Neo QLED 4K Mini LED, NQ4 AI Gen2 Processor, 4K AI Upscaling, A",
-    "price_now": 499.0,
-    "timestamp": "2026-06-16T21:40:26.999491",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0F53MJY8T": {
     "deal_id": "rapidapi_deals-v2_p1_B0F53MJY8T",
     "asin": "B0F53MJY8T",
@@ -193,7 +175,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-16T19:59:59.226741",
+    "timestamp": "2026-07-17T09:01:57.828430",
     "price_prev": 59.99,
     "posted": false
   },
@@ -220,7 +202,7 @@
     "asin": "B00C7N1TQW",
     "title": "NESCAF\u00c9 DOLCE GUSTO Espresso Barista Caff\u00e8, 6 Confezioni da 16 Capsule (96 Capsule Compatibili Nesca",
     "price_now": 20.89,
-    "timestamp": "2026-07-16T19:59:59.227219",
+    "timestamp": "2026-07-17T09:01:57.828793",
     "price_prev": 20.89,
     "posted": false
   },
@@ -238,7 +220,7 @@
     "asin": "B0D9PQD5V4",
     "title": "Rowenta X-Pert 6.60 Allergy, Aspirapolvere Senza Fili Potente, Scopa Elettrica Senza Fili con Conten",
     "price_now": 109.99,
-    "timestamp": "2026-07-16T15:07:03.971662",
+    "timestamp": "2026-07-17T09:01:57.829439",
     "price_prev": 109.99,
     "posted": false
   },
@@ -247,7 +229,7 @@
     "asin": "B0GL1X2QKM",
     "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
     "price_now": 159.99,
-    "timestamp": "2026-07-16T17:00:50.893176",
+    "timestamp": "2026-07-17T09:01:57.829123",
     "price_prev": 159.99,
     "posted": false
   },
@@ -274,9 +256,9 @@
     "asin": "B0G4CSZGBC",
     "title": "Braun Silk Epil 9 SkinSpa, Epilatore Con Testina Flessibile, Rasoio Elettrico Donna, Wet&Dry, Pelle ",
     "price_now": 139.89,
-    "timestamp": "2026-07-16T17:00:50.893363",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-07-17T09:01:57.829770",
+    "price_prev": 139.89,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0FWCLJ51V": {
     "deal_id": "rapidapi_deals-v2_p1_B0FWCLJ51V",
