@@ -26,15 +26,6 @@
     "price_prev": 24.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0F6YTVXM4": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F6YTVXM4",
-    "asin": "B0F6YTVXM4",
-    "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
-    "price_now": 285.0,
-    "timestamp": "2026-06-18T12:48:20.270225",
-    "price_prev": 285.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F53MJY8T": {
     "deal_id": "rapidapi_deals-v2_p1_B0F53MJY8T",
     "asin": "B0F53MJY8T",
@@ -52,15 +43,6 @@
     "timestamp": "2026-06-19T16:09:55.504066",
     "price_prev": 198.55,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0FS16B394": {
-    "deal_id": "rapidapi_deals-v2_p1_B0FS16B394",
-    "asin": "B0FS16B394",
-    "title": "roborock Qrevo Curv 2 Flow Robot Aspirapolvere Lavapavimenti, 270mm Autopulizia Rullo, 20.000Pa, Pro",
-    "price_now": 599.0,
-    "timestamp": "2026-06-18T11:03:34.118931",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0DK9M8CZ9": {
     "deal_id": "rapidapi_deals-v2_p1_B0DK9M8CZ9",
@@ -148,7 +130,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-18T10:57:50.562837",
+    "timestamp": "2026-07-18T14:21:36.743461",
     "price_prev": 59.99,
     "posted": false
   },
@@ -193,7 +175,7 @@
     "asin": "B0D9PQD5V4",
     "title": "Rowenta X-Pert 6.60 Allergy, Aspirapolvere Senza Fili Potente, Scopa Elettrica Senza Fili con Conten",
     "price_now": 109.99,
-    "timestamp": "2026-07-18T10:57:50.563161",
+    "timestamp": "2026-07-18T14:21:36.744840",
     "price_prev": 109.99,
     "posted": false
   },
@@ -202,7 +184,7 @@
     "asin": "B0GL1X2QKM",
     "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
     "price_now": 159.99,
-    "timestamp": "2026-07-18T10:57:50.562252",
+    "timestamp": "2026-07-18T14:21:36.742789",
     "price_prev": 159.99,
     "posted": false
   },
@@ -229,7 +211,7 @@
     "asin": "B0G4CSZGBC",
     "title": "Braun Silk Epil 9 SkinSpa, Epilatore Con Testina Flessibile, Rasoio Elettrico Donna, Wet&Dry, Pelle ",
     "price_now": 139.89,
-    "timestamp": "2026-07-18T10:57:50.563788",
+    "timestamp": "2026-07-18T14:21:36.743762",
     "price_prev": 139.89,
     "posted": false
   },
@@ -293,6 +275,15 @@
     "title": "Pampers Progressi Newborn, Taglia 1 (2-5 kg), 168 Pannolini Neonato",
     "price_now": 44.42,
     "timestamp": "2026-07-18T08:29:53.862390",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0B97C62VW": {
+    "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
+    "asin": "B0B97C62VW",
+    "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
+    "price_now": 284.04,
+    "timestamp": "2026-07-18T14:21:36.744324",
     "price_prev": null,
     "posted": true
   }
