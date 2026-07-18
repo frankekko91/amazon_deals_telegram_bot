@@ -26,15 +26,6 @@
     "price_prev": 24.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0CQ87N7TS": {
-    "deal_id": "rapidapi_deals-v2_p1_B0CQ87N7TS",
-    "asin": "B0CQ87N7TS",
-    "title": "DJI Mini 3 Fly More Combo (DJI RC)\u2013Mini drone con fotocamera leggero, stabilizzatore a 3 assi, video",
-    "price_now": 429.0,
-    "timestamp": "2026-06-17T21:01:29.082358",
-    "price_prev": 385.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F6YTVXM4": {
     "deal_id": "rapidapi_deals-v2_p1_B0F6YTVXM4",
     "asin": "B0F6YTVXM4",
@@ -157,7 +148,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-17T20:02:20.115885",
+    "timestamp": "2026-07-18T08:29:53.861073",
     "price_prev": 59.99,
     "posted": false
   },
@@ -202,7 +193,7 @@
     "asin": "B0D9PQD5V4",
     "title": "Rowenta X-Pert 6.60 Allergy, Aspirapolvere Senza Fili Potente, Scopa Elettrica Senza Fili con Conten",
     "price_now": 109.99,
-    "timestamp": "2026-07-17T16:57:10.039343",
+    "timestamp": "2026-07-18T08:29:53.861754",
     "price_prev": 109.99,
     "posted": false
   },
@@ -211,7 +202,7 @@
     "asin": "B0GL1X2QKM",
     "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
     "price_now": 159.99,
-    "timestamp": "2026-07-17T20:02:20.116296",
+    "timestamp": "2026-07-18T08:29:53.862592",
     "price_prev": 159.99,
     "posted": false
   },
@@ -284,6 +275,24 @@
     "title": "Lefant M3 Robot Aspirapolvere Lavapavimenti con Mappatura, 12000Pa, Stazione All-in-One, Autosvuotam",
     "price_now": 299.99,
     "timestamp": "2026-07-17T20:02:20.116623",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0D1G28XR5": {
+    "deal_id": "rapidapi_deals-v2_p1_B0D1G28XR5",
+    "asin": "B0D1G28XR5",
+    "title": "SHEKO Collagene Idrolizzato in Polvere - Bovino Tipo 1, 2 e 3-450 g | Peptidi di collagene bovino \u00b7 ",
+    "price_now": 27.95,
+    "timestamp": "2026-07-18T08:29:53.862061",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B01LXREYOY": {
+    "deal_id": "rapidapi_deals-v2_p1_B01LXREYOY",
+    "asin": "B01LXREYOY",
+    "title": "Pampers Progressi Newborn, Taglia 1 (2-5 kg), 168 Pannolini Neonato",
+    "price_now": 44.42,
+    "timestamp": "2026-07-18T08:29:53.862390",
     "price_prev": null,
     "posted": true
   }
