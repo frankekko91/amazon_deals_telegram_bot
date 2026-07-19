@@ -17,15 +17,6 @@
     "price_prev": 199.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B07WXRW9LL": {
-    "deal_id": "rapidapi_deals-v2_p1_B07WXRW9LL",
-    "asin": "B07WXRW9LL",
-    "title": "ECOVACS DEEBOT T50 OMNI Gen2 Robot Aspirapolvere Lavapavimenti, (Migliorato da T30 PRO), 21000 Pa, S",
-    "price_now": 271.0,
-    "timestamp": "2026-06-19T17:46:11.861236",
-    "price_prev": 271.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0CQTJ59FR": {
     "deal_id": "rapidapi_deals-v2_p1_B0CQTJ59FR",
     "asin": "B0CQTJ59FR",
@@ -58,7 +49,7 @@
     "asin": "B0F2J7HL3M",
     "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
     "price_now": 59.99,
-    "timestamp": "2026-07-19T16:42:10.773888",
+    "timestamp": "2026-07-19T20:05:13.537151",
     "price_prev": 59.99,
     "posted": false
   },
@@ -67,7 +58,7 @@
     "asin": "B0CDCL53KW",
     "title": "De\u2019Longhi Rivelia \u2013 Perfetto Macchina da Caff\u00e8 Automatica, LatteCrema Montalatte Automatico, 16 Beva",
     "price_now": 552.0,
-    "timestamp": "2026-07-19T09:00:19.682354",
+    "timestamp": "2026-07-19T20:05:13.537544",
     "price_prev": 552.0,
     "posted": false
   },
@@ -139,7 +130,7 @@
     "asin": "B0G4CSZGBC",
     "title": "Braun Silk Epil 9 SkinSpa, Epilatore Con Testina Flessibile, Rasoio Elettrico Donna, Wet&Dry, Pelle ",
     "price_now": 139.89,
-    "timestamp": "2026-07-19T16:42:10.774320",
+    "timestamp": "2026-07-19T20:05:13.538195",
     "price_prev": 139.89,
     "posted": false
   },
@@ -211,7 +202,7 @@
     "asin": "B0B97C62VW",
     "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
     "price_now": 284.04,
-    "timestamp": "2026-07-19T16:42:10.774505",
+    "timestamp": "2026-07-19T20:05:13.538504",
     "price_prev": 284.04,
     "posted": false
   },
@@ -229,8 +220,8 @@
     "asin": "B0GGHDQ82J",
     "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
     "price_now": 170.99,
-    "timestamp": "2026-07-19T09:00:19.682160",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-07-19T20:05:13.536397",
+    "price_prev": 170.99,
+    "posted": false
   }
 }
