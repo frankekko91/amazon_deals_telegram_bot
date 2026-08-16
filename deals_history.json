@@ -139,7 +139,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-16T16:10:39.263897",
+    "timestamp": "2026-08-16T19:17:42.515911",
     "price_prev": 38.99,
     "posted": false
   },
@@ -148,7 +148,7 @@
     "asin": "B0CN41GMDK",
     "title": "Amazon Fire TV Stick 4K Select (ultimo modello) - Trasmetti in streaming in 4K centinaia di migliaia",
     "price_now": 29.99,
-    "timestamp": "2026-08-16T16:10:39.264743",
+    "timestamp": "2026-08-16T19:17:42.516707",
     "price_prev": 29.99,
     "posted": false
   },
@@ -175,7 +175,7 @@
     "asin": "B0D3J7CKFR",
     "title": "Apple Pencil Pro: strumenti evoluti, precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e alla pressi",
     "price_now": 109.0,
-    "timestamp": "2026-08-16T13:35:25.361741",
+    "timestamp": "2026-08-16T19:17:42.516192",
     "price_prev": 109.0,
     "posted": false
   },
@@ -184,9 +184,9 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-16T10:17:05.159205",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-16T19:17:42.516518",
+    "price_prev": 699.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GHN3V6BP": {
     "deal_id": "rapidapi_deals-v2_p1_B0GHN3V6BP",
@@ -202,8 +202,8 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 31.99,
-    "timestamp": "2026-08-16T13:35:25.362461",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-16T19:17:42.516849",
+    "price_prev": 31.99,
+    "posted": false
   }
 }
