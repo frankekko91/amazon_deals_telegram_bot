@@ -62,15 +62,6 @@
     "price_prev": 139.89,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0D8WD78ND": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D8WD78ND",
-    "asin": "B0D8WD78ND",
-    "title": "Fairy Platinum Plus Pastiglie Lavastoviglie, 150 Capsule, Limone, Detersivo Con Tecnologia Anti-Opac",
-    "price_now": 28.99,
-    "timestamp": "2026-07-16T19:59:59.227368",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0FMJ5D4KS": {
     "deal_id": "rapidapi_deals-v2_p1_B0FMJ5D4KS",
     "asin": "B0FMJ5D4KS",
@@ -142,5 +133,50 @@
     "timestamp": "2026-07-19T20:05:13.536397",
     "price_prev": 170.99,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0F9B6KJRH": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F9B6KJRH",
+    "asin": "B0F9B6KJRH",
+    "title": "Alienware 16 Gaming Laptop - Intel Core Ultra 9 275HX | Schermo WQXGA 2560x1600 240Hz, RTX 5070, 32G",
+    "price_now": 1899.0,
+    "timestamp": "2026-08-16T07:21:34.381047",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F7ZFWVTC",
+    "asin": "B0F7ZFWVTC",
+    "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
+    "price_now": 38.99,
+    "timestamp": "2026-08-16T07:21:34.381362",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CN41GMDK": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CN41GMDK",
+    "asin": "B0CN41GMDK",
+    "title": "Amazon Fire TV Stick 4K Select (ultimo modello) - Trasmetti in streaming in 4K centinaia di migliaia",
+    "price_now": 29.99,
+    "timestamp": "2026-08-16T07:21:34.381570",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0CL7DZXB2": {
+    "deal_id": "rapidapi_deals-v2_p1_B0CL7DZXB2",
+    "asin": "B0CL7DZXB2",
+    "title": "Apple Pencil (USB-C): precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e la pi\u00f9 bassa latenza del s",
+    "price_now": 69.0,
+    "timestamp": "2026-08-16T07:21:34.381874",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G7YP6MXV": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G7YP6MXV",
+    "asin": "B0G7YP6MXV",
+    "title": "Lefant M5 Pro Robot Aspirapolvere Lavapavimenti con Rullo 23.000Pa | Rullo Autopulente, Anti-Grovigl",
+    "price_now": 449.98,
+    "timestamp": "2026-08-16T07:21:34.382067",
+    "price_prev": null,
+    "posted": true
   }
 }
