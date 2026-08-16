@@ -130,16 +130,16 @@
     "asin": "B0F9B6KJRH",
     "title": "Alienware 16 Gaming Laptop - Intel Core Ultra 9 275HX | Schermo WQXGA 2560x1600 240Hz, RTX 5070, 32G",
     "price_now": 1899.0,
-    "timestamp": "2026-08-16T07:21:34.381047",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-16T16:10:39.264543",
+    "price_prev": 1899.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
     "deal_id": "rapidapi_deals-v2_p1_B0F7ZFWVTC",
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-16T13:35:25.361945",
+    "timestamp": "2026-08-16T16:10:39.263897",
     "price_prev": 38.99,
     "posted": false
   },
@@ -148,7 +148,7 @@
     "asin": "B0CN41GMDK",
     "title": "Amazon Fire TV Stick 4K Select (ultimo modello) - Trasmetti in streaming in 4K centinaia di migliaia",
     "price_now": 29.99,
-    "timestamp": "2026-08-16T13:35:25.362298",
+    "timestamp": "2026-08-16T16:10:39.264743",
     "price_prev": 29.99,
     "posted": false
   },
@@ -157,9 +157,9 @@
     "asin": "B0CL7DZXB2",
     "title": "Apple Pencil (USB-C): precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e la pi\u00f9 bassa latenza del s",
     "price_now": 69.0,
-    "timestamp": "2026-08-16T07:21:34.381874",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-16T16:10:39.264244",
+    "price_prev": 69.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0G7YP6MXV": {
     "deal_id": "rapidapi_deals-v2_p1_B0G7YP6MXV",
@@ -193,7 +193,7 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-16T13:35:25.362122",
+    "timestamp": "2026-08-16T16:10:39.263500",
     "price_prev": 369.99,
     "posted": false
   },
