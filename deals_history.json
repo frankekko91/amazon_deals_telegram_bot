@@ -71,15 +71,6 @@
     "price_prev": 170.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0FWCY4ZTD": {
-    "deal_id": "rapidapi_deals-v2_p1_B0FWCY4ZTD",
-    "asin": "B0FWCY4ZTD",
-    "title": "msi MAG 274QPA QD-OLED X24 Monitor Gaming 27\" WQHD -Quantum Dot OLED (2560 x 1440), 240\u202fHz, 0,03\u202fms,",
-    "price_now": 379.0,
-    "timestamp": "2026-07-17T11:18:13.253733",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0GJZ8LDXR": {
     "deal_id": "rapidapi_deals-v2_p1_B0GJZ8LDXR",
     "asin": "B0GJZ8LDXR",
@@ -148,7 +139,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-16T10:17:05.159662",
+    "timestamp": "2026-08-16T13:35:25.361945",
     "price_prev": 38.99,
     "posted": false
   },
@@ -157,7 +148,7 @@
     "asin": "B0CN41GMDK",
     "title": "Amazon Fire TV Stick 4K Select (ultimo modello) - Trasmetti in streaming in 4K centinaia di migliaia",
     "price_now": 29.99,
-    "timestamp": "2026-08-16T10:17:05.159872",
+    "timestamp": "2026-08-16T13:35:25.362298",
     "price_prev": 29.99,
     "posted": false
   },
@@ -184,9 +175,9 @@
     "asin": "B0D3J7CKFR",
     "title": "Apple Pencil Pro: strumenti evoluti, precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e alla pressi",
     "price_now": 109.0,
-    "timestamp": "2026-08-16T10:17:05.158934",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-16T13:35:25.361741",
+    "price_prev": 109.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0FHHYQ58Q": {
     "deal_id": "rapidapi_deals-v2_p1_B0FHHYQ58Q",
@@ -202,7 +193,16 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-16T10:17:05.159438",
+    "timestamp": "2026-08-16T13:35:25.362122",
+    "price_prev": 369.99,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0DJGCX6Q2": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DJGCX6Q2",
+    "asin": "B0DJGCX6Q2",
+    "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
+    "price_now": 31.99,
+    "timestamp": "2026-08-16T13:35:25.362461",
     "price_prev": null,
     "posted": true
   }
