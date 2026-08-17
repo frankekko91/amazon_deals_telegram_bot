@@ -35,15 +35,6 @@
     "price_prev": 109.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GL1X2QKM": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GL1X2QKM",
-    "asin": "B0GL1X2QKM",
-    "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
-    "price_now": 159.99,
-    "timestamp": "2026-07-18T16:42:06.618847",
-    "price_prev": 159.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0GHN9DR1C": {
     "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
     "asin": "B0GHN9DR1C",
@@ -112,7 +103,7 @@
     "asin": "B0F9B6KJRH",
     "title": "Alienware 16 Gaming Laptop - Intel Core Ultra 9 275HX | Schermo WQXGA 2560x1600 240Hz, RTX 5070, 32G",
     "price_now": 1899.0,
-    "timestamp": "2026-08-17T10:25:57.237455",
+    "timestamp": "2026-08-17T19:23:41.636923",
     "price_prev": 1899.0,
     "posted": false
   },
@@ -121,7 +112,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-17T16:13:12.702043",
+    "timestamp": "2026-08-17T19:23:41.636051",
     "price_prev": 38.99,
     "posted": false
   },
@@ -166,7 +157,7 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-17T16:13:12.702188",
+    "timestamp": "2026-08-17T19:23:41.635714",
     "price_prev": 699.0,
     "posted": false
   },
@@ -184,7 +175,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 31.99,
-    "timestamp": "2026-08-17T16:13:12.702476",
+    "timestamp": "2026-08-17T19:23:41.636347",
     "price_prev": 31.99,
     "posted": false
   },
@@ -203,6 +194,15 @@
     "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3N Nero, 1 Testina Di Ricambio, 1 Spazzolino Elettrico O",
     "price_now": 59.99,
     "timestamp": "2026-08-17T07:41:32.980122",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GQTP21W6": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GQTP21W6",
+    "asin": "B0GQTP21W6",
+    "title": "Lenovo IdeaPad Slim 3 Copilot+ PC Notebook 15\" IPS (1920x1200) Snapdragon X X1-26-100, 16GB RAM LPDD",
+    "price_now": 549.9,
+    "timestamp": "2026-08-17T19:23:41.636685",
     "price_prev": null,
     "posted": true
   }
