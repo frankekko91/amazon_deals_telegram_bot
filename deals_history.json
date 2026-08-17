@@ -80,24 +80,6 @@
     "price_prev": 299.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0D1G28XR5": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D1G28XR5",
-    "asin": "B0D1G28XR5",
-    "title": "SHEKO Collagene Idrolizzato in Polvere - Bovino Tipo 1, 2 e 3-450 g | Peptidi di collagene bovino \u00b7 ",
-    "price_now": 27.95,
-    "timestamp": "2026-07-18T08:29:53.862061",
-    "price_prev": null,
-    "posted": true
-  },
-  "rapidapi_deals-v2_p1_B01LXREYOY": {
-    "deal_id": "rapidapi_deals-v2_p1_B01LXREYOY",
-    "asin": "B01LXREYOY",
-    "title": "Pampers Progressi Newborn, Taglia 1 (2-5 kg), 168 Pannolini Neonato",
-    "price_now": 44.42,
-    "timestamp": "2026-07-18T08:29:53.862390",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0B97C62VW": {
     "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
     "asin": "B0B97C62VW",
@@ -130,7 +112,7 @@
     "asin": "B0F9B6KJRH",
     "title": "Alienware 16 Gaming Laptop - Intel Core Ultra 9 275HX | Schermo WQXGA 2560x1600 240Hz, RTX 5070, 32G",
     "price_now": 1899.0,
-    "timestamp": "2026-08-16T16:10:39.264543",
+    "timestamp": "2026-08-17T10:25:57.237455",
     "price_prev": 1899.0,
     "posted": false
   },
@@ -139,7 +121,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-16T19:17:42.515911",
+    "timestamp": "2026-08-17T10:25:57.237848",
     "price_prev": 38.99,
     "posted": false
   },
@@ -184,7 +166,7 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-17T07:41:32.978670",
+    "timestamp": "2026-08-17T10:25:57.237233",
     "price_prev": 699.0,
     "posted": false
   },
@@ -193,7 +175,7 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-17T07:41:32.980433",
+    "timestamp": "2026-08-17T10:25:57.237656",
     "price_prev": 369.99,
     "posted": false
   },
@@ -211,9 +193,9 @@
     "asin": "B09V7Z4TJG",
     "title": "medicube Toner Pads Zero Pore Pad 2.0 | Toner Pads Doppia Texture per Esfoliazione & Pori con 4,5% A",
     "price_now": 11.45,
-    "timestamp": "2026-08-17T07:41:32.979818",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-08-17T10:25:57.238028",
+    "price_prev": 11.45,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J6RCKL": {
     "deal_id": "rapidapi_deals-v2_p1_B0F2J6RCKL",
