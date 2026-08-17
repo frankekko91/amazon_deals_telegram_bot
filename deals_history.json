@@ -175,7 +175,7 @@
     "asin": "B0D3J7CKFR",
     "title": "Apple Pencil Pro: strumenti evoluti, precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e alla pressi",
     "price_now": 109.0,
-    "timestamp": "2026-08-16T19:17:42.516192",
+    "timestamp": "2026-08-17T07:41:32.979407",
     "price_prev": 109.0,
     "posted": false
   },
@@ -184,7 +184,7 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-16T19:17:42.516518",
+    "timestamp": "2026-08-17T07:41:32.978670",
     "price_prev": 699.0,
     "posted": false
   },
@@ -193,7 +193,7 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-16T16:10:39.263500",
+    "timestamp": "2026-08-17T07:41:32.980433",
     "price_prev": 369.99,
     "posted": false
   },
@@ -205,5 +205,23 @@
     "timestamp": "2026-08-16T19:17:42.516849",
     "price_prev": 31.99,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B09V7Z4TJG": {
+    "deal_id": "rapidapi_deals-v2_p1_B09V7Z4TJG",
+    "asin": "B09V7Z4TJG",
+    "title": "medicube Toner Pads Zero Pore Pad 2.0 | Toner Pads Doppia Texture per Esfoliazione & Pori con 4,5% A",
+    "price_now": 11.45,
+    "timestamp": "2026-08-17T07:41:32.979818",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F2J6RCKL": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F2J6RCKL",
+    "asin": "B0F2J6RCKL",
+    "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3N Nero, 1 Testina Di Ricambio, 1 Spazzolino Elettrico O",
+    "price_now": 59.99,
+    "timestamp": "2026-08-17T07:41:32.980122",
+    "price_prev": null,
+    "posted": true
   }
 }
