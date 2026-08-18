@@ -103,7 +103,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-18T07:27:27.691736",
+    "timestamp": "2026-08-18T10:22:03.222857",
     "price_prev": 38.99,
     "posted": false
   },
@@ -121,7 +121,7 @@
     "asin": "B0CL7DZXB2",
     "title": "Apple Pencil (USB-C): precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e la pi\u00f9 bassa latenza del s",
     "price_now": 69.0,
-    "timestamp": "2026-08-16T16:10:39.264244",
+    "timestamp": "2026-08-18T10:22:03.223302",
     "price_prev": 69.0,
     "posted": false
   },
@@ -148,7 +148,7 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-17T19:23:41.635714",
+    "timestamp": "2026-08-18T10:22:03.222440",
     "price_prev": 699.0,
     "posted": false
   },
@@ -166,7 +166,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 31.99,
-    "timestamp": "2026-08-17T19:23:41.636347",
+    "timestamp": "2026-08-18T10:22:03.221445",
     "price_prev": 31.99,
     "posted": false
   },
@@ -230,6 +230,15 @@
     "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3N Nero, 1 Testina Di Ricambio, 1 Spazzolino Elettrico O",
     "price_now": 59.99,
     "timestamp": "2026-08-18T07:27:29.744855",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B09B8X9RGM": {
+    "deal_id": "rapidapi_deals-v2_p1_B09B8X9RGM",
+    "asin": "B09B8X9RGM",
+    "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
+    "price_now": 39.99,
+    "timestamp": "2026-08-18T10:22:03.221898",
     "price_prev": null,
     "posted": true
   }
