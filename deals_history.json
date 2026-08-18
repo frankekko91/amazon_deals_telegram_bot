@@ -80,15 +80,6 @@
     "price_prev": 284.04,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GMHC87FB": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GMHC87FB",
-    "asin": "B0GMHC87FB",
-    "title": "roborock Qrevo Edge 2 Set Robot Aspirapolvere Lavapavimenti con LDS Retrattile, 7,98 cm, 25.000Pa, F",
-    "price_now": 599.99,
-    "timestamp": "2026-07-18T20:01:49.586721",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0GGHDQ82J": {
     "deal_id": "rapidapi_deals-v2_p1_B0GGHDQ82J",
     "asin": "B0GGHDQ82J",
@@ -112,7 +103,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-17T19:23:41.636051",
+    "timestamp": "2026-08-18T07:27:27.691736",
     "price_prev": 38.99,
     "posted": false
   },
@@ -184,7 +175,7 @@
     "asin": "B09V7Z4TJG",
     "title": "medicube Toner Pads Zero Pore Pad 2.0 | Toner Pads Doppia Texture per Esfoliazione & Pori con 4,5% A",
     "price_now": 11.45,
-    "timestamp": "2026-08-17T16:13:12.702338",
+    "timestamp": "2026-08-18T07:27:27.693311",
     "price_prev": 11.45,
     "posted": false
   },
@@ -203,6 +194,42 @@
     "title": "Lenovo IdeaPad Slim 3 Copilot+ PC Notebook 15\" IPS (1920x1200) Snapdragon X X1-26-100, 16GB RAM LPDD",
     "price_now": 549.9,
     "timestamp": "2026-08-17T19:23:41.636685",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B09B8RF4PY": {
+    "deal_id": "rapidapi_deals-v2_p1_B09B8RF4PY",
+    "asin": "B09B8RF4PY",
+    "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
+    "price_now": 39.99,
+    "timestamp": "2026-08-18T07:27:27.691338",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G4NBBZLG": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G4NBBZLG",
+    "asin": "B0G4NBBZLG",
+    "title": "roborock Saros 20 Robot Aspirapolvere Lavapavimenti 36.000Pa, 7,95cm | Supera Ostacoli da 8,8cm, Ant",
+    "price_now": 999.0,
+    "timestamp": "2026-08-18T07:27:27.691554",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F2J5LS2Y": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F2J5LS2Y",
+    "asin": "B0F2J5LS2Y",
+    "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero",
+    "price_now": 119.99,
+    "timestamp": "2026-08-18T07:27:27.692057",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0F2J6RCKL": {
+    "deal_id": "rapidapi_deals-v2_p3_B0F2J6RCKL",
+    "asin": "B0F2J6RCKL",
+    "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3N Nero, 1 Testina Di Ricambio, 1 Spazzolino Elettrico O",
+    "price_now": 59.99,
+    "timestamp": "2026-08-18T07:27:29.744855",
     "price_prev": null,
     "posted": true
   }
