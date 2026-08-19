@@ -1,49 +1,4 @@
 {
-  "rapidapi_deals-v2_p1_B0F2J7HL3M": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J7HL3M",
-    "asin": "B0F2J7HL3M",
-    "title": "Oral-B iO 3 Spazzolino Elettrico Ricaricabile, con 1 Testina di Ricambio, Nero - 1 Testine di Ricamb",
-    "price_now": 59.99,
-    "timestamp": "2026-07-20T09:48:24.092039",
-    "price_prev": 59.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0D9PQD5V4": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D9PQD5V4",
-    "asin": "B0D9PQD5V4",
-    "title": "Rowenta X-Pert 6.60 Allergy, Aspirapolvere Senza Fili Potente, Scopa Elettrica Senza Fili con Conten",
-    "price_now": 109.99,
-    "timestamp": "2026-07-20T09:48:24.093206",
-    "price_prev": 109.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0GHN9DR1C": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
-    "asin": "B0GHN9DR1C",
-    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, 18.500Pa, Autopulizia Panno 75\u00b0C, Asciugatur",
-    "price_now": 389.99,
-    "timestamp": "2026-07-20T09:48:24.092354",
-    "price_prev": 389.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0G4CSZGBC": {
-    "deal_id": "rapidapi_deals-v2_p1_B0G4CSZGBC",
-    "asin": "B0G4CSZGBC",
-    "title": "Braun Silk Epil 9 SkinSpa, Epilatore Con Testina Flessibile, Rasoio Elettrico Donna, Wet&Dry, Pelle ",
-    "price_now": 139.89,
-    "timestamp": "2026-07-20T09:48:24.092934",
-    "price_prev": 139.89,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0B97C62VW": {
-    "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
-    "asin": "B0B97C62VW",
-    "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
-    "price_now": 284.04,
-    "timestamp": "2026-07-20T09:48:24.092630",
-    "price_prev": 284.04,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F9B6KJRH": {
     "deal_id": "rapidapi_deals-v2_p1_B0F9B6KJRH",
     "asin": "B0F9B6KJRH",
@@ -58,7 +13,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-19T07:28:47.913928",
+    "timestamp": "2026-08-19T10:22:18.614129",
     "price_prev": 38.99,
     "posted": false
   },
@@ -103,7 +58,7 @@
     "asin": "B0FHHYQ58Q",
     "title": "dreame Aqua10 Ultra Roller Complete Robot Aspirapolvere, Aspir. 30.000 Pa | Mocio AquaRoll, Superame",
     "price_now": 699.0,
-    "timestamp": "2026-08-18T19:23:23.680889",
+    "timestamp": "2026-08-19T10:22:18.613920",
     "price_prev": 699.0,
     "posted": false
   },
@@ -112,7 +67,7 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-19T07:28:47.913620",
+    "timestamp": "2026-08-19T10:22:18.614306",
     "price_prev": 369.99,
     "posted": false
   },
@@ -121,7 +76,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 31.99,
-    "timestamp": "2026-08-19T07:28:47.913349",
+    "timestamp": "2026-08-19T10:22:18.613706",
     "price_prev": 31.99,
     "posted": false
   },
@@ -193,7 +148,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 39.99,
-    "timestamp": "2026-08-19T07:28:47.913499",
+    "timestamp": "2026-08-19T10:22:18.613445",
     "price_prev": 39.99,
     "posted": false
   },
