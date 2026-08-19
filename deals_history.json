@@ -8,15 +8,6 @@
     "price_prev": 59.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0CDCL53KW": {
-    "deal_id": "rapidapi_deals-v2_p1_B0CDCL53KW",
-    "asin": "B0CDCL53KW",
-    "title": "De\u2019Longhi Rivelia \u2013 Perfetto Macchina da Caff\u00e8 Automatica, LatteCrema Montalatte Automatico, 16 Beva",
-    "price_now": 552.0,
-    "timestamp": "2026-07-19T20:05:13.537544",
-    "price_prev": 552.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0D9PQD5V4": {
     "deal_id": "rapidapi_deals-v2_p1_B0D9PQD5V4",
     "asin": "B0D9PQD5V4",
@@ -53,15 +44,6 @@
     "price_prev": 284.04,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GGHDQ82J": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GGHDQ82J",
-    "asin": "B0GGHDQ82J",
-    "title": "FunWater Sup Gonfiabile Portatile: Tavola Gonfiabile, Pinne, Pompa, Pagaia, Zaino e Guinzaglio di Si",
-    "price_now": 170.99,
-    "timestamp": "2026-07-19T20:05:13.536397",
-    "price_prev": 170.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F9B6KJRH": {
     "deal_id": "rapidapi_deals-v2_p1_B0F9B6KJRH",
     "asin": "B0F9B6KJRH",
@@ -76,7 +58,7 @@
     "asin": "B0F7ZFWVTC",
     "title": "Fire TV Stick 4K Plus di Amazon, dispositivo per lo streaming con supporto per Wi-Fi 6, Dolby Vision",
     "price_now": 38.99,
-    "timestamp": "2026-08-18T19:23:23.681206",
+    "timestamp": "2026-08-19T07:28:47.913928",
     "price_prev": 38.99,
     "posted": false
   },
@@ -130,7 +112,7 @@
     "asin": "B0GHN3V6BP",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-08-18T16:17:34.890226",
+    "timestamp": "2026-08-19T07:28:47.913620",
     "price_prev": 369.99,
     "posted": false
   },
@@ -139,7 +121,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 31.99,
-    "timestamp": "2026-08-18T19:23:23.680162",
+    "timestamp": "2026-08-19T07:28:47.913349",
     "price_prev": 31.99,
     "posted": false
   },
@@ -211,8 +193,17 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (Ultimo modello) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamic",
     "price_now": 39.99,
-    "timestamp": "2026-08-18T19:23:23.680528",
+    "timestamp": "2026-08-19T07:28:47.913499",
     "price_prev": 39.99,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0GZZ96X7N": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GZZ96X7N",
+    "asin": "B0GZZ96X7N",
+    "title": "roborock Qrevo 2 Pro Set Robot Aspirapolvere Lavapavimenti 25.000Pa, Bianco | Panno Estensibile, Ant",
+    "price_now": 499.99,
+    "timestamp": "2026-08-19T07:28:47.913748",
+    "price_prev": null,
+    "posted": true
   }
 }
