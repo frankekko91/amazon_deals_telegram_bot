@@ -35,15 +35,6 @@
     "price_prev": 69.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0D3J7CKFR": {
-    "deal_id": "rapidapi_deals-v2_p1_B0D3J7CKFR",
-    "asin": "B0D3J7CKFR",
-    "title": "Apple Pencil Pro: strumenti evoluti, precisione al pixel, sensibilit\u00e0 all\u2019inclinazione e alla pressi",
-    "price_now": 109.0,
-    "timestamp": "2026-08-17T07:41:32.979407",
-    "price_prev": 109.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0FHHYQ58Q": {
     "deal_id": "rapidapi_deals-v2_p1_B0FHHYQ58Q",
     "asin": "B0FHHYQ58Q",
@@ -79,15 +70,6 @@
     "timestamp": "2026-08-18T07:27:27.693311",
     "price_prev": 11.45,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F2J6RCKL": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J6RCKL",
-    "asin": "B0F2J6RCKL",
-    "title": "Oral-B Spazzolino Elettrico Ricaricabile iO 3N Nero, 1 Testina Di Ricambio, 1 Spazzolino Elettrico O",
-    "price_now": 59.99,
-    "timestamp": "2026-08-17T07:41:32.980122",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0GQTP21W6": {
     "deal_id": "rapidapi_deals-v2_p1_B0GQTP21W6",
@@ -149,6 +131,51 @@
     "title": "roborock Qrevo 2 Pro Set Robot Aspirapolvere Lavapavimenti 25.000Pa, Bianco | Panno Estensibile, Ant",
     "price_now": 499.99,
     "timestamp": "2026-08-19T07:28:47.913748",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GHN9DR1C": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
+    "asin": "B0GHN9DR1C",
+    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
+    "price_now": 369.99,
+    "timestamp": "2026-09-16T12:16:55.917090",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G7VW71DD": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G7VW71DD",
+    "asin": "B0G7VW71DD",
+    "title": "Lefant M210 PRO OMNI Robot Aspirapolvere Lavapavimenti con Rullo 20.000Pa | Rullo Autopulente, Lavag",
+    "price_now": 289.99,
+    "timestamp": "2026-09-16T12:16:55.917979",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F2JBR211": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F2JBR211",
+    "asin": "B0F2JBR211",
+    "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
+    "price_now": 119.89,
+    "timestamp": "2026-09-16T12:16:55.918246",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G5PZR2NN": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G5PZR2NN",
+    "asin": "B0G5PZR2NN",
+    "title": "Dell 14 Laptop - AMD Ryzen AI 7 350, 16GB RAM, 1TB SSD | 14'' FHD+, AMD Radeon Graphics, Windows 11 ",
+    "price_now": 859.0,
+    "timestamp": "2026-09-16T12:16:55.918989",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H5JX9ZQ8": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H5JX9ZQ8",
+    "asin": "B0H5JX9ZQ8",
+    "title": "Samsung Galaxy Watch Ultra2, 47 mm, Titanium Gray, LTE [Versione Italiana] | 3 anni di garanzia, Des",
+    "price_now": 589.08,
+    "timestamp": "2026-09-16T12:16:55.919247",
     "price_prev": null,
     "posted": true
   }
