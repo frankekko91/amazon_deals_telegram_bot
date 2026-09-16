@@ -1,13 +1,4 @@
 {
-  "rapidapi_deals-v2_p1_B0F9B6KJRH": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F9B6KJRH",
-    "asin": "B0F9B6KJRH",
-    "title": "Alienware 16 Gaming Laptop - Intel Core Ultra 9 275HX | Schermo WQXGA 2560x1600 240Hz, RTX 5070, 32G",
-    "price_now": 1899.0,
-    "timestamp": "2026-08-17T19:23:41.636923",
-    "price_prev": 1899.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0F7ZFWVTC": {
     "deal_id": "rapidapi_deals-v2_p1_B0F7ZFWVTC",
     "asin": "B0F7ZFWVTC",
@@ -71,15 +62,6 @@
     "price_prev": 11.45,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GQTP21W6": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GQTP21W6",
-    "asin": "B0GQTP21W6",
-    "title": "Lenovo IdeaPad Slim 3 Copilot+ PC Notebook 15\" IPS (1920x1200) Snapdragon X X1-26-100, 16GB RAM LPDD",
-    "price_now": 549.9,
-    "timestamp": "2026-08-17T19:23:41.636685",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B09B8RF4PY": {
     "deal_id": "rapidapi_deals-v2_p1_B09B8RF4PY",
     "asin": "B09B8RF4PY",
@@ -139,7 +121,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-16T19:10:19.718569",
+    "timestamp": "2026-09-16T21:51:26.670411",
     "price_prev": 369.99,
     "posted": false
   },
@@ -157,7 +139,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-16T19:10:19.717448",
+    "timestamp": "2026-09-16T21:51:26.670106",
     "price_prev": 119.89,
     "posted": false
   },
@@ -205,5 +187,32 @@
     "timestamp": "2026-09-16T19:10:19.718754",
     "price_prev": 549.99,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0H419WWBZ": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H419WWBZ",
+    "asin": "B0H419WWBZ",
+    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
+    "price_now": 799.0,
+    "timestamp": "2026-09-16T21:51:26.670974",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0F13KXRG8": {
+    "deal_id": "rapidapi_deals-v2_p1_B0F13KXRG8",
+    "asin": "B0F13KXRG8",
+    "title": "aspirapolvere senza fili 55KPa/650W/70Min Per Animali/Pavimenti/Tappeti | Aspirapolvere Verticale Se",
+    "price_now": 120.02,
+    "timestamp": "2026-09-16T21:51:26.671339",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B07LH73GZ9": {
+    "deal_id": "rapidapi_deals-v2_p1_B07LH73GZ9",
+    "asin": "B07LH73GZ9",
+    "title": "Magnesio Bisglicinato 1500 mg con Vitamina B6 | 90 Capsule | Nutrimea | Forma Chelata | Stanchezza e",
+    "price_now": 9.49,
+    "timestamp": "2026-09-16T21:51:26.671701",
+    "price_prev": null,
+    "posted": true
   }
 }
