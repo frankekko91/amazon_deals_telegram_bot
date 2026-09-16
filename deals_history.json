@@ -139,9 +139,9 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-16T12:16:55.917090",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-16T14:32:01.562676",
+    "price_prev": 369.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0G7VW71DD": {
     "deal_id": "rapidapi_deals-v2_p1_B0G7VW71DD",
@@ -157,9 +157,9 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-16T12:16:55.918246",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-16T14:32:01.562825",
+    "price_prev": 119.89,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0G5PZR2NN": {
     "deal_id": "rapidapi_deals-v2_p1_B0G5PZR2NN",
@@ -175,7 +175,25 @@
     "asin": "B0H5JX9ZQ8",
     "title": "Samsung Galaxy Watch Ultra2, 47 mm, Titanium Gray, LTE [Versione Italiana] | 3 anni di garanzia, Des",
     "price_now": 589.08,
-    "timestamp": "2026-09-16T12:16:55.919247",
+    "timestamp": "2026-09-16T14:32:01.562967",
+    "price_prev": 589.08,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0H4FFNW2Q": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4FFNW2Q",
+    "asin": "B0H4FFNW2Q",
+    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
+    "price_now": 799.0,
+    "timestamp": "2026-09-16T14:32:01.563222",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H6XGHLZV": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H6XGHLZV",
+    "asin": "B0H6XGHLZV",
+    "title": "POCO F9 Pro, Smartphone 12+512GB, Bianco, Batteria 6330mAh, HyperCharge100W | Snapdragon\u00ae 8 Elite Ge",
+    "price_now": 799.9,
+    "timestamp": "2026-09-16T14:32:01.563352",
     "price_prev": null,
     "posted": true
   }
