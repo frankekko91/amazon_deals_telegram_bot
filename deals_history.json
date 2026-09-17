@@ -67,7 +67,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-17T12:16:49.831236",
+    "timestamp": "2026-09-17T14:36:05.765160",
     "price_prev": 369.99,
     "posted": false
   },
@@ -85,7 +85,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-17T12:16:49.831547",
+    "timestamp": "2026-09-17T14:36:05.763909",
     "price_prev": 119.89,
     "posted": false
   },
@@ -103,7 +103,7 @@
     "asin": "B0H5JX9ZQ8",
     "title": "Samsung Galaxy Watch Ultra2, 47 mm, Titanium Gray, LTE [Versione Italiana] | 3 anni di garanzia, Des",
     "price_now": 589.08,
-    "timestamp": "2026-09-16T14:32:01.562967",
+    "timestamp": "2026-09-17T14:36:05.764890",
     "price_prev": 589.08,
     "posted": false
   },
@@ -112,7 +112,7 @@
     "asin": "B0H4FFNW2Q",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-17T12:16:49.830615",
+    "timestamp": "2026-09-17T14:36:05.764190",
     "price_prev": 799.0,
     "posted": false
   },
@@ -176,6 +176,15 @@
     "title": "Lenovo IdeaPad Slim 3 Notebook 15\" IPS Intel Core 7 350, RAM 16GB, 512GB SSD, Windows 11 Home, WiFi ",
     "price_now": 799.0,
     "timestamp": "2026-09-17T12:16:49.833024",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H4H7FVVZ": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4H7FVVZ",
+    "asin": "B0H4H7FVVZ",
+    "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Black, Batteria da 8340 mAh | Fotocamera OIS 50MP, HyperC",
+    "price_now": 429.9,
+    "timestamp": "2026-09-17T14:36:05.765409",
     "price_prev": null,
     "posted": true
   }
