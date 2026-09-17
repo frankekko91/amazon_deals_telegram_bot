@@ -85,7 +85,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-17T14:36:05.763909",
+    "timestamp": "2026-09-17T17:33:41.552931",
     "price_prev": 119.89,
     "posted": false
   },
@@ -94,7 +94,7 @@
     "asin": "B0G5PZR2NN",
     "title": "Dell 14 Laptop - AMD Ryzen AI 7 350, 16GB RAM, 1TB SSD | 14'' FHD+, AMD Radeon Graphics, Windows 11 ",
     "price_now": 859.0,
-    "timestamp": "2026-09-16T19:10:19.718125",
+    "timestamp": "2026-09-17T17:33:41.551241",
     "price_prev": 859.0,
     "posted": false
   },
@@ -112,7 +112,7 @@
     "asin": "B0H4FFNW2Q",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-17T14:36:05.764190",
+    "timestamp": "2026-09-17T17:33:41.550285",
     "price_prev": 799.0,
     "posted": false
   },
@@ -121,16 +121,16 @@
     "asin": "B0H6XGHLZV",
     "title": "POCO F9 Pro, Smartphone 12+512GB, Bianco, Batteria 6330mAh, HyperCharge100W | Snapdragon\u00ae 8 Elite Ge",
     "price_now": 799.9,
-    "timestamp": "2026-09-16T14:32:01.563352",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-17T17:33:41.551914",
+    "price_prev": 799.9,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GMHC87FB": {
     "deal_id": "rapidapi_deals-v2_p1_B0GMHC87FB",
     "asin": "B0GMHC87FB",
     "title": "roborock Qrevo Edge 2 Set Robot Aspirapolvere Lavapavimenti 25.000Pa | LDS Retrattile, 7,98 cm, Flex",
     "price_now": 549.99,
-    "timestamp": "2026-09-16T19:10:19.718754",
+    "timestamp": "2026-09-17T17:33:41.550853",
     "price_prev": 549.99,
     "posted": false
   },
