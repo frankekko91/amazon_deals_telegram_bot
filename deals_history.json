@@ -121,7 +121,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-18T17:00:03.153208",
+    "timestamp": "2026-09-18T18:43:42.299757",
     "price_prev": 799.0,
     "posted": false
   },
@@ -148,7 +148,7 @@
     "asin": "B0GL2Y8DWL",
     "title": "Dell 16 Laptop - AMD Ryzen 7 250, 16GB DDR5, 1TB SSD | 16\" 2K anti-riflesso, AMD Radeon Graphics, Wi",
     "price_now": 749.0,
-    "timestamp": "2026-09-18T11:57:29.761047",
+    "timestamp": "2026-09-18T18:43:42.300411",
     "price_prev": 749.0,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0H7656PXT",
     "title": "Lenovo IdeaPad Slim 3 Notebook 15\" IPS Intel Core 7 350, RAM 16GB, 512GB SSD, Windows 11 Home, WiFi ",
     "price_now": 799.0,
-    "timestamp": "2026-09-17T21:52:58.315264",
+    "timestamp": "2026-09-18T18:43:42.300743",
     "price_prev": 799.0,
     "posted": false
   },
@@ -184,7 +184,7 @@
     "asin": "B0915C748N",
     "title": "Tineco FLOOR ONE S5 Aspirapolvere Senza Fili Intelligente, Lavapavimenti",
     "price_now": 149.0,
-    "timestamp": "2026-09-18T17:00:03.152820",
+    "timestamp": "2026-09-18T18:43:42.300084",
     "price_prev": 149.0,
     "posted": false
   },
@@ -194,6 +194,15 @@
     "title": "medicube Booster Pro X2\u2122 | Dispositivo Beauty 7-1, Glow, Pori, Compattezza & Radiosit\u00e0, Modalit\u00e0 Per",
     "price_now": 171.0,
     "timestamp": "2026-09-18T17:00:03.154961",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H4HDPGMD": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4HDPGMD",
+    "asin": "B0H4HDPGMD",
+    "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Purple, Batteria da 8340 mAh | Fotocamera OIS 50MP, Hyper",
+    "price_now": 429.9,
+    "timestamp": "2026-09-18T18:43:42.299114",
     "price_prev": null,
     "posted": true
   }
