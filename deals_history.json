@@ -58,7 +58,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-18T11:57:29.759868",
+    "timestamp": "2026-09-18T14:02:43.266438",
     "price_prev": 369.99,
     "posted": false
   },
@@ -76,7 +76,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-18T11:57:29.761913",
+    "timestamp": "2026-09-18T14:02:43.266097",
     "price_prev": 119.89,
     "posted": false
   },
@@ -130,7 +130,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-18T11:57:29.761383",
+    "timestamp": "2026-09-18T14:02:43.265726",
     "price_prev": 799.0,
     "posted": false
   },
@@ -175,7 +175,7 @@
     "asin": "B0H4H7FVVZ",
     "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Black, Batteria da 8340 mAh | Fotocamera OIS 50MP, HyperC",
     "price_now": 429.9,
-    "timestamp": "2026-09-18T11:57:29.760141",
+    "timestamp": "2026-09-18T14:02:43.265409",
     "price_prev": 429.9,
     "posted": false
   },
@@ -185,6 +185,15 @@
     "title": "DREAME X50s Ultra Robot Aspirapolvere e Lavapavimenti, Ultrasottile 7,95 cm, Supera Ostacoli 8.8 cm,",
     "price_now": 899.0,
     "timestamp": "2026-09-17T21:52:58.315077",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0915C748N": {
+    "deal_id": "rapidapi_deals-v2_p1_B0915C748N",
+    "asin": "B0915C748N",
+    "title": "Tineco FLOOR ONE S5 Aspirapolvere Senza Fili Intelligente, Lavapavimenti",
+    "price_now": 149.0,
+    "timestamp": "2026-09-18T14:02:43.267234",
     "price_prev": null,
     "posted": true
   }
