@@ -53,21 +53,12 @@
     "price_prev": 39.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GZZ96X7N": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GZZ96X7N",
-    "asin": "B0GZZ96X7N",
-    "title": "roborock Qrevo 2 Pro Set Robot Aspirapolvere Lavapavimenti 25.000Pa, Bianco | Panno Estensibile, Ant",
-    "price_now": 499.99,
-    "timestamp": "2026-08-19T07:28:47.913748",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0GHN9DR1C": {
     "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-17T21:52:58.314227",
+    "timestamp": "2026-09-18T11:57:29.759868",
     "price_prev": 369.99,
     "posted": false
   },
@@ -85,7 +76,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-17T21:52:58.314415",
+    "timestamp": "2026-09-18T11:57:29.761913",
     "price_prev": 119.89,
     "posted": false
   },
@@ -139,9 +130,9 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-16T21:51:26.670974",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-18T11:57:29.761383",
+    "price_prev": 799.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0F13KXRG8": {
     "deal_id": "rapidapi_deals-v2_p1_B0F13KXRG8",
@@ -166,7 +157,7 @@
     "asin": "B0GL2Y8DWL",
     "title": "Dell 16 Laptop - AMD Ryzen 7 250, 16GB DDR5, 1TB SSD | 16\" 2K anti-riflesso, AMD Radeon Graphics, Wi",
     "price_now": 749.0,
-    "timestamp": "2026-09-17T19:22:27.310136",
+    "timestamp": "2026-09-18T11:57:29.761047",
     "price_prev": 749.0,
     "posted": false
   },
@@ -184,9 +175,9 @@
     "asin": "B0H4H7FVVZ",
     "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Black, Batteria da 8340 mAh | Fotocamera OIS 50MP, HyperC",
     "price_now": 429.9,
-    "timestamp": "2026-09-17T14:36:05.765409",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-18T11:57:29.760141",
+    "price_prev": 429.9,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GWGVPXG4": {
     "deal_id": "rapidapi_deals-v2_p1_B0GWGVPXG4",
