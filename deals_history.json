@@ -26,15 +26,6 @@
     "price_prev": 699.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GHN3V6BP": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GHN3V6BP",
-    "asin": "B0GHN3V6BP",
-    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
-    "price_now": 369.99,
-    "timestamp": "2026-08-19T16:17:21.974921",
-    "price_prev": 369.99,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0DJGCX6Q2": {
     "deal_id": "rapidapi_deals-v2_p1_B0DJGCX6Q2",
     "asin": "B0DJGCX6Q2",
@@ -94,7 +85,7 @@
     "asin": "B0H5JX9ZQ8",
     "title": "Samsung Galaxy Watch Ultra2, 47 mm, Titanium Gray, LTE [Versione Italiana] | 3 anni di garanzia, Des",
     "price_now": 589.08,
-    "timestamp": "2026-09-17T14:36:05.764890",
+    "timestamp": "2026-09-18T17:00:03.154403",
     "price_prev": 589.08,
     "posted": false
   },
@@ -130,7 +121,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-18T14:02:43.265726",
+    "timestamp": "2026-09-18T17:00:03.153208",
     "price_prev": 799.0,
     "posted": false
   },
@@ -139,9 +130,9 @@
     "asin": "B0F13KXRG8",
     "title": "aspirapolvere senza fili 55KPa/650W/70Min Per Animali/Pavimenti/Tappeti | Aspirapolvere Verticale Se",
     "price_now": 120.02,
-    "timestamp": "2026-09-16T21:51:26.671339",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-18T17:00:03.154686",
+    "price_prev": 120.02,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B07LH73GZ9": {
     "deal_id": "rapidapi_deals-v2_p1_B07LH73GZ9",
@@ -193,7 +184,16 @@
     "asin": "B0915C748N",
     "title": "Tineco FLOOR ONE S5 Aspirapolvere Senza Fili Intelligente, Lavapavimenti",
     "price_now": 149.0,
-    "timestamp": "2026-09-18T14:02:43.267234",
+    "timestamp": "2026-09-18T17:00:03.152820",
+    "price_prev": 149.0,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0GS8YKMN3": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GS8YKMN3",
+    "asin": "B0GS8YKMN3",
+    "title": "medicube Booster Pro X2\u2122 | Dispositivo Beauty 7-1, Glow, Pori, Compattezza & Radiosit\u00e0, Modalit\u00e0 Per",
+    "price_now": 171.0,
+    "timestamp": "2026-09-18T17:00:03.154961",
     "price_prev": null,
     "posted": true
   }
