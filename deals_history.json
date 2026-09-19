@@ -187,5 +187,50 @@
     "timestamp": "2026-09-19T13:38:51.765331",
     "price_prev": null,
     "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0H4H1TD7F": {
+    "deal_id": "rapidapi_deals-v2_p3_B0H4H1TD7F",
+    "asin": "B0H4H1TD7F",
+    "title": "REDMI Note 17 Pro 5G, Smartphone 8+512GB, Sky Blue, Batteria da 8340 mAh | Fotocamera OIS 50MP, Hype",
+    "price_now": 479.9,
+    "timestamp": "2026-09-19T16:19:57.196436",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0GHN9DR1C": {
+    "deal_id": "rapidapi_deals-v2_p3_B0GHN9DR1C",
+    "asin": "B0GHN9DR1C",
+    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
+    "price_now": 369.99,
+    "timestamp": "2026-09-19T16:19:57.196772",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0H419WWBZ": {
+    "deal_id": "rapidapi_deals-v2_p3_B0H419WWBZ",
+    "asin": "B0H419WWBZ",
+    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
+    "price_now": 799.0,
+    "timestamp": "2026-09-19T16:19:57.197128",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0F13KXRG8": {
+    "deal_id": "rapidapi_deals-v2_p3_B0F13KXRG8",
+    "asin": "B0F13KXRG8",
+    "title": "aspirapolvere senza fili 55KPa/650W/70Min Per Animali/Pavimenti/Tappeti | Aspirapolvere Verticale Se",
+    "price_now": 120.02,
+    "timestamp": "2026-09-19T16:19:57.197678",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B0F2JBR211": {
+    "deal_id": "rapidapi_deals-v2_p3_B0F2JBR211",
+    "asin": "B0F2JBR211",
+    "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
+    "price_now": 119.89,
+    "timestamp": "2026-09-19T16:19:57.198494",
+    "price_prev": null,
+    "posted": true
   }
 }
