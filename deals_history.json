@@ -4,7 +4,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-19T11:41:28.483058",
+    "timestamp": "2026-09-19T13:38:51.765146",
     "price_prev": 369.99,
     "posted": false
   },
@@ -22,7 +22,7 @@
     "asin": "B0F2JBR211",
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
-    "timestamp": "2026-09-18T14:02:43.266097",
+    "timestamp": "2026-09-19T13:38:51.765761",
     "price_prev": 119.89,
     "posted": false
   },
@@ -76,7 +76,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-19T11:41:28.484273",
+    "timestamp": "2026-09-19T13:38:51.765609",
     "price_prev": 799.0,
     "posted": false
   },
@@ -139,7 +139,7 @@
     "asin": "B0915C748N",
     "title": "Tineco FLOOR ONE S5 Aspirapolvere Senza Fili Intelligente, Lavapavimenti",
     "price_now": 149.0,
-    "timestamp": "2026-09-18T18:43:42.300084",
+    "timestamp": "2026-09-19T13:38:51.765863",
     "price_prev": 149.0,
     "posted": false
   },
@@ -176,6 +176,15 @@
     "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Sky Blue, Batteria da 8340 mAh | Fotocamera OIS 50MP, Hyp",
     "price_now": 429.9,
     "timestamp": "2026-09-19T11:41:28.483393",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H4HLCBY8": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4HLCBY8",
+    "asin": "B0H4HLCBY8",
+    "title": "REDMI Note 17 5G, Smartphone 8+256GB, Celestial Purple, Batteria da 7700mAh | Snapdragon\u00ae 4 Gen 4, R",
+    "price_now": 359.9,
+    "timestamp": "2026-09-19T13:38:51.765331",
     "price_prev": null,
     "posted": true
   }
