@@ -4,7 +4,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-18T21:23:51.938547",
+    "timestamp": "2026-09-19T11:41:28.483058",
     "price_prev": 369.99,
     "posted": false
   },
@@ -67,7 +67,7 @@
     "asin": "B0GMHC87FB",
     "title": "roborock Qrevo Edge 2 Set Robot Aspirapolvere Lavapavimenti 25.000Pa | LDS Retrattile, 7,98 cm, Flex",
     "price_now": 549.99,
-    "timestamp": "2026-09-18T21:23:51.938895",
+    "timestamp": "2026-09-19T11:41:28.484050",
     "price_prev": 549.99,
     "posted": false
   },
@@ -76,7 +76,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-18T21:23:51.939588",
+    "timestamp": "2026-09-19T11:41:28.484273",
     "price_prev": 799.0,
     "posted": false
   },
@@ -130,7 +130,7 @@
     "asin": "B0GWGVPXG4",
     "title": "DREAME X50s Ultra Robot Aspirapolvere e Lavapavimenti, Ultrasottile 7,95 cm, Supera Ostacoli 8.8 cm,",
     "price_now": 899.0,
-    "timestamp": "2026-09-18T21:23:51.939935",
+    "timestamp": "2026-09-19T11:41:28.483865",
     "price_prev": 899.0,
     "posted": false
   },
@@ -167,6 +167,15 @@
     "title": "Lefant M3 Max Robot Aspirapolvere Lavapavimenti con Mappatura 20.000Pa | Pulizia Automatica Mop, 8 S",
     "price_now": 349.99,
     "timestamp": "2026-09-18T21:23:51.939252",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H4H75WP7": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4H75WP7",
+    "asin": "B0H4H75WP7",
+    "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Sky Blue, Batteria da 8340 mAh | Fotocamera OIS 50MP, Hyp",
+    "price_now": 429.9,
+    "timestamp": "2026-09-19T11:41:28.483393",
     "price_prev": null,
     "posted": true
   }
