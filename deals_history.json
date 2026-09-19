@@ -4,7 +4,7 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 369.99,
-    "timestamp": "2026-09-19T13:38:51.765146",
+    "timestamp": "2026-09-19T18:15:56.221107",
     "price_prev": 369.99,
     "posted": false
   },
@@ -76,7 +76,7 @@
     "asin": "B0H419WWBZ",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 799.0,
-    "timestamp": "2026-09-19T13:38:51.765609",
+    "timestamp": "2026-09-19T18:15:56.221714",
     "price_prev": 799.0,
     "posted": false
   },
@@ -85,7 +85,7 @@
     "asin": "B0F13KXRG8",
     "title": "aspirapolvere senza fili 55KPa/650W/70Min Per Animali/Pavimenti/Tappeti | Aspirapolvere Verticale Se",
     "price_now": 120.02,
-    "timestamp": "2026-09-18T17:00:03.154686",
+    "timestamp": "2026-09-19T18:15:56.222172",
     "price_prev": 120.02,
     "posted": false
   },
@@ -184,9 +184,9 @@
     "asin": "B0H4HLCBY8",
     "title": "REDMI Note 17 5G, Smartphone 8+256GB, Celestial Purple, Batteria da 7700mAh | Snapdragon\u00ae 4 Gen 4, R",
     "price_now": 359.9,
-    "timestamp": "2026-09-19T13:38:51.765331",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-09-19T18:15:56.220771",
+    "price_prev": 359.9,
+    "posted": false
   },
   "rapidapi_deals-v2_p3_B0H4H1TD7F": {
     "deal_id": "rapidapi_deals-v2_p3_B0H4H1TD7F",
@@ -230,6 +230,15 @@
     "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
     "price_now": 119.89,
     "timestamp": "2026-09-19T16:19:57.198494",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GSZ6BPW9": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GSZ6BPW9",
+    "asin": "B0GSZ6BPW9",
+    "title": "roborock Qrevo EdgeT Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,98 cm, Antigroviglio, ",
+    "price_now": 499.98,
+    "timestamp": "2026-09-19T18:15:56.221911",
     "price_prev": null,
     "posted": true
   }
