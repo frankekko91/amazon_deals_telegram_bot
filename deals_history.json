@@ -247,36 +247,36 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-16T11:58:59.639365",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-16T14:28:06.820289",
+    "price_prev": 349.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J7HCVF": {
     "deal_id": "rapidapi_deals-v2_p1_B0F2J7HCVF",
     "asin": "B0F2J7HCVF",
     "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero | 2 Testine di Ricambio per",
     "price_now": 119.88,
-    "timestamp": "2026-10-16T11:58:59.639610",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-16T14:28:06.820500",
+    "price_prev": 119.88,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0DCFYVR1Z": {
     "deal_id": "rapidapi_deals-v2_p1_B0DCFYVR1Z",
     "asin": "B0DCFYVR1Z",
     "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
     "price_now": 39.99,
-    "timestamp": "2026-10-16T11:58:59.639795",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-16T14:28:06.820585",
+    "price_prev": 39.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0F2J8X7HZ": {
     "deal_id": "rapidapi_deals-v2_p1_B0F2J8X7HZ",
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-16T11:58:59.640133",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-16T14:28:06.820405",
+    "price_prev": 59.98,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0FNWM7WP7": {
     "deal_id": "rapidapi_deals-v2_p1_B0FNWM7WP7",
@@ -284,6 +284,15 @@
     "title": "Lefant M330 Pro Robot Aspirapolvere Lavapavimenti Anti-Groviglio, Nero | Riconoscimento Tappeti, 3 M",
     "price_now": 139.97,
     "timestamp": "2026-10-16T11:58:59.640455",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GMGT447Q": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GMGT447Q",
+    "asin": "B0GMGT447Q",
+    "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
+    "price_now": 519.99,
+    "timestamp": "2026-10-16T14:28:06.820684",
     "price_prev": null,
     "posted": true
   }
