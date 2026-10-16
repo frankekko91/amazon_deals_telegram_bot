@@ -265,7 +265,7 @@
     "asin": "B0DCFYVR1Z",
     "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
     "price_now": 39.99,
-    "timestamp": "2026-10-16T14:28:06.820585",
+    "timestamp": "2026-10-16T17:15:42.139478",
     "price_prev": 39.99,
     "posted": false
   },
@@ -274,7 +274,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-16T14:28:06.820405",
+    "timestamp": "2026-10-16T17:15:42.138721",
     "price_prev": 59.98,
     "posted": false
   },
@@ -292,7 +292,25 @@
     "asin": "B0GMGT447Q",
     "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
     "price_now": 519.99,
-    "timestamp": "2026-10-16T14:28:06.820684",
+    "timestamp": "2026-10-16T17:15:42.139848",
+    "price_prev": 519.99,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0GS6C6FP1": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GS6C6FP1",
+    "asin": "B0GS6C6FP1",
+    "title": "Xiaomi 17T, Smartphone 12+256GB, Black, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Ba",
+    "price_now": 599.9,
+    "timestamp": "2026-10-16T17:15:42.139125",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0B97C62VW": {
+    "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
+    "asin": "B0B97C62VW",
+    "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
+    "price_now": 289.0,
+    "timestamp": "2026-10-16T17:15:42.140193",
     "price_prev": null,
     "posted": true
   }
