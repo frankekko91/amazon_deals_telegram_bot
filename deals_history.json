@@ -89,15 +89,6 @@
     "price_prev": 120.02,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B07LH73GZ9": {
-    "deal_id": "rapidapi_deals-v2_p1_B07LH73GZ9",
-    "asin": "B07LH73GZ9",
-    "title": "Magnesio Bisglicinato 1500 mg con Vitamina B6 | 90 Capsule | Nutrimea | Forma Chelata | Stanchezza e",
-    "price_now": 9.49,
-    "timestamp": "2026-09-16T21:51:26.671701",
-    "price_prev": null,
-    "posted": true
-  },
   "rapidapi_deals-v2_p1_B0GL2Y8DWL": {
     "deal_id": "rapidapi_deals-v2_p1_B0GL2Y8DWL",
     "asin": "B0GL2Y8DWL",
@@ -247,7 +238,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-16T19:06:07.458830",
+    "timestamp": "2026-10-16T21:53:33.448393",
     "price_prev": 349.99,
     "posted": false
   },
@@ -256,7 +247,7 @@
     "asin": "B0F2J7HCVF",
     "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero | 2 Testine di Ricambio per",
     "price_now": 119.88,
-    "timestamp": "2026-10-16T19:06:07.459596",
+    "timestamp": "2026-10-16T21:53:33.449034",
     "price_prev": 119.88,
     "posted": false
   },
@@ -265,7 +256,7 @@
     "asin": "B0DCFYVR1Z",
     "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
     "price_now": 39.99,
-    "timestamp": "2026-10-16T19:06:07.459170",
+    "timestamp": "2026-10-16T21:53:33.448725",
     "price_prev": 39.99,
     "posted": false
   },
@@ -274,7 +265,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-16T19:06:07.458546",
+    "timestamp": "2026-10-16T21:53:33.447753",
     "price_prev": 59.98,
     "posted": false
   },
@@ -292,7 +283,7 @@
     "asin": "B0GMGT447Q",
     "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
     "price_now": 519.99,
-    "timestamp": "2026-10-16T17:15:42.139848",
+    "timestamp": "2026-10-16T21:53:33.448085",
     "price_prev": 519.99,
     "posted": false
   },
