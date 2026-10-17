@@ -238,7 +238,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-16T21:53:33.448393",
+    "timestamp": "2026-10-17T11:14:16.046050",
     "price_prev": 349.99,
     "posted": false
   },
@@ -256,7 +256,7 @@
     "asin": "B0DCFYVR1Z",
     "title": "Philips OneBlade QP2834/31 - Regolabarba elettrico 360 autentico, per viso e corpo, 3 lame da 360, 4",
     "price_now": 39.99,
-    "timestamp": "2026-10-16T21:53:33.448725",
+    "timestamp": "2026-10-17T11:14:16.046518",
     "price_prev": 39.99,
     "posted": false
   },
@@ -265,7 +265,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-16T21:53:33.447753",
+    "timestamp": "2026-10-17T11:14:16.046315",
     "price_prev": 59.98,
     "posted": false
   },
@@ -283,7 +283,7 @@
     "asin": "B0GMGT447Q",
     "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
     "price_now": 519.99,
-    "timestamp": "2026-10-16T21:53:33.448085",
+    "timestamp": "2026-10-17T11:14:16.045886",
     "price_prev": 519.99,
     "posted": false
   },
@@ -311,6 +311,15 @@
     "title": "roborock Saros 20 Robot Aspirapolvere Lavapavimenti 36.000Pa, 7,95cm | Supera Ostacoli da 8,8cm, Ant",
     "price_now": 949.0,
     "timestamp": "2026-10-16T19:06:07.459425",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G7Y6VPDJ": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G7Y6VPDJ",
+    "asin": "B0G7Y6VPDJ",
+    "title": "Lefant M5 Pro Robot Aspirapolvere Lavapavimenti con Rullo 23.000Pa | Rullo Autopulente, Anti-Grovigl",
+    "price_now": 399.98,
+    "timestamp": "2026-10-17T11:14:16.046175",
     "price_prev": null,
     "posted": true
   }
