@@ -238,7 +238,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-17T11:14:16.046050",
+    "timestamp": "2026-10-17T13:24:48.073963",
     "price_prev": 349.99,
     "posted": false
   },
@@ -265,7 +265,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-17T11:14:16.046315",
+    "timestamp": "2026-10-17T13:24:48.074277",
     "price_prev": 59.98,
     "posted": false
   },
@@ -283,7 +283,7 @@
     "asin": "B0GMGT447Q",
     "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
     "price_now": 519.99,
-    "timestamp": "2026-10-17T11:14:16.045886",
+    "timestamp": "2026-10-17T13:24:48.074550",
     "price_prev": 519.99,
     "posted": false
   },
@@ -320,6 +320,24 @@
     "title": "Lefant M5 Pro Robot Aspirapolvere Lavapavimenti con Rullo 23.000Pa | Rullo Autopulente, Anti-Grovigl",
     "price_now": 399.98,
     "timestamp": "2026-10-17T11:14:16.046175",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GHR9NGT7": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GHR9NGT7",
+    "asin": "B0GHR9NGT7",
+    "title": "ECOVACS T90 OMNI Robot Aspirapolvere Lavapavimenti OZMO ROLLER 30000 Pa | TruePass 4WD, AIVI 3D 4.0,",
+    "price_now": 399.0,
+    "timestamp": "2026-10-17T13:24:48.074735",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GS684M4B": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GS684M4B",
+    "asin": "B0GS684M4B",
+    "title": "Xiaomi 17T, Smartphone 12+256GB, Blue, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Bat",
+    "price_now": 599.9,
+    "timestamp": "2026-10-17T13:24:48.074909",
     "price_prev": null,
     "posted": true
   }
