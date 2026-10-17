@@ -238,7 +238,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-17T13:24:48.073963",
+    "timestamp": "2026-10-17T16:15:18.073347",
     "price_prev": 349.99,
     "posted": false
   },
@@ -265,7 +265,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-17T13:24:48.074277",
+    "timestamp": "2026-10-17T16:15:18.073656",
     "price_prev": 59.98,
     "posted": false
   },
@@ -292,9 +292,9 @@
     "asin": "B0GS6C6FP1",
     "title": "Xiaomi 17T, Smartphone 12+256GB, Black, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Ba",
     "price_now": 599.9,
-    "timestamp": "2026-10-16T17:15:42.139125",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-17T16:15:18.073926",
+    "price_prev": 599.9,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0B97C62VW": {
     "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
@@ -328,9 +328,9 @@
     "asin": "B0GHR9NGT7",
     "title": "ECOVACS T90 OMNI Robot Aspirapolvere Lavapavimenti OZMO ROLLER 30000 Pa | TruePass 4WD, AIVI 3D 4.0,",
     "price_now": 399.0,
-    "timestamp": "2026-10-17T13:24:48.074735",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-17T16:15:18.073063",
+    "price_prev": 399.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0GS684M4B": {
     "deal_id": "rapidapi_deals-v2_p1_B0GS684M4B",
@@ -338,6 +338,15 @@
     "title": "Xiaomi 17T, Smartphone 12+256GB, Blue, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Bat",
     "price_now": 599.9,
     "timestamp": "2026-10-17T13:24:48.074909",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0FT1QPQ9P": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FT1QPQ9P",
+    "asin": "B0FT1QPQ9P",
+    "title": "Candy Rapid\u00d3 RO EH10N3TE-S, Asciugatrice 10 Kg a Pompa di Calore, Motore Inverter, Programma Stiro F",
+    "price_now": 399.0,
+    "timestamp": "2026-10-17T16:15:18.074168",
     "price_prev": null,
     "posted": true
   }
