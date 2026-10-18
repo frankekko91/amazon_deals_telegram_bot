@@ -53,24 +53,6 @@
     "price_prev": 120.02,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GL2Y8DWL": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GL2Y8DWL",
-    "asin": "B0GL2Y8DWL",
-    "title": "Dell 16 Laptop - AMD Ryzen 7 250, 16GB DDR5, 1TB SSD | 16\" 2K anti-riflesso, AMD Radeon Graphics, Wi",
-    "price_now": 749.0,
-    "timestamp": "2026-09-18T18:43:42.300411",
-    "price_prev": 749.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0H7656PXT": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H7656PXT",
-    "asin": "B0H7656PXT",
-    "title": "Lenovo IdeaPad Slim 3 Notebook 15\" IPS Intel Core 7 350, RAM 16GB, 512GB SSD, Windows 11 Home, WiFi ",
-    "price_now": 799.0,
-    "timestamp": "2026-09-18T18:43:42.300743",
-    "price_prev": 799.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0GWGVPXG4": {
     "deal_id": "rapidapi_deals-v2_p1_B0GWGVPXG4",
     "asin": "B0GWGVPXG4",
@@ -88,15 +70,6 @@
     "timestamp": "2026-09-19T21:14:23.915149",
     "price_prev": 149.0,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0H4HDPGMD": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H4HDPGMD",
-    "asin": "B0H4HDPGMD",
-    "title": "REDMI Note 17 Pro 5G, Smartphone 12+256GB, Purple, Batteria da 8340 mAh | Fotocamera OIS 50MP, Hyper",
-    "price_now": 429.9,
-    "timestamp": "2026-09-18T18:43:42.299114",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0G81F3HSR": {
     "deal_id": "rapidapi_deals-v2_p1_B0G81F3HSR",
@@ -184,7 +157,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-18T18:20:09.596561",
+    "timestamp": "2026-10-18T21:13:10.451240",
     "price_prev": 349.99,
     "posted": false
   },
@@ -211,7 +184,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-18T18:20:09.596677",
+    "timestamp": "2026-10-18T21:13:10.450911",
     "price_prev": 59.98,
     "posted": false
   },
@@ -229,7 +202,7 @@
     "asin": "B0GMGT447Q",
     "title": "roborock Qrevo Edge 2 Robot Aspirapolvere Lavapavimenti 25.000Pa, Nero | LDS Retrattile, 7,98 cm, Fl",
     "price_now": 519.99,
-    "timestamp": "2026-10-18T16:25:17.130572",
+    "timestamp": "2026-10-18T21:13:10.451606",
     "price_prev": 519.99,
     "posted": false
   },
@@ -256,7 +229,7 @@
     "asin": "B0G4NBBZLG",
     "title": "roborock Saros 20 Robot Aspirapolvere Lavapavimenti 36.000Pa, 7,95cm | Supera Ostacoli da 8,8cm, Ant",
     "price_now": 949.0,
-    "timestamp": "2026-10-18T13:43:33.519098",
+    "timestamp": "2026-10-18T21:13:10.450529",
     "price_prev": 949.0,
     "posted": false
   },
@@ -301,7 +274,7 @@
     "asin": "B0H261K2KN",
     "title": "ASUS Vivobook 15 F1504MA#B0H261K2KN, Notebook con display 15.6\" IPS, Anti-glare, 60Hz,Intel\u00ae Core\u2122 5",
     "price_now": 599.0,
-    "timestamp": "2026-10-18T18:20:09.596790",
+    "timestamp": "2026-10-18T21:13:10.452016",
     "price_prev": 599.0,
     "posted": false
   },
