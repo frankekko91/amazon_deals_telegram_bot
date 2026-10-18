@@ -26,15 +26,6 @@
     "price_prev": 119.89,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0H5JX9ZQ8": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H5JX9ZQ8",
-    "asin": "B0H5JX9ZQ8",
-    "title": "Samsung Galaxy Watch Ultra2, 47 mm, Titanium Gray, LTE [Versione Italiana] | 3 anni di garanzia, Des",
-    "price_now": 589.08,
-    "timestamp": "2026-09-18T17:00:03.154403",
-    "price_prev": 589.08,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0GMHC87FB": {
     "deal_id": "rapidapi_deals-v2_p1_B0GMHC87FB",
     "asin": "B0GMHC87FB",
@@ -97,15 +88,6 @@
     "timestamp": "2026-09-19T21:14:23.915149",
     "price_prev": 149.0,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0GS8YKMN3": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GS8YKMN3",
-    "asin": "B0GS8YKMN3",
-    "title": "medicube Booster Pro X2\u2122 | Dispositivo Beauty 7-1, Glow, Pori, Compattezza & Radiosit\u00e0, Modalit\u00e0 Per",
-    "price_now": 171.0,
-    "timestamp": "2026-09-18T17:00:03.154961",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0H4HDPGMD": {
     "deal_id": "rapidapi_deals-v2_p1_B0H4HDPGMD",
@@ -202,7 +184,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-18T16:25:17.130286",
+    "timestamp": "2026-10-18T18:20:09.596561",
     "price_prev": 349.99,
     "posted": false
   },
@@ -229,7 +211,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-18T16:25:17.130932",
+    "timestamp": "2026-10-18T18:20:09.596677",
     "price_prev": 59.98,
     "posted": false
   },
@@ -265,9 +247,9 @@
     "asin": "B0B97C62VW",
     "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
     "price_now": 289.0,
-    "timestamp": "2026-10-16T17:15:42.140193",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-18T18:20:09.597096",
+    "price_prev": 289.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0G4NBBZLG": {
     "deal_id": "rapidapi_deals-v2_p1_B0G4NBBZLG",
@@ -319,7 +301,7 @@
     "asin": "B0H261K2KN",
     "title": "ASUS Vivobook 15 F1504MA#B0H261K2KN, Notebook con display 15.6\" IPS, Anti-glare, 60Hz,Intel\u00ae Core\u2122 5",
     "price_now": 599.0,
-    "timestamp": "2026-10-18T16:25:17.130758",
+    "timestamp": "2026-10-18T18:20:09.596790",
     "price_prev": 599.0,
     "posted": false
   },
@@ -328,8 +310,8 @@
     "asin": "B0H7J42Q1N",
     "title": "HUAWEI WATCH GT 7 41mm Smartwatch con modalit\u00e0 Sci e Ciclismo, GPS, Blu | EasyCross Strap, Fino a 14",
     "price_now": 195.7,
-    "timestamp": "2026-10-18T16:25:17.129906",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-18T18:20:09.596382",
+    "price_prev": 195.7,
+    "posted": false
   }
 }
