@@ -35,15 +35,6 @@
     "price_prev": 589.08,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0H4FFNW2Q": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H4FFNW2Q",
-    "asin": "B0H4FFNW2Q",
-    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
-    "price_now": 799.0,
-    "timestamp": "2026-09-17T21:52:58.313885",
-    "price_prev": 799.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0GMHC87FB": {
     "deal_id": "rapidapi_deals-v2_p1_B0GMHC87FB",
     "asin": "B0GMHC87FB",
@@ -220,7 +211,7 @@
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-17T21:12:11.352841",
+    "timestamp": "2026-10-18T11:50:57.007624",
     "price_prev": 349.99,
     "posted": false
   },
@@ -229,7 +220,7 @@
     "asin": "B0F2J7HCVF",
     "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero | 2 Testine di Ricambio per",
     "price_now": 119.88,
-    "timestamp": "2026-10-17T21:12:11.353217",
+    "timestamp": "2026-10-18T11:50:57.008355",
     "price_prev": 119.88,
     "posted": false
   },
@@ -247,7 +238,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-17T21:12:11.353867",
+    "timestamp": "2026-10-18T11:50:57.007942",
     "price_prev": 59.98,
     "posted": false
   },
@@ -292,9 +283,9 @@
     "asin": "B0G4NBBZLG",
     "title": "roborock Saros 20 Robot Aspirapolvere Lavapavimenti 36.000Pa, 7,95cm | Supera Ostacoli da 8,8cm, Ant",
     "price_now": 949.0,
-    "timestamp": "2026-10-16T19:06:07.459425",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-18T11:50:57.007257",
+    "price_prev": 949.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0G7Y6VPDJ": {
     "deal_id": "rapidapi_deals-v2_p1_B0G7Y6VPDJ",
@@ -328,9 +319,9 @@
     "asin": "B0FT1QPQ9P",
     "title": "Candy Rapid\u00d3 RO EH10N3TE-S, Asciugatrice 10 Kg a Pompa di Calore, Motore Inverter, Programma Stiro F",
     "price_now": 399.0,
-    "timestamp": "2026-10-17T16:15:18.074168",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-10-18T11:50:57.008973",
+    "price_prev": 399.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0H261K2KN": {
     "deal_id": "rapidapi_deals-v2_p1_B0H261K2KN",
