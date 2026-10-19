@@ -1,55 +1,10 @@
 {
-  "rapidapi_deals-v2_p1_B0GHN9DR1C": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
-    "asin": "B0GHN9DR1C",
-    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
-    "price_now": 369.99,
-    "timestamp": "2026-09-19T21:14:23.913604",
-    "price_prev": 369.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0G7VW71DD": {
-    "deal_id": "rapidapi_deals-v2_p1_B0G7VW71DD",
-    "asin": "B0G7VW71DD",
-    "title": "Lefant M210 PRO OMNI Robot Aspirapolvere Lavapavimenti con Rullo 20.000Pa | Rullo Autopulente, Lavag",
-    "price_now": 289.99,
-    "timestamp": "2026-09-19T21:14:23.914811",
-    "price_prev": 289.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F2JBR211": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2JBR211",
-    "asin": "B0F2JBR211",
-    "title": "Oral-B iO 6 Spazzolino Elettrico, con 2 Testine di Ricambio, Nero | 2 Testine di Ricambio per Spazzo",
-    "price_now": 119.89,
-    "timestamp": "2026-09-19T21:14:23.914466",
-    "price_prev": 119.89,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0H419WWBZ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H419WWBZ",
-    "asin": "B0H419WWBZ",
-    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
-    "price_now": 799.0,
-    "timestamp": "2026-09-19T21:14:23.914222",
-    "price_prev": 799.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0915C748N": {
-    "deal_id": "rapidapi_deals-v2_p1_B0915C748N",
-    "asin": "B0915C748N",
-    "title": "Tineco FLOOR ONE S5 Aspirapolvere Senza Fili Intelligente, Lavapavimenti",
-    "price_now": 149.0,
-    "timestamp": "2026-09-19T21:14:23.915149",
-    "price_prev": 149.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0GHN39ZGJ": {
     "deal_id": "rapidapi_deals-v2_p1_B0GHN39ZGJ",
     "asin": "B0GHN39ZGJ",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 349.99,
-    "timestamp": "2026-10-19T19:10:37.148823",
+    "timestamp": "2026-10-19T22:46:55.692085",
     "price_prev": 349.99,
     "posted": false
   },
@@ -58,7 +13,7 @@
     "asin": "B0F2J7HCVF",
     "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero | 2 Testine di Ricambio per",
     "price_now": 119.88,
-    "timestamp": "2026-10-19T20:46:30.235656",
+    "timestamp": "2026-10-19T22:46:55.691803",
     "price_prev": 119.88,
     "posted": false
   },
@@ -76,7 +31,7 @@
     "asin": "B0F2J8X7HZ",
     "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
     "price_now": 59.98,
-    "timestamp": "2026-10-19T20:46:30.235575",
+    "timestamp": "2026-10-19T22:46:55.691423",
     "price_prev": 59.98,
     "posted": false
   },
@@ -166,7 +121,7 @@
     "asin": "B0H261K2KN",
     "title": "ASUS Vivobook 15 F1504MA#B0H261K2KN, Notebook con display 15.6\" IPS, Anti-glare, 60Hz,Intel\u00ae Core\u2122 5",
     "price_now": 599.0,
-    "timestamp": "2026-10-19T20:46:30.235456",
+    "timestamp": "2026-10-19T22:46:55.690779",
     "price_prev": 599.0,
     "posted": false
   },
@@ -184,7 +139,7 @@
     "asin": "B0H4FFNW2Q",
     "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
     "price_now": 749.0,
-    "timestamp": "2026-10-19T16:44:52.922830",
+    "timestamp": "2026-10-19T22:46:55.691114",
     "price_prev": 749.0,
     "posted": false
   }
