@@ -112,9 +112,9 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-16T16:34:19.346805",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-16T19:58:08.024348",
+    "price_prev": 25.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0DPB7RN2L": {
     "deal_id": "rapidapi_deals-v2_p1_B0DPB7RN2L",
@@ -139,9 +139,9 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-16T16:34:19.347396",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-16T19:58:08.024615",
+    "price_prev": 499.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0HBCD8SS5": {
     "deal_id": "rapidapi_deals-v2_p1_B0HBCD8SS5",
@@ -149,6 +149,42 @@
     "title": "DREAME L60 Ultra CE Robot Aspira e Lava, 35.000 Pa, Spazzola Antigroviglio | Auto-pulizia Moci 100 \u2103",
     "price_now": 499.0,
     "timestamp": "2026-11-16T16:34:19.347585",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H44KWKRS": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H44KWKRS",
+    "asin": "B0H44KWKRS",
+    "title": "Xiaomi TV 32 pollici 2026, HD Smart TV Fire TV Dolby Audio L32MB-FAVEU | DTS-HD,DTS Virtual:X, DTS-H",
+    "price_now": 119.0,
+    "timestamp": "2026-11-16T19:58:08.024504",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GSWYM8Q2": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GSWYM8Q2",
+    "asin": "B0GSWYM8Q2",
+    "title": "DREAME X60 Pro Ultra Complete Robot Aspirapolvere, Aspiraz. 42.000 Pa | Bracci UltraExtend, Sistema ",
+    "price_now": 1098.0,
+    "timestamp": "2026-11-16T19:58:08.024715",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GQTFHB2N": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GQTFHB2N",
+    "asin": "B0GQTFHB2N",
+    "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
+    "price_now": 299.0,
+    "timestamp": "2026-11-16T19:58:08.024810",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p2_B09B8X9RGM": {
+    "deal_id": "rapidapi_deals-v2_p2_B09B8X9RGM",
+    "asin": "B09B8X9RGM",
+    "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
+    "price_now": 39.99,
+    "timestamp": "2026-11-16T19:58:09.107712",
     "price_prev": null,
     "posted": true
   }
