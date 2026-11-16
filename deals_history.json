@@ -44,15 +44,6 @@
     "price_prev": 519.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0GS6C6FP1": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GS6C6FP1",
-    "asin": "B0GS6C6FP1",
-    "title": "Xiaomi 17T, Smartphone 12+256GB, Black, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Ba",
-    "price_now": 599.9,
-    "timestamp": "2026-10-17T16:15:18.073926",
-    "price_prev": 599.9,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0B97C62VW": {
     "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
     "asin": "B0B97C62VW",
@@ -79,24 +70,6 @@
     "timestamp": "2026-10-19T20:46:30.235737",
     "price_prev": 399.98,
     "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0GHR9NGT7": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GHR9NGT7",
-    "asin": "B0GHR9NGT7",
-    "title": "ECOVACS T90 OMNI Robot Aspirapolvere Lavapavimenti OZMO ROLLER 30000 Pa | TruePass 4WD, AIVI 3D 4.0,",
-    "price_now": 399.0,
-    "timestamp": "2026-10-17T16:15:18.073063",
-    "price_prev": 399.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0GS684M4B": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GS684M4B",
-    "asin": "B0GS684M4B",
-    "title": "Xiaomi 17T, Smartphone 12+256GB, Blue, Teleobiettivo Leica 5x | Display Eye-Care da 6,59\" 120Hz, Bat",
-    "price_now": 599.9,
-    "timestamp": "2026-10-17T13:24:48.074909",
-    "price_prev": null,
-    "posted": true
   },
   "rapidapi_deals-v2_p1_B0FT1QPQ9P": {
     "deal_id": "rapidapi_deals-v2_p1_B0FT1QPQ9P",
@@ -133,5 +106,50 @@
     "timestamp": "2026-10-19T22:46:55.691114",
     "price_prev": 749.0,
     "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0DJGCX6Q2": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DJGCX6Q2",
+    "asin": "B0DJGCX6Q2",
+    "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
+    "price_now": 25.99,
+    "timestamp": "2026-11-16T16:34:19.346805",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DPB7RN2L": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DPB7RN2L",
+    "asin": "B0DPB7RN2L",
+    "title": "DREAME X50 Ultra Complete Robot Aspirapolvere Lavapavimenti, 20.000 Pa | Rileva Ostacoli con IA, Nav",
+    "price_now": 599.0,
+    "timestamp": "2026-11-16T16:34:19.347125",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0G6LCC42J": {
+    "deal_id": "rapidapi_deals-v2_p1_B0G6LCC42J",
+    "asin": "B0G6LCC42J",
+    "title": "Nothing Headphone (a) Cuffie Wireless Over Ear con Cancellazione Attiva del Rumore, fino a 135h Auto",
+    "price_now": 99.0,
+    "timestamp": "2026-11-16T16:34:19.347285",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0DJ3284BS": {
+    "deal_id": "rapidapi_deals-v2_p1_B0DJ3284BS",
+    "asin": "B0DJ3284BS",
+    "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
+    "price_now": 499.99,
+    "timestamp": "2026-11-16T16:34:19.347396",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0HBCD8SS5": {
+    "deal_id": "rapidapi_deals-v2_p1_B0HBCD8SS5",
+    "asin": "B0HBCD8SS5",
+    "title": "DREAME L60 Ultra CE Robot Aspira e Lava, 35.000 Pa, Spazzola Antigroviglio | Auto-pulizia Moci 100 \u2103",
+    "price_now": 499.0,
+    "timestamp": "2026-11-16T16:34:19.347585",
+    "price_prev": null,
+    "posted": true
   }
 }
