@@ -112,7 +112,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-16T22:48:05.090622",
+    "timestamp": "2026-11-16T23:53:26.876737",
     "price_prev": 25.99,
     "posted": false
   },
@@ -139,7 +139,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-16T22:48:05.090781",
+    "timestamp": "2026-11-16T23:53:26.877015",
     "price_prev": 499.99,
     "posted": false
   },
@@ -157,7 +157,7 @@
     "asin": "B0H44KWKRS",
     "title": "Xiaomi TV 32 pollici 2026, HD Smart TV Fire TV Dolby Audio L32MB-FAVEU | DTS-HD,DTS Virtual:X, DTS-H",
     "price_now": 119.0,
-    "timestamp": "2026-11-16T22:48:05.090928",
+    "timestamp": "2026-11-16T23:53:26.877450",
     "price_prev": 119.0,
     "posted": false
   },
@@ -166,7 +166,7 @@
     "asin": "B0GSWYM8Q2",
     "title": "DREAME X60 Pro Ultra Complete Robot Aspirapolvere, Aspiraz. 42.000 Pa | Bracci UltraExtend, Sistema ",
     "price_now": 1098.0,
-    "timestamp": "2026-11-16T22:48:05.091036",
+    "timestamp": "2026-11-16T23:53:26.877230",
     "price_prev": 1098.0,
     "posted": false
   },
@@ -175,9 +175,9 @@
     "asin": "B0GQTFHB2N",
     "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
     "price_now": 299.0,
-    "timestamp": "2026-11-16T19:58:08.024810",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-16T23:53:26.877651",
+    "price_prev": 299.0,
+    "posted": false
   },
   "rapidapi_deals-v2_p2_B09B8X9RGM": {
     "deal_id": "rapidapi_deals-v2_p2_B09B8X9RGM",
@@ -203,6 +203,15 @@
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
     "timestamp": "2026-11-16T22:48:06.485946",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p3_B09B8X9RGM": {
+    "deal_id": "rapidapi_deals-v2_p3_B09B8X9RGM",
+    "asin": "B09B8X9RGM",
+    "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
+    "price_now": 39.99,
+    "timestamp": "2026-11-16T23:53:32.013694",
     "price_prev": null,
     "posted": true
   }
