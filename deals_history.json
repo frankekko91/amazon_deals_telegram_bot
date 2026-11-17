@@ -44,15 +44,6 @@
     "price_prev": 519.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0B97C62VW": {
-    "deal_id": "rapidapi_deals-v2_p1_B0B97C62VW",
-    "asin": "B0B97C62VW",
-    "title": "Hisense WFQE7012EVM Lavatrice Slim Carica Frontale, 7kg, Classe A, 1200 giri, Vapore, Motore Inverte",
-    "price_now": 289.0,
-    "timestamp": "2026-10-18T18:20:09.597096",
-    "price_prev": 289.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0G4NBBZLG": {
     "deal_id": "rapidapi_deals-v2_p1_B0G4NBBZLG",
     "asin": "B0G4NBBZLG",
@@ -80,15 +71,6 @@
     "price_prev": 599.0,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0H7J42Q1N": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H7J42Q1N",
-    "asin": "B0H7J42Q1N",
-    "title": "HUAWEI WATCH GT 7 41mm Smartwatch con modalit\u00e0 Sci e Ciclismo, GPS, Blu | EasyCross Strap, Fino a 14",
-    "price_now": 195.7,
-    "timestamp": "2026-10-18T18:20:09.596382",
-    "price_prev": 195.7,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0H4FFNW2Q": {
     "deal_id": "rapidapi_deals-v2_p1_B0H4FFNW2Q",
     "asin": "B0H4FFNW2Q",
@@ -103,7 +85,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-17T16:32:49.003048",
+    "timestamp": "2026-11-17T18:54:33.159551",
     "price_prev": 25.99,
     "posted": false
   },
@@ -130,7 +112,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-17T16:32:49.003728",
+    "timestamp": "2026-11-17T18:54:33.159878",
     "price_prev": 499.99,
     "posted": false
   },
@@ -202,9 +184,9 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-16T23:53:32.013694",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-17T18:54:36.434512",
+    "price_prev": 39.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B09B8X9RGM": {
     "deal_id": "rapidapi_deals-v2_p1_B09B8X9RGM",
@@ -238,7 +220,25 @@
     "asin": "B0H83J9FWG",
     "title": "roborock Saros 20 Flow Complete Robot Aspirapolvere Lavapavimenti con Rullo | 8,98cm, 36.000Pa, Supe",
     "price_now": 799.0,
-    "timestamp": "2026-11-17T16:32:49.003864",
+    "timestamp": "2026-11-17T18:54:33.160186",
+    "price_prev": 799.0,
+    "posted": false
+  },
+  "rapidapi_deals-v2_p1_B0GHN9DR1C": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GHN9DR1C",
+    "asin": "B0GHN9DR1C",
+    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
+    "price_now": 299.99,
+    "timestamp": "2026-11-17T18:54:33.160037",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H4H2DC7H": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H4H2DC7H",
+    "asin": "B0H4H2DC7H",
+    "title": "REDMI Note 17 Pro 5G, Smartphone 6+256GB, Purple, Batteria da 8340 mAh | Fotocamera OIS 50MP, HyperC",
+    "price_now": 379.9,
+    "timestamp": "2026-11-17T18:54:33.160352",
     "price_prev": null,
     "posted": true
   }
