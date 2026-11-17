@@ -44,15 +44,6 @@
     "price_prev": 519.99,
     "posted": false
   },
-  "rapidapi_deals-v2_p1_B0G4NBBZLG": {
-    "deal_id": "rapidapi_deals-v2_p1_B0G4NBBZLG",
-    "asin": "B0G4NBBZLG",
-    "title": "roborock Saros 20 Robot Aspirapolvere Lavapavimenti 36.000Pa, 7,95cm | Supera Ostacoli da 8,8cm, Ant",
-    "price_now": 949.0,
-    "timestamp": "2026-10-18T21:13:10.450529",
-    "price_prev": 949.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0G7Y6VPDJ": {
     "deal_id": "rapidapi_deals-v2_p1_B0G7Y6VPDJ",
     "asin": "B0G7Y6VPDJ",
@@ -85,7 +76,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-17T18:54:33.159551",
+    "timestamp": "2026-11-17T21:37:40.729651",
     "price_prev": 25.99,
     "posted": false
   },
@@ -94,7 +85,7 @@
     "asin": "B0DPB7RN2L",
     "title": "DREAME X50 Ultra Complete Robot Aspirapolvere Lavapavimenti, 20.000 Pa | Rileva Ostacoli con IA, Nav",
     "price_now": 599.0,
-    "timestamp": "2026-11-17T16:32:49.003469",
+    "timestamp": "2026-11-17T21:37:40.730361",
     "price_prev": 599.0,
     "posted": false
   },
@@ -112,7 +103,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-17T18:54:33.159878",
+    "timestamp": "2026-11-17T21:37:40.729967",
     "price_prev": 499.99,
     "posted": false
   },
@@ -148,7 +139,7 @@
     "asin": "B0GQTFHB2N",
     "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
     "price_now": 299.0,
-    "timestamp": "2026-11-16T23:53:26.877651",
+    "timestamp": "2026-11-17T21:37:40.730735",
     "price_prev": 299.0,
     "posted": false
   },
@@ -193,9 +184,9 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-17T02:16:04.043076",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-17T21:37:40.729346",
+    "price_prev": 39.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0CFPLP3YL": {
     "deal_id": "rapidapi_deals-v2_p1_B0CFPLP3YL",
@@ -239,6 +230,15 @@
     "title": "REDMI Note 17 Pro 5G, Smartphone 6+256GB, Purple, Batteria da 8340 mAh | Fotocamera OIS 50MP, HyperC",
     "price_now": 379.9,
     "timestamp": "2026-11-17T18:54:33.160352",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p4_B0FS16B394": {
+    "deal_id": "rapidapi_deals-v2_p4_B0FS16B394",
+    "asin": "B0FS16B394",
+    "title": "roborock Qrevo Curv 2 Flow Robot Aspirapolvere Lavapavimenti con Rullo | 270mm, Protezione Rullo per",
+    "price_now": 349.0,
+    "timestamp": "2026-11-17T21:37:45.012347",
     "price_prev": null,
     "posted": true
   }
