@@ -76,7 +76,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-17T21:37:40.729651",
+    "timestamp": "2026-11-17T23:13:13.392459",
     "price_prev": 25.99,
     "posted": false
   },
@@ -103,7 +103,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-17T21:37:40.729967",
+    "timestamp": "2026-11-17T23:13:13.392571",
     "price_prev": 499.99,
     "posted": false
   },
@@ -121,7 +121,7 @@
     "asin": "B0H44KWKRS",
     "title": "Xiaomi TV 32 pollici 2026, HD Smart TV Fire TV Dolby Audio L32MB-FAVEU | DTS-HD,DTS Virtual:X, DTS-H",
     "price_now": 119.0,
-    "timestamp": "2026-11-17T16:32:49.003256",
+    "timestamp": "2026-11-17T23:13:13.392683",
     "price_prev": 119.0,
     "posted": false
   },
@@ -130,7 +130,7 @@
     "asin": "B0GSWYM8Q2",
     "title": "DREAME X60 Pro Ultra Complete Robot Aspirapolvere, Aspiraz. 42.000 Pa | Bracci UltraExtend, Sistema ",
     "price_now": 1098.0,
-    "timestamp": "2026-11-16T23:53:26.877230",
+    "timestamp": "2026-11-17T23:13:13.392787",
     "price_prev": 1098.0,
     "posted": false
   },
@@ -184,7 +184,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-17T21:37:40.729346",
+    "timestamp": "2026-11-17T23:13:13.392305",
     "price_prev": 39.99,
     "posted": false
   },
@@ -239,6 +239,15 @@
     "title": "roborock Qrevo Curv 2 Flow Robot Aspirapolvere Lavapavimenti con Rullo | 270mm, Protezione Rullo per",
     "price_now": 349.0,
     "timestamp": "2026-11-17T21:37:45.012347",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p5_B0GQTFHB2N": {
+    "deal_id": "rapidapi_deals-v2_p5_B0GQTFHB2N",
+    "asin": "B0GQTFHB2N",
+    "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
+    "price_now": 299.0,
+    "timestamp": "2026-11-17T23:13:16.397354",
     "price_prev": null,
     "posted": true
   }
