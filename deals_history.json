@@ -76,7 +76,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-18T16:01:13.565735",
+    "timestamp": "2026-11-18T18:35:27.003135",
     "price_prev": 25.99,
     "posted": false
   },
@@ -103,7 +103,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-18T16:01:13.566140",
+    "timestamp": "2026-11-18T18:35:27.003494",
     "price_prev": 499.99,
     "posted": false
   },
@@ -130,7 +130,7 @@
     "asin": "B0GSWYM8Q2",
     "title": "DREAME X60 Pro Ultra Complete Robot Aspirapolvere, Aspiraz. 42.000 Pa | Bracci UltraExtend, Sistema ",
     "price_now": 1098.0,
-    "timestamp": "2026-11-17T23:13:13.392787",
+    "timestamp": "2026-11-18T18:35:27.003357",
     "price_prev": 1098.0,
     "posted": false
   },
@@ -139,7 +139,7 @@
     "asin": "B0GQTFHB2N",
     "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
     "price_now": 299.0,
-    "timestamp": "2026-11-18T16:01:13.566258",
+    "timestamp": "2026-11-18T18:35:27.003712",
     "price_prev": 299.0,
     "posted": false
   },
@@ -175,7 +175,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-17T18:54:36.434512",
+    "timestamp": "2026-11-18T18:35:31.943540",
     "price_prev": 39.99,
     "posted": false
   },
@@ -257,6 +257,15 @@
     "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
     "price_now": 299.0,
     "timestamp": "2026-11-18T01:28:22.538587",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H8N499TP": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H8N499TP",
+    "asin": "B0H8N499TP",
+    "title": "roborock Saros 20 Flow Complete Robot Aspirapolvere Lavapavimenti con Rullo | 8,98cm, 36.000Pa, Supe",
+    "price_now": 799.0,
+    "timestamp": "2026-11-18T18:35:27.003606",
     "price_prev": null,
     "posted": true
   }
