@@ -76,7 +76,7 @@
     "asin": "B0DJGCX6Q2",
     "title": "Amazon Fire TV Stick HD (ultimo modello), TV gratuita e in diretta, telecomando vocale Alexa, alimen",
     "price_now": 25.99,
-    "timestamp": "2026-11-17T23:13:13.392459",
+    "timestamp": "2026-11-18T01:28:22.538076",
     "price_prev": 25.99,
     "posted": false
   },
@@ -85,7 +85,7 @@
     "asin": "B0DPB7RN2L",
     "title": "DREAME X50 Ultra Complete Robot Aspirapolvere Lavapavimenti, 20.000 Pa | Rileva Ostacoli con IA, Nav",
     "price_now": 599.0,
-    "timestamp": "2026-11-17T21:37:40.730361",
+    "timestamp": "2026-11-18T01:28:22.538461",
     "price_prev": 599.0,
     "posted": false
   },
@@ -103,7 +103,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-17T23:13:13.392571",
+    "timestamp": "2026-11-18T01:28:22.538225",
     "price_prev": 499.99,
     "posted": false
   },
@@ -166,9 +166,9 @@
     "asin": "B09B94956P",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-16T22:48:06.485946",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-18T01:28:23.704121",
+    "price_prev": 39.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p3_B09B8X9RGM": {
     "deal_id": "rapidapi_deals-v2_p3_B09B8X9RGM",
@@ -211,7 +211,7 @@
     "asin": "B0H83J9FWG",
     "title": "roborock Saros 20 Flow Complete Robot Aspirapolvere Lavapavimenti con Rullo | 8,98cm, 36.000Pa, Supe",
     "price_now": 799.0,
-    "timestamp": "2026-11-17T18:54:33.160186",
+    "timestamp": "2026-11-18T01:28:22.538710",
     "price_prev": 799.0,
     "posted": false
   },
@@ -248,6 +248,15 @@
     "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
     "price_now": 299.0,
     "timestamp": "2026-11-17T23:13:16.397354",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GQTCDX17": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GQTCDX17",
+    "asin": "B0GQTCDX17",
+    "title": "ECOVACS T50 PRO OMNI Gen3 Robot Aspirapolvere Lavapavimenti 25000 Pa | AIVI 3D 3.0, Lavaggio a 75 \u00b0C",
+    "price_now": 299.0,
+    "timestamp": "2026-11-18T01:28:22.538587",
     "price_prev": null,
     "posted": true
   }
