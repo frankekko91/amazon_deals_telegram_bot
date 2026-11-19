@@ -13,7 +13,7 @@
     "asin": "B0DPB7RN2L",
     "title": "DREAME X50 Ultra Complete Robot Aspirapolvere Lavapavimenti, 20.000 Pa | Rileva Ostacoli con IA, Nav",
     "price_now": 599.0,
-    "timestamp": "2026-11-18T16:01:13.565873",
+    "timestamp": "2026-11-19T22:48:25.272742",
     "price_prev": 599.0,
     "posted": false
   },
@@ -31,7 +31,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-19T21:16:29.521974",
+    "timestamp": "2026-11-19T22:48:25.272487",
     "price_prev": 499.99,
     "posted": false
   },
@@ -112,7 +112,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-19T21:16:29.521510",
+    "timestamp": "2026-11-19T22:48:25.272116",
     "price_prev": 39.99,
     "posted": false
   },
@@ -148,9 +148,9 @@
     "asin": "B0GHN9DR1C",
     "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
     "price_now": 299.99,
-    "timestamp": "2026-11-17T18:54:33.160037",
-    "price_prev": null,
-    "posted": true
+    "timestamp": "2026-11-19T22:48:25.272871",
+    "price_prev": 299.99,
+    "posted": false
   },
   "rapidapi_deals-v2_p1_B0H4H2DC7H": {
     "deal_id": "rapidapi_deals-v2_p1_B0H4H2DC7H",
@@ -229,7 +229,7 @@
     "asin": "B0DPPLWYGX",
     "title": "Tineco Floor ONE S7 Stretch Ultra Lavapavimenti aspirapolvere senza fili | Fino a 50 minuti di auton",
     "price_now": 249.99,
-    "timestamp": "2026-11-19T21:16:29.521649",
+    "timestamp": "2026-11-19T22:48:25.272311",
     "price_prev": 249.99,
     "posted": false
   },
