@@ -1,49 +1,4 @@
 {
-  "rapidapi_deals-v2_p1_B0GHN39ZGJ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0GHN39ZGJ",
-    "asin": "B0GHN39ZGJ",
-    "title": "roborock Qrevo S Pro Robot Aspirapolvere Lavapavimenti, Lavaggio Panno 75\u00b0C | Asciugatura Aria Calda",
-    "price_now": 349.99,
-    "timestamp": "2026-10-19T22:46:55.692085",
-    "price_prev": 349.99,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F2J7HCVF": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J7HCVF",
-    "asin": "B0F2J7HCVF",
-    "title": "Oral-B iO 6 Spazzolino Elettrico, 2 Testine, Custodia, Dentifricio, Nero | 2 Testine di Ricambio per",
-    "price_now": 119.88,
-    "timestamp": "2026-10-19T22:46:55.691803",
-    "price_prev": 119.88,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0F2J8X7HZ": {
-    "deal_id": "rapidapi_deals-v2_p1_B0F2J8X7HZ",
-    "asin": "B0F2J8X7HZ",
-    "title": "Oral-B iO 3 Spazzolino Elettrico, 1 Testina, Custodia, Dentifricio, Nero | 1 Testine di Ricambio per",
-    "price_now": 59.98,
-    "timestamp": "2026-10-19T22:46:55.691423",
-    "price_prev": 59.98,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0H261K2KN": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H261K2KN",
-    "asin": "B0H261K2KN",
-    "title": "ASUS Vivobook 15 F1504MA#B0H261K2KN, Notebook con display 15.6\" IPS, Anti-glare, 60Hz,Intel\u00ae Core\u2122 5",
-    "price_now": 599.0,
-    "timestamp": "2026-10-19T22:46:55.690779",
-    "price_prev": 599.0,
-    "posted": false
-  },
-  "rapidapi_deals-v2_p1_B0H4FFNW2Q": {
-    "deal_id": "rapidapi_deals-v2_p1_B0H4FFNW2Q",
-    "asin": "B0H4FFNW2Q",
-    "title": "roborock Saros 20 Neo Robot Aspirapolvere Lavapavimenti con LDS Retrattile | 7,95cm, 36.000Pa, Super",
-    "price_now": 749.0,
-    "timestamp": "2026-10-19T22:46:55.691114",
-    "price_prev": 749.0,
-    "posted": false
-  },
   "rapidapi_deals-v2_p1_B0DJGCX6Q2": {
     "deal_id": "rapidapi_deals-v2_p1_B0DJGCX6Q2",
     "asin": "B0DJGCX6Q2",
@@ -76,7 +31,7 @@
     "asin": "B0DJ3284BS",
     "title": "roborock Saros 10R Robot Aspirapolvere Lavapavimenti 22.000Pa, 7,98 cm | Antigroviglio, Telaio Adapt",
     "price_now": 499.99,
-    "timestamp": "2026-11-18T22:44:44.251596",
+    "timestamp": "2026-11-19T00:56:34.962970",
     "price_prev": 499.99,
     "posted": false
   },
@@ -157,7 +112,7 @@
     "asin": "B09B8X9RGM",
     "title": "Echo Dot (modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono pi\u00f9 potente e dinamico ",
     "price_now": 39.99,
-    "timestamp": "2026-11-18T16:01:13.565580",
+    "timestamp": "2026-11-19T00:56:34.962119",
     "price_prev": 39.99,
     "posted": false
   },
@@ -239,6 +194,33 @@
     "title": "roborock Saros 20 Flow Complete Robot Aspirapolvere Lavapavimenti con Rullo | 8,98cm, 36.000Pa, Supe",
     "price_now": 799.0,
     "timestamp": "2026-11-18T18:35:27.003606",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0H62DS4LY": {
+    "deal_id": "rapidapi_deals-v2_p1_B0H62DS4LY",
+    "asin": "B0H62DS4LY",
+    "title": "Google Pixel 11 Pro XL \u2013 Smartphone Android sbloccato - Grigio, 512GB | Con Gemini Intelligence, aut",
+    "price_now": 1199.0,
+    "timestamp": "2026-11-19T00:56:34.962305",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0FBGVTY3B": {
+    "deal_id": "rapidapi_deals-v2_p1_B0FBGVTY3B",
+    "asin": "B0FBGVTY3B",
+    "title": "OM SYSTEM OM-5 Mark II Fotocamera Micro 4/3 con Obiettivo 14-150mm II | Sensore Live MOS 20 MP, stab",
+    "price_now": 1305.0,
+    "timestamp": "2026-11-19T00:56:34.962453",
+    "price_prev": null,
+    "posted": true
+  },
+  "rapidapi_deals-v2_p1_B0GXZFVQ46": {
+    "deal_id": "rapidapi_deals-v2_p1_B0GXZFVQ46",
+    "asin": "B0GXZFVQ46",
+    "title": "XGIMI Elfin Flip 4K Proiettore Portatile, RGB Laser Triple, 1600 ISO Lumen | 4K UHD Nativo, Netflix ",
+    "price_now": 699.0,
+    "timestamp": "2026-11-19T00:56:34.962634",
     "price_prev": null,
     "posted": true
   }
